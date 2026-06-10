@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #f8fafc; /* Slate-50 */
+  --text-base: #0f172a; /* Slate-900 */
+  --text-muted: #475569; /* Slate-600 */
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(15, 23, 42, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+}
+
+.dark {
+  --bg-base: #030712; /* Slate-950 / Slate dark */
+  --text-base: #f8fafc; /* Slate-50 */
+  --text-muted: #94a3b8; /* Slate-400 */
+  --card-bg: rgba(17, 24, 39, 0.65);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --input-bg: rgba(17, 24, 39, 0.8);
+  --input-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme {
+  --color-bg-base: var(--bg-base);
+  --color-text-base: var(--text-base);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+
+  --color-brand-primary: #d97706; /* Amber-600 */
+  --color-brand-primary-dark: #b45309; /* Amber-700 */
+  --color-brand-primary-deep: #92400e; /* Amber-800 */
+  
+  --color-brand-accent: #fec200; /* Vibrant yellow-gold */
+  --color-brand-orange: #f97316; /* Vibrant orange */
+  --color-brand-green: #10b981; /* Emerald-500 */
+  --color-brand-blue: #0ea5e9; /* Sky-500 */
+  --color-brand-cyan: #06b6d4; /* Cyan-500 */
+  --color-brand-purple: #8b5cf6; /* Violet-500 */
+  --color-brand-pink: #ec4899; /* Pink-500 */
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Be Vietnam Pro', 'Chakra Petch', sans-serif;
+}
+
+/* Custom premium design system elements */
+
+/* Glassmorphism card utility with enhanced responsiveness */
+.glass-premium {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+/* Glowing Ambient Background Orbs */
+.glow-orb {
+  position: absolute;
+  filter: blur(120px);
+  border-radius: 50%;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glow-orb {
+  opacity: 0.25;
+  filter: blur(140px);
+}
+
+.glow-yellow { background-color: #fec200; }
+.glow-orange { background-color: #f97316; }
+.glow-green { background-color: #10b981; }
+.glow-blue { background-color: #0ea5e9; }
+.glow-cyan { background-color: #06b6d4; }
+.glow-purple { background-color: #8b5cf6; }
+.glow-pink { background-color: #ec4899; }
+
+/* Floating keyframe animation for background blobs */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.1);
+  }
+}
+
+@keyframes float-slow-reverse {
+  0%, 100% {
+    transform: translateY(0px) scale(1.1);
+  }
+  50% {
+    transform: translateY(25px) scale(1);
+  }
+}
+
+.animate-float {
+  animation: float-slow 14s infinite ease-in-out;
+}
+
+.animate-float-reverse {
+  animation: float-slow-reverse 18s infinite ease-in-out;
+}
+
+/* Multicolored Glow outline on hover - inspired by KIGI Agency */
+.glowing-card {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glowing-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #d97706, #fec200, #f97316, #10b981, #0ea5e9, #8b5cf6, #ec4899);
+  background-size: 300% 300%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.glowing-card:hover::after {
+  opacity: 0.7;
+  animation: border-glow-flow 4s ease infinite;
+}
+
+.glowing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(217, 119, 6, 0.2);
+}
+
+.dark .glowing-card:hover {
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 20px 2px rgba(249, 115, 22, 0.1);
+}
+
+@keyframes border-glow-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Marquee Scrolling Text - infinite loop */
+.marquee-container {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Shine Sweep effect for CTAs */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.shine-effect:hover::before {
+  left: 150%;
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll reveal helper class */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating pulsing hotline button animation */
+@keyframes hotline-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5), 0 0 0 0 rgba(254, 194, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(249, 115, 22, 0), 0 0 0 22px rgba(254, 194, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0), 0 0 0 0 rgba(254, 194, 0, 0);
+  }
+}
+
+.animate-hotline {
+  animation: hotline-pulse 2.2s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.3);
+  border-radius: 5px;
+  border: 2px solid var(--bg-base);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.6);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,353 @@
+---
+// Project list with categories and descriptions matching the copied actual images
+const projects = [
+  {
+    id: 1,
+    title: "Thi công trần lam nhôm giả gỗ sảnh cafe ngoài trời",
+    category: "lam-nhom",
+    image: "/projects/project-1.png",
+    desc: "Lắp đặt hệ lam nhôm vân gỗ kháng nước, chịu nhiệt độ cao cho khu resort ven biển Nha Trang.",
+    tags: ["Lam nhôm", "Vân gỗ", "Ven biển"]
+  },
+  {
+    id: 2,
+    title: "Khung xương và vách thạch cao ngoài trời Knauf",
+    category: "thach-cao",
+    image: "/projects/project-2.png",
+    desc: "Thi công hệ vách thạch cao chống ẩm thương hiệu Knauf Đức cho dự án biệt thự biển.",
+    tags: ["Thạch cao", "Chống ẩm", "Knauf"]
+  },
+  {
+    id: 4,
+    title: "Hệ trần gỗ nghệ thuật nhà hàng cao cấp",
+    category: "noi-that",
+    image: "/projects/project-4.png",
+    desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc.",
+    tags: ["Trần gỗ", "Trang trí", "Nội thất"]
+  },
+  {
+    id: 5,
+    title: "Sảnh nhà hàng cafe lam nhôm giả gỗ hoàn thiện",
+    category: "lam-nhom",
+    image: "/projects/project-5.png",
+    desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng.",
+    tags: ["Lam nhôm", "Vân gỗ", "Hoàn thiện"]
+  },
+  {
+    id: 6,
+    title: "Trần lam nhôm giả gỗ góc sảnh đứng đón sáng",
+    category: "lam-nhom",
+    image: "/projects/project-6.png",
+    desc: "Kiến trúc trần lam nhôm chạy dọc song song, kết hợp hệ thống đèn âm trần hiện đại.",
+    tags: ["Lam nhôm", "Đèn âm trần", "Hiện đại"]
+  },
+  {
+    id: 7,
+    title: "Thi công vách ngoài trời chống ẩm biệt thự Nha Trang",
+    category: "thach-cao",
+    image: "/projects/project-7.png",
+    desc: "Lắp đặt tấm thạch cao chịu nước mặt ngoài công trình, đảm bảo cách âm cách nhiệt tốt.",
+    tags: ["Thạch cao", "Chống ẩm", "Biệt thự"]
+  },
+  {
+    id: 8,
+    title: "Lắp ráp hệ lam nhôm giả gỗ trên giàn giáo cao",
+    category: "lam-nhom",
+    image: "/projects/project-8.png",
+    desc: "Đội ngũ thợ tay nghề cao, thi công tỉ mỉ từng thanh lam thẳng tắp, bảo đảm tính thẩm mỹ.",
+    tags: ["Lam nhôm", "Thi công", "Tỉ mỉ"]
+  },
+  {
+    id: 9,
+    title: "Đội ngũ Gia Huy thi công lam nhôm sảnh lớn",
+    category: "lam-nhom",
+    image: "/projects/project-9.png",
+    desc: "Lắp ráp đồng loạt hệ trần lam nhôm vân gỗ quy mô lớn đúng tiến độ bàn giao.",
+    tags: ["Lam nhôm", "Đúng tiến độ", "Giá xưởng"]
+  }
+];
+
+const categories = [
+  { id: "all", name: "Tất cả công trình" },
+  { id: "lam-nhom", name: "Trần & Lam nhôm" },
+  { id: "thach-cao", name: "Trần & Vách thạch cao" },
+  { id: "noi-that", name: "Trần gỗ nghệ thuật" }
+];
+---
+
+<div class="space-y-12">
+  <!-- Pill Filter Buttons - Vibrant Gradient styles -->
+  <div class="flex flex-wrap justify-center gap-3">
+    {categories.map((cat, idx) => (
+      <button
+        class={`filter-btn px-6 py-3 rounded-full font-display font-black text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+          idx === 0 
+            ? "bg-gradient-to-r from-brand-primary to-brand-orange text-white shadow-lg shadow-brand-primary/35 active:scale-95" 
+            : "bg-white dark:bg-slate-900 text-text-base hover:bg-gradient-to-r hover:from-brand-primary hover:to-brand-orange hover:text-white hover:shadow-lg border border-stone-200/60 dark:border-white/5 active:scale-95"
+        }`}
+        data-category={cat.id}
+      >
+        {cat.name}
+      </button>
+    ))}
+  </div>
+
+  <!-- Rounded Project Grid -->
+  <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    {projects.map((proj) => (
+      <div
+        class="project-card glowing-card group rounded-[2rem] bg-white dark:bg-slate-900 border border-stone-200/50 dark:border-white/5 shadow-xl shadow-stone-200/20 dark:shadow-black/20 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between overflow-hidden cursor-pointer"
+        data-category={proj.category}
+        data-id={proj.id}
+      >
+        <!-- Card Image with Hover Overlay -->
+        <div class="relative aspect-[4/3] bg-stone-100 dark:bg-slate-800 overflow-hidden project-img-container">
+          <img
+            src={proj.image}
+            alt={proj.title}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+            loading="lazy"
+          />
+          <!-- Glass Overlay for Image magnifying -->
+          <div class="absolute inset-0 bg-brand-primary-deep/30 backdrop-blur-xs opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300">
+            <span class="size-12 rounded-full bg-white text-brand-primary-deep flex items-center justify-center text-lg shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </span>
+          </div>
+          <!-- Category badge overlay -->
+          <span class="absolute top-4 left-4 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-extrabold text-[9px] uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-lg border border-white/20">
+            {proj.category === "lam-nhom" ? "Lam nhôm" : proj.category === "thach-cao" ? "Thạch cao" : "Nội thất"}
+          </span>
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h4 class="font-display font-extrabold text-base text-text-base leading-tight group-hover:text-brand-primary dark:group-hover:text-brand-accent transition-colors line-clamp-2">
+              {proj.title}
+            </h4>
+            <p class="text-xs text-text-muted leading-relaxed line-clamp-3">
+              {proj.desc}
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-stone-100 dark:border-white/5">
+            {proj.tags.map((tag) => (
+              <span class="text-[9px] font-extrabold text-brand-primary dark:text-brand-accent bg-brand-primary/5 dark:bg-brand-accent/5 px-2.5 py-1 rounded-full border border-brand-primary/10 dark:border-brand-accent/10">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Fullscreen Glassmorphic Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-[300] bg-slate-950/85 backdrop-blur-2xl flex flex-col items-center justify-center p-4 md:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+    <button id="lightbox-close" class="absolute top-4 right-4 md:top-6 md:right-6 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-colors shadow-2xl cursor-pointer" aria-label="Đóng thư viện">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+
+    <!-- Navigation Arrows -->
+    <button id="lightbox-prev" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer" aria-label="Hình trước">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <button id="lightbox-next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer" aria-label="Hình sau">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Image & Caption Container -->
+    <div class="max-w-4xl w-full flex flex-col items-center space-y-6">
+      <div class="relative bg-white/5 p-2 rounded-3xl border border-white/10 shadow-2xl max-h-[70vh] flex items-center justify-center overflow-hidden">
+        <img id="lightbox-img" src="" alt="Project Image" class="max-w-full max-h-[66vh] rounded-2xl object-contain" />
+      </div>
+      <div class="text-center text-white max-w-2xl px-4 space-y-2">
+        <h4 id="lightbox-title" class="font-display font-extrabold text-lg md:text-xl text-brand-accent"></h4>
+        <p id="lightbox-desc" class="text-xs md:text-sm text-white/70 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Project data passed to Client script for Lightbox navigation
+  const projectsData = [
+    {
+      id: 1,
+      title: "Thi công trần lam nhôm giả gỗ sảnh cafe ngoài trời",
+      category: "lam-nhom",
+      image: "/projects/project-1.png",
+      desc: "Lắp đặt hệ lam nhôm vân gỗ kháng nước, chịu nhiệt độ cao cho khu resort ven biển Nha Trang."
+    },
+    {
+      id: 2,
+      title: "Khung xương và vách thạch cao ngoài trời Knauf",
+      category: "thach-cao",
+      image: "/projects/project-2.png",
+      desc: "Thi công hệ vách thạch cao chống ẩm thương hiệu Knauf Đức cho dự án biệt thự biển."
+    },
+    {
+      id: 4,
+      title: "Hệ trần gỗ nghệ thuật nhà hàng cao cấp",
+      category: "noi-that",
+      image: "/projects/project-4.png",
+      desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc."
+    },
+    {
+      id: 5,
+      title: "Sảnh nhà hàng cafe lam nhôm giả gỗ hoàn thiện",
+      category: "lam-nhom",
+      image: "/projects/project-5.png",
+      desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng."
+    },
+    {
+      id: 6,
+      title: "Trần lam nhôm giả gỗ góc sảnh đứng đón sáng",
+      category: "lam-nhom",
+      image: "/projects/project-6.png",
+      desc: "Kiến trúc trần lam nhôm chạy dọc song song, kết hợp hệ thống đèn âm trần hiện đại."
+    },
+    {
+      id: 7,
+      title: "Thi công vách ngoài trời chống ẩm biệt thự Nha Trang",
+      category: "thach-cao",
+      image: "/projects/project-7.png",
+      desc: "Lắp đặt tấm thạch cao chịu nước mặt ngoài công trình, đảm bảo cách âm cách nhiệt tốt."
+    },
+    {
+      id: 8,
+      title: "Lắp ráp hệ lam nhôm giả gỗ trên giàn giáo cao",
+      category: "lam-nhom",
+      image: "/projects/project-8.png",
+      desc: "Đội ngũ thợ tay nghề cao, thi công tỉ mỉ từng thanh lam thẳng tắp, bảo đảm tính thẩm mỹ."
+    },
+    {
+      id: 9,
+      title: "Đội ngũ Gia Huy thi công lam nhôm sảnh lớn",
+      category: "lam-nhom",
+      image: "/projects/project-9.png",
+      desc: "Lắp ráp đồng loạt hệ trần lam nhôm vân gỗ quy mô lớn đúng tiến độ bàn giao."
+    }
+  ];
+
+  let activeFilter = "all";
+  let visibleProjects = [...projectsData];
+  let currentImageIdx = 0;
+
+  // DOM Elements
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+  const modal = document.getElementById("lightbox-modal");
+  const modalImg = document.getElementById("lightbox-img") as HTMLImageElement;
+  const modalTitle = document.getElementById("lightbox-title");
+  const modalDesc = document.getElementById("lightbox-desc");
+  const modalClose = document.getElementById("lightbox-close");
+  const modalPrev = document.getElementById("lightbox-prev");
+  const modalNext = document.getElementById("lightbox-next");
+
+  // Filtering Logic
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const cat = btn.getAttribute("data-category") || "all";
+      activeFilter = cat;
+
+      // Update button styles
+      filterButtons.forEach(b => {
+        b.classList.remove("bg-gradient-to-r", "from-brand-primary", "to-brand-orange", "text-white", "shadow-lg", "shadow-brand-primary/35");
+        b.classList.add("bg-white", "dark:bg-slate-900", "text-text-base", "border-stone-200/60", "dark:border-white/5");
+      });
+      btn.classList.add("bg-gradient-to-r", "from-brand-primary", "to-brand-orange", "text-white", "shadow-lg", "shadow-brand-primary/35");
+      btn.classList.remove("bg-white", "dark:bg-slate-900", "text-text-base", "border-stone-200/60", "dark:border-white/5");
+
+      // Filter grid cards
+      projectCards.forEach(card => {
+        const cardCat = card.getAttribute("data-category");
+        if (cat === "all" || cardCat === cat) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      // Update visible projects for lightbox slideshow
+      visibleProjects = cat === "all" 
+        ? projectsData 
+        : projectsData.filter(p => p.category === cat);
+    });
+  });
+
+  // Lightbox Logic
+  function openLightbox(id: number) {
+    const idx = visibleProjects.findIndex(p => p.id === id);
+    if (idx === -1) return;
+    
+    currentImageIdx = idx;
+    updateLightboxContent();
+    
+    modal?.classList.remove("opacity-0", "pointer-events-none");
+    modal?.classList.add("opacity-100");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    modal?.classList.remove("opacity-100");
+    modal?.classList.add("opacity-0", "pointer-events-none");
+    document.body.style.overflow = "";
+  }
+
+  function updateLightboxContent() {
+    const proj = visibleProjects[currentImageIdx];
+    if (!proj) return;
+    
+    if (modalImg) modalImg.src = proj.image;
+    if (modalTitle) modalTitle.textContent = proj.title;
+    if (modalDesc) modalDesc.textContent = proj.desc;
+  }
+
+  function nextImage() {
+    if (visibleProjects.length === 0) return;
+    currentImageIdx = (currentImageIdx + 1) % visibleProjects.length;
+    updateLightboxContent();
+  }
+
+  function prevImage() {
+    if (visibleProjects.length === 0) return;
+    currentImageIdx = (currentImageIdx - 1 + visibleProjects.length) % visibleProjects.length;
+    updateLightboxContent();
+  }
+
+  // Click on card triggers Lightbox
+  projectCards.forEach(card => {
+    const imgContainer = card.querySelector(".project-img-container");
+    const id = parseInt(card.getAttribute("data-id") || "0");
+    imgContainer?.addEventListener("click", () => {
+      openLightbox(id);
+    });
+  });
+
+  // Close and arrow listeners
+  modalClose?.addEventListener("click", closeLightbox);
+  modalNext?.addEventListener("click", nextImage);
+  modalPrev?.addEventListener("click", prevImage);
+
+  // Close lightbox on clicking backdrop (outside image box)
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard Navigation
+  window.addEventListener("keydown", (e) => {
+    if (!modal?.classList.contains("opacity-100")) return;
+    
+    if (e.key === "Escape") {
+      closeLightbox();
+    } else if (e.key === "ArrowRight") {
+      nextImage();
+    } else if (e.key === "ArrowLeft") {
+      prevImage();
+    }
+  });
+</script>

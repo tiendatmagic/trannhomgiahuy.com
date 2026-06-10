@@ -1,23 +1,331 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Trần Nhôm Gia Huy - Thi Công Trần & Vách Chuyên Nghiệp Nha Trang", 
+	description = "Dịch vụ thi công trọn gói trần nhôm giả gỗ, trần thạch cao, lam nhựa giả gỗ giá rẻ tại Nha Trang, Khánh Hòa. Thiết kế hiện đại, thi công nhanh đúng tiến độ."
+} = Astro.props;
+---
 <!doctype html>
-<html lang="en">
+<html lang="vi" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Chakra+Petch:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		
+		<!-- FontAwesome for Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+		<!-- Inline Script to prevent FOUC for Theme Toggle -->
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+			window.localStorage.setItem('theme', theme);
+		</script>
 	</head>
-	<body>
-		<slot />
+	<body class="flex flex-col min-h-screen text-text-base bg-bg-base font-sans antialiased overflow-x-hidden transition-colors duration-300">
+		
+		<!-- Glowing Background Ambient Orbs (Layout Level) -->
+		<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden h-fit">
+			<div class="glow-orb glow-yellow w-[500px] h-[500px] -left-60 -top-20 opacity-20 animate-float"></div>
+			<div class="glow-orb glow-orange w-[400px] h-[400px] -right-40 top-[15%] opacity-15 animate-float-reverse"></div>
+			<div class="glow-orb glow-cyan w-[350px] h-[350px] left-[20%] top-[45%] opacity-10 animate-float"></div>
+		</div>
+
+		<!-- Floating Capsule Header in Vibrant Brand Colors with White Text -->
+		<header id="main-header" class="fixed inset-x-4 sm:inset-x-6 lg:inset-x-8 top-4 z-50 mx-auto w-auto max-w-7xl transition-all duration-500 ease-out bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-deep/95 to-brand-orange/90 backdrop-blur-xl border border-white/20 text-white rounded-full shadow-xl shadow-brand-primary/10">
+			<div class="px-6 md:px-8 py-3">
+				<div class="flex items-center justify-between gap-4">
+					
+					<!-- Mobile Hamburger Button -->
+					<button id="mobile-menu-btn" class="lg:hidden size-10 flex items-center justify-center text-white hover:bg-white/10 transition rounded-full border border-white/20" aria-label="Mở menu">
+						<i class="fa-solid fa-bars text-lg"></i>
+					</button>
+					
+					<!-- Logo & Name -->
+					<a href="/" class="flex items-center gap-2.5 bg-white px-4 py-1.5 rounded-full border border-stone-200/50 shadow-sm transition-transform duration-300 hover:scale-105">
+						<img src="/logo.svg" alt="Trần Nhôm Gia Huy" class="h-8 w-auto object-contain">
+						<div class="flex flex-col leading-none">
+							<span class="font-display font-extrabold text-stone-900 text-xs tracking-wider">TRẦN NHÔM</span>
+							<span class="font-display font-black text-brand-primary text-[10px] tracking-widest mt-0.5">GIA HUY</span>
+						</div>
+					</a>
+					
+					<!-- Navigation links (Desktop - Capsule Rounded styles) -->
+					<nav class="hidden lg:flex items-center gap-1.5">
+						<a href="#top" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white bg-white/15 transition-all duration-250">Trang chủ</a>
+						<a href="#gioi-thieu" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250">Giới thiệu</a>
+						<a href="#dich-vu" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250">Dịch vụ</a>
+						<a href="#thu-vien" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250">Thực tế</a>
+						<a href="#quy-trinh" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250">Quy trình</a>
+						<a href="#lien-he" class="nav-link px-4 py-2 rounded-full font-display font-bold text-xs uppercase tracking-wider text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250">Liên hệ</a>
+					</nav>
+					
+					<!-- Actions Right (Desktop / Tablet) -->
+					<div class="flex items-center gap-3">
+						<!-- Theme Toggle Button -->
+						<button id="theme-toggle" class="size-10 flex items-center justify-center text-white hover:bg-white/10 transition rounded-full border border-white/20 cursor-pointer" aria-label="Đổi giao diện">
+							<i class="fa-solid fa-sun text-brand-accent text-sm hidden dark:block"></i>
+							<i class="fa-solid fa-moon text-white text-sm dark:hidden"></i>
+						</button>
+
+						<a href="tel:0935373577" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-orange hover:shadow-lg text-brand-primary-deep font-display font-extrabold text-xs px-5 py-2.5 rounded-full border border-white/30 transition-all duration-300 shine-effect cursor-pointer">
+							<i class="fa-solid fa-phone"></i>
+							<span>GỌI 0935.37.3577</span>
+						</a>
+						
+						<!-- Mobile Call icon -->
+						<a href="tel:0935373577" class="sm:hidden flex size-10 items-center justify-center bg-gradient-to-r from-brand-accent to-brand-orange text-brand-primary-deep border border-white/30 rounded-full shadow-md transition-transform active:scale-95" aria-label="Gọi hotline">
+							<i class="fa-solid fa-phone text-sm"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		
+		<!-- Mobile Drawer Menu - Glassmorphic & Rounded -->
+		<div id="drawer-overlay" class="fixed inset-0 z-[200] bg-brand-primary-deep/20 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+		<div id="drawer-menu" class="fixed inset-y-0 left-0 z-[210] w-[80vw] max-w-[19rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-6 border-r border-stone-200/50 dark:border-white/10 shadow-2xl rounded-r-[2rem] -translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between">
+			<div>
+				<div class="flex items-center justify-between border-b border-stone-200/50 dark:border-white/10 pb-4 mb-6">
+					<a href="/" class="flex items-center gap-2.5 bg-white px-3 py-1 rounded-full border border-stone-200/50 shadow-sm">
+						<img src="/logo.svg" alt="Trần Nhôm Gia Huy" class="h-8 w-auto">
+						<span class="font-display font-extrabold text-stone-900 text-xs tracking-wider">GIA HUY</span>
+					</a>
+					<button id="drawer-close-btn" class="size-9 flex items-center justify-center text-text-base hover:bg-stone-100 dark:hover:bg-white/10 rounded-full border border-stone-200 dark:border-white/10" aria-label="Đóng menu">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+				<nav class="flex flex-col gap-1.5">
+					<a href="#top" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-house w-5 text-center text-stone-400"></i> Trang chủ
+					</a>
+					<a href="#gioi-thieu" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-circle-info w-5 text-center text-stone-400"></i> Giới thiệu
+					</a>
+					<a href="#dich-vu" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-hammer w-5 text-center text-stone-400"></i> Dịch vụ thi công
+					</a>
+					<a href="#thu-vien" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-images w-5 text-center text-stone-400"></i> Thực tế
+					</a>
+					<a href="#quy-trinh" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-route w-5 text-center text-stone-400"></i> Quy trình
+					</a>
+					<a href="#lien-he" class="drawer-link flex items-center gap-3 px-4 py-3 rounded-xl font-display font-bold text-sm text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200">
+						<i class="fa-solid fa-envelope w-5 text-center text-stone-400"></i> Liên hệ báo giá
+					</a>
+				</nav>
+			</div>
+			
+			<div class="pt-6 border-t border-stone-200/50 dark:border-white/10">
+				<a href="tel:0935373577" class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-brand-primary-dark to-brand-orange text-white font-display font-bold py-3.5 rounded-full shadow-lg shine-effect">
+					<i class="fa-solid fa-phone"></i>
+					<span>Gọi Ngay 0935.37.3577</span>
+				</a>
+			</div>
+		</div>
+
+		<!-- Main Page Content -->
+		<main class="flex-grow pt-24 z-10 relative">
+			<slot />
+		</main>
+
+		<!-- Footer in Vibrant Gradient Brand Color with White Text -->
+		<footer class="bg-gradient-to-br from-brand-primary-deep via-brand-primary-dark to-[#5c2400] text-white pt-16 pb-6 relative overflow-hidden">
+			<!-- Wave design background -->
+			<div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(circle_at_bottom_left,#fec200_1px,transparent_1px)] bg-[size:16px_16px]"></div>
+			
+			<!-- Bottom glow decoration -->
+			<div class="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-brand-orange/20 blur-[100px] pointer-events-none"></div>
+
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+					
+					<!-- Column 1: Info -->
+					<div class="md:col-span-5 space-y-5">
+						<div class="flex items-center gap-2.5 bg-white px-4 py-1.5 rounded-full border border-white/10 shadow-sm w-fit">
+							<img src="/logo.svg" alt="Trần Nhôm Gia Huy" class="h-8 w-auto">
+							<div class="flex flex-col leading-none">
+								<span class="font-display font-extrabold text-stone-900 text-xs tracking-wider">TRẦN NHÔM</span>
+								<span class="font-display font-black text-brand-primary text-[10px] tracking-widest mt-0.5">GIA HUY</span>
+							</div>
+						</div>
+						<p class="text-white/80 text-sm leading-relaxed max-w-md">
+							Đơn vị chuyên cung cấp vật tư chính hãng và trực tiếp thi công trọn gói trần nhôm, trần thạch cao, lam nhựa giả gỗ cao cấp cho nhà dân, biệt thự, nhà hàng, khách sạn lớn tại Nha Trang - Khánh Hòa.
+						</p>
+						<div class="flex gap-2.5">
+							<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="size-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-accent hover:text-brand-primary-deep border border-white/20 transition-all duration-300" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+							<a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="size-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-accent hover:text-brand-primary-deep border border-white/20 transition-all duration-300" aria-label="Youtube"><i class="fa-brands fa-youtube text-sm"></i></a>
+							<a href="tel:0935373577" class="size-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-accent hover:text-brand-primary-deep border border-white/20 transition-all duration-300" aria-label="Gọi điện thoại"><i class="fa-solid fa-phone text-sm"></i></a>
+						</div>
+					</div>
+					
+					<!-- Column 2: Quick Links -->
+					<div class="md:col-span-3 space-y-5">
+						<h3 class="font-display font-extrabold text-base text-brand-accent uppercase tracking-widest">Danh mục nhanh</h3>
+						<ul class="space-y-3 text-sm text-white/80 font-medium">
+							<li><a href="#top" class="hover:text-brand-accent transition-colors flex items-center gap-2.5"><i class="fa-solid fa-circle text-[6px] text-brand-accent"></i> Trang chủ</a></li>
+							<li><a href="#gioi-thieu" class="hover:text-brand-accent transition-colors flex items-center gap-2.5"><i class="fa-solid fa-circle text-[6px] text-brand-accent"></i> Giới thiệu</a></li>
+							<li><a href="#dich-vu" class="hover:text-brand-accent transition-colors flex items-center gap-2.5"><i class="fa-solid fa-circle text-[6px] text-brand-accent"></i> Dịch vụ thi công</a></li>
+							<li><a href="#thu-vien" class="hover:text-brand-accent transition-colors flex items-center gap-2.5"><i class="fa-solid fa-circle text-[6px] text-brand-accent"></i> Thư viện thực tế</a></li>
+							<li><a href="#lien-he" class="hover:text-brand-accent transition-colors flex items-center gap-2.5"><i class="fa-solid fa-circle text-[6px] text-brand-accent"></i> Liên hệ báo giá</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column 3: Contact Details -->
+					<div class="md:col-span-4 space-y-5">
+						<h3 class="font-display font-extrabold text-base text-brand-accent uppercase tracking-widest">Thông tin liên hệ</h3>
+						<ul class="space-y-3 text-sm text-white/80 leading-relaxed font-medium">
+							<li class="flex items-start gap-3.5">
+								<i class="fa-solid fa-location-dot mt-1 text-brand-accent shrink-0 text-base"></i>
+								<span>Vĩnh Lương, TP. Nha Trang, Tỉnh Khánh Hòa</span>
+							</li>
+							<li class="flex items-center gap-3.5">
+								<i class="fa-solid fa-phone text-brand-accent shrink-0"></i>
+								<a href="tel:0935373577" class="hover:text-brand-accent hover:underline font-extrabold">0935.37.3577</a>
+							</li>
+							<li class="flex items-center gap-3.5">
+								<i class="fa-solid fa-envelope text-brand-accent shrink-0"></i>
+								<span>trannhomgiahuy.nt@gmail.com</span>
+							</li>
+							<li class="flex items-center gap-3.5">
+								<i class="fa-solid fa-clock text-brand-accent shrink-0"></i>
+								<span>Tư vấn hỗ trợ 24/7 (Cả lễ & CN)</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4 text-center sm:text-left">
+					<p>© {new Date().getFullYear()} Trần Nhôm Gia Huy. Thiết kế chuẩn kiến trúc & thi công cao cấp.</p>
+					<p>Bảo lưu mọi quyền. Nha Trang, Khánh Hòa.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Floating Pulse Hotline Button & Zalo Widget (Rounded Pulsing) -->
+		<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3.5">
+			
+			<!-- Zalo Icon Button -->
+			<a href="https://zalo.me/0935373577" target="_blank" rel="noopener noreferrer" class="flex size-12 items-center justify-center bg-[#0068ff] hover:bg-[#0052cc] text-white rounded-full shadow-lg hover:shadow-[#0068ff]/30 border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 cursor-pointer" aria-label="Chat Zalo">
+				<span class="font-display font-black text-xs tracking-tighter">Zalo</span>
+			</a>
+			
+			<!-- Pulsing Call Button -->
+			<a href="tel:0935373577" class="animate-hotline flex size-12 items-center justify-center bg-gradient-to-r from-brand-orange to-brand-accent text-brand-primary-deep rounded-full shadow-lg hover:shadow-brand-accent/30 border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 cursor-pointer" aria-label="Gọi điện thoại ngay">
+				<i class="fa-solid fa-phone text-lg"></i>
+			</a>
+			
+		</div>
+
+		<!-- Client side menu & theme toggle scripts -->
+		<script>
+			const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+			const drawerCloseBtn = document.getElementById("drawer-close-btn");
+			const drawerOverlay = document.getElementById("drawer-overlay");
+			const drawerMenu = document.getElementById("drawer-menu");
+			const drawerLinks = document.querySelectorAll(".drawer-link");
+			const header = document.getElementById("main-header");
+			const themeToggle = document.getElementById("theme-toggle");
+
+			function openDrawer() {
+				drawerOverlay?.classList.remove("pointer-events-none", "opacity-0");
+				drawerOverlay?.classList.add("opacity-100");
+				drawerMenu?.classList.remove("-translate-x-full");
+				document.body.style.overflow = "hidden";
+			}
+
+			function closeDrawer() {
+				drawerOverlay?.classList.remove("opacity-100");
+				drawerOverlay?.classList.add("pointer-events-none", "opacity-0");
+				drawerMenu?.classList.add("-translate-x-full");
+				document.body.style.overflow = "";
+			}
+
+			mobileMenuBtn?.addEventListener("click", openDrawer);
+			drawerCloseBtn?.addEventListener("click", closeDrawer);
+			drawerOverlay?.addEventListener("click", closeDrawer);
+			
+			drawerLinks.forEach(link => {
+				link.addEventListener("click", closeDrawer);
+			});
+
+			// Header capsule shrink and shift on scroll
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 40) {
+					header?.classList.remove("top-4");
+					header?.classList.add("top-2", "shadow-2xl", "bg-opacity-95");
+				} else {
+					header?.classList.add("top-4");
+					header?.classList.remove("top-2", "shadow-2xl", "bg-opacity-95");
+				}
+			});
+
+			// Theme toggle click handler
+			themeToggle?.addEventListener("click", () => {
+				const isDark = document.documentElement.classList.toggle("dark");
+				localStorage.setItem("theme", isDark ? "dark" : "light");
+			});
+
+			// Active link indicator based on scroll (Capsule round styles)
+			const sections = document.querySelectorAll("section[id]");
+			const navLinks = document.querySelectorAll(".nav-link");
+
+			function highlightNav() {
+				let scrollY = window.pageYOffset;
+				let currentSectionId = "top";
+				
+				sections.forEach(current => {
+					const sectionHeight = current.offsetHeight;
+					const sectionTop = current.offsetTop - 140;
+					const sectionId = current.getAttribute("id");
+					
+					if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+						currentSectionId = sectionId;
+					}
+				});
+
+				navLinks.forEach(link => {
+					const href = link.getAttribute("href");
+					const isActive = href === `#${currentSectionId}`;
+					link.classList.toggle("bg-white/15", isActive);
+					link.classList.toggle("text-white", isActive);
+					link.classList.toggle("text-white/80", !isActive);
+				});
+			}
+
+			window.addEventListener("scroll", highlightNav);
+			window.addEventListener("DOMContentLoaded", highlightNav);
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
