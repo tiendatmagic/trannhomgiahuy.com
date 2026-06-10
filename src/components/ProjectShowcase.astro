@@ -73,8 +73,8 @@ const categories = [
     {categories.map((cat, idx) => (
       <button
         class={`filter-btn px-6 py-3 rounded-full font-display font-black text-xs lg:text-base uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-          idx === 0 
-            ? "bg-gradient-to-r from-brand-primary to-brand-orange text-white shadow-lg shadow-brand-primary/35 active:scale-95" 
+          idx === 0
+            ? "bg-gradient-to-r from-brand-primary to-brand-orange text-white shadow-lg shadow-brand-primary/35 active:scale-95"
             : "bg-white text-text-base hover:bg-gradient-to-r hover:from-brand-primary hover:to-brand-orange hover:text-white hover:shadow-lg border border-stone-200/60 active:scale-95"
         }`}
         data-category={cat.id}
@@ -111,10 +111,10 @@ const categories = [
         <!-- Card Content (Removed Tags completely) -->
         <div class="p-3 sm:p-4 lg:p-5 flex-grow flex flex-col justify-between space-y-2 sm:space-y-3">
           <div class="space-y-1.5">
-            <h4 class="font-display font-extrabold text-sm sm:text-base lg:text-lg text-text-base leading-tight group-hover:text-brand-primary transition-colors line-clamp-2">
+            <h4 class="font-display font-extrabold text-base sm:text-lg lg:text-xl text-text-base leading-tight group-hover:text-brand-primary transition-colors line-clamp-2">
               {proj.title}
             </h4>
-            <p class="text-[11px] sm:text-xs lg:text-sm text-text-muted leading-relaxed line-clamp-3">
+            <p class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed line-clamp-3">
               {proj.desc}
             </p>
           </div>
@@ -133,7 +133,7 @@ const categories = [
     <button id="lightbox-prev" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer" aria-label="Hình trước">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
-    
+
     <button id="lightbox-next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-all hover:scale-105 active:scale-95 shadow-2xl cursor-pointer" aria-label="Hình sau">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
@@ -252,8 +252,8 @@ const categories = [
       });
 
       // Update visible projects for lightbox slideshow
-      visibleProjects = cat === "all" 
-        ? projectsData 
+      visibleProjects = cat === "all"
+        ? projectsData
         : projectsData.filter(p => p.category === cat);
     });
   });
@@ -262,14 +262,14 @@ const categories = [
   function openLightbox(id: number) {
     const idx = visibleProjects.findIndex(p => p.id === id);
     if (idx === -1) return;
-    
+
     currentImageIdx = idx;
     updateLightboxContent();
-    
+
     modal?.classList.remove("opacity-0", "pointer-events-none");
     modal?.classList.add("opacity-100");
     document.body.style.overflow = "hidden";
-    
+
     // Hide header so lightbox overlay fully covers it
     const header = document.getElementById("main-header");
     if (header) header.style.visibility = "hidden";
@@ -279,7 +279,7 @@ const categories = [
     modal?.classList.remove("opacity-100");
     modal?.classList.add("opacity-0", "pointer-events-none");
     document.body.style.overflow = "";
-    
+
     // Restore header visibility
     const header = document.getElementById("main-header");
     if (header) header.style.visibility = "";
@@ -288,7 +288,7 @@ const categories = [
   function updateLightboxContent() {
     const proj = visibleProjects[currentImageIdx];
     if (!proj) return;
-    
+
     if (modalImg) modalImg.src = proj.image;
     if (modalTitle) modalTitle.textContent = proj.title;
     if (modalDesc) modalDesc.textContent = proj.desc;
@@ -330,7 +330,7 @@ const categories = [
   // Keyboard Navigation
   window.addEventListener("keydown", (e) => {
     if (!modal?.classList.contains("opacity-100")) return;
-    
+
     if (e.key === "Escape") {
       closeLightbox();
     } else if (e.key === "ArrowRight") {
