@@ -6,64 +6,56 @@ const projects = [
     title: "Thi công trần lam nhôm giả gỗ sảnh cafe ngoài trời",
     category: "lam-nhom",
     image: "/projects/project-1.png",
-    desc: "Lắp đặt hệ lam nhôm vân gỗ kháng nước, chịu nhiệt độ cao cho khu resort ven biển Nha Trang.",
-    tags: ["Lam nhôm", "Vân gỗ", "Ven biển"]
+    desc: "Lắp đặt hệ lam nhôm vân gỗ kháng nước, chịu nhiệt độ cao cho khu resort ven biển Nha Trang."
   },
   {
     id: 2,
     title: "Khung xương và vách thạch cao ngoài trời Knauf",
     category: "thach-cao",
     image: "/projects/project-2.png",
-    desc: "Thi công hệ vách thạch cao chống ẩm thương hiệu Knauf Đức cho dự án biệt thự biển.",
-    tags: ["Thạch cao", "Chống ẩm", "Knauf"]
+    desc: "Thi công hệ vách thạch cao chống ẩm thương hiệu Knauf Đức cho dự án biệt thự biển."
   },
   {
     id: 4,
     title: "Hệ trần gỗ nghệ thuật nhà hàng cao cấp",
     category: "noi-that",
     image: "/projects/project-4.png",
-    desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc.",
-    tags: ["Trần gỗ", "Trang trí", "Nội thất"]
+    desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc."
   },
   {
     id: 5,
     title: "Sảnh nhà hàng cafe lam nhôm giả gỗ hoàn thiện",
     category: "lam-nhom",
     image: "/projects/project-5.png",
-    desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng.",
-    tags: ["Lam nhôm", "Vân gỗ", "Hoàn thiện"]
+    desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng."
   },
   {
     id: 6,
     title: "Trần lam nhôm giả gỗ góc sảnh đứng đón sáng",
     category: "lam-nhom",
     image: "/projects/project-6.png",
-    desc: "Kiến trúc trần lam nhôm chạy dọc song song, kết hợp hệ thống đèn âm trần hiện đại.",
-    tags: ["Lam nhôm", "Đèn âm trần", "Hiện đại"]
+    desc: "Kiến trúc trần lam nhôm chạy dọc song song, kết hợp hệ thống đèn âm trần hiện đại."
   },
   {
     id: 7,
     title: "Thi công vách ngoài trời chống ẩm biệt thự Nha Trang",
     category: "thach-cao",
     image: "/projects/project-7.png",
-    desc: "Lắp đặt tấm thạch cao chịu nước mặt ngoài công trình, đảm bảo cách âm cách nhiệt tốt.",
-    tags: ["Thạch cao", "Chống ẩm", "Biệt thự"]
+    desc: "Lắp đặt tấm thạch cao chịu nước mặt ngoài công trình, đảm bảo cách âm cách nhiệt tốt."
   },
   {
     id: 8,
     title: "Lắp ráp hệ lam nhôm giả gỗ trên giàn giáo cao",
     category: "lam-nhom",
     image: "/projects/project-8.png",
-    desc: "Đội ngũ thợ tay nghề cao, thi công tỉ mỉ từng thanh lam thẳng tắp, bảo đảm tính thẩm mỹ.",
-    tags: ["Lam nhôm", "Thi công", "Tỉ mỉ"]
+    desc: "Đội ngũ thợ tay nghề cao, thi công tỉ mỉ từng thanh lam thẳng tắp, bảo đảm tính thẩm mỹ."
   },
   {
     id: 9,
     title: "Đội ngũ Gia Huy thi công lam nhôm sảnh lớn",
     category: "lam-nhom",
     image: "/projects/project-9.png",
-    desc: "Lắp ráp đồng loạt hệ trần lam nhôm vân gỗ quy mô lớn đúng tiến độ bàn giao.",
-    tags: ["Lam nhôm", "Đúng tiến độ", "Giá xưởng"]
+    desc: "Lắp ráp đồng loạt hệ trần lam nhôm vân gỗ quy mô lớn đúng tiến độ bàn giao."
   }
 ];
 
@@ -76,14 +68,14 @@ const categories = [
 ---
 
 <div class="space-y-12">
-  <!-- Pill Filter Buttons - Vibrant Gradient styles -->
+  <!-- Pill Filter Buttons - Vibrant Gradient styles (for buttons, gradients are allowed) -->
   <div class="flex flex-wrap justify-center gap-3">
     {categories.map((cat, idx) => (
       <button
-        class={`filter-btn px-6 py-3 rounded-full font-display font-black text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+        class={`filter-btn px-6 py-3 rounded-full font-display font-black text-xs lg:text-base uppercase tracking-wider transition-all duration-300 cursor-pointer ${
           idx === 0 
             ? "bg-gradient-to-r from-brand-primary to-brand-orange text-white shadow-lg shadow-brand-primary/35 active:scale-95" 
-            : "bg-white dark:bg-slate-900 text-text-base hover:bg-gradient-to-r hover:from-brand-primary hover:to-brand-orange hover:text-white hover:shadow-lg border border-stone-200/60 dark:border-white/5 active:scale-95"
+            : "bg-white text-text-base hover:bg-gradient-to-r hover:from-brand-primary hover:to-brand-orange hover:text-white hover:shadow-lg border border-stone-200/60 active:scale-95"
         }`}
         data-category={cat.id}
       >
@@ -93,15 +85,15 @@ const categories = [
   </div>
 
   <!-- Rounded Project Grid -->
-  <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+  <div id="project-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
     {projects.map((proj) => (
       <div
-        class="project-card glowing-card group rounded-[2rem] bg-white dark:bg-slate-900 border border-stone-200/50 dark:border-white/5 shadow-xl shadow-stone-200/20 dark:shadow-black/20 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between overflow-hidden cursor-pointer"
+        class="project-card group rounded-2xl sm:rounded-[2rem] bg-white border border-stone-200/60 shadow-sm hover:shadow-md hover:border-brand-primary transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
         data-category={proj.category}
         data-id={proj.id}
       >
         <!-- Card Image with Hover Overlay -->
-        <div class="relative aspect-[4/3] bg-stone-100 dark:bg-slate-800 overflow-hidden project-img-container">
+        <div class="relative aspect-[4/3] bg-stone-100 overflow-hidden project-img-container">
           <img
             src={proj.image}
             alt={proj.title}
@@ -114,36 +106,25 @@ const categories = [
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </span>
           </div>
-          <!-- Category badge overlay -->
-          <span class="absolute top-4 left-4 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-extrabold text-[9px] uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-lg border border-white/20">
-            {proj.category === "lam-nhom" ? "Lam nhôm" : proj.category === "thach-cao" ? "Thạch cao" : "Nội thất"}
-          </span>
         </div>
 
-        <!-- Card Content -->
-        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <h4 class="font-display font-extrabold text-base text-text-base leading-tight group-hover:text-brand-primary dark:group-hover:text-brand-accent transition-colors line-clamp-2">
+        <!-- Card Content (Removed Tags completely) -->
+        <div class="p-3 sm:p-4 lg:p-5 flex-grow flex flex-col justify-between space-y-2 sm:space-y-3">
+          <div class="space-y-1.5">
+            <h4 class="font-display font-extrabold text-sm sm:text-base lg:text-lg text-text-base leading-tight group-hover:text-brand-primary transition-colors line-clamp-2">
               {proj.title}
             </h4>
-            <p class="text-xs text-text-muted leading-relaxed line-clamp-3">
+            <p class="text-[11px] sm:text-xs lg:text-sm text-text-muted leading-relaxed line-clamp-3">
               {proj.desc}
             </p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-stone-100 dark:border-white/5">
-            {proj.tags.map((tag) => (
-              <span class="text-[9px] font-extrabold text-brand-primary dark:text-brand-accent bg-brand-primary/5 dark:bg-brand-accent/5 px-2.5 py-1 rounded-full border border-brand-primary/10 dark:border-brand-accent/10">
-                #{tag}
-              </span>
-            ))}
           </div>
         </div>
       </div>
     ))}
   </div>
 
-  <!-- Fullscreen Glassmorphic Lightbox Modal -->
-  <div id="lightbox-modal" class="fixed inset-0 z-[300] bg-slate-950/85 backdrop-blur-2xl flex flex-col items-center justify-center p-4 md:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+  <!-- Fullscreen Lightbox Modal - z-[9999] to cover fixed header -->
+  <div id="lightbox-modal" class="fixed inset-0 z-[9999] bg-black/90 flex flex-col items-center justify-center p-4 md:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
     <button id="lightbox-close" class="absolute top-4 right-4 md:top-6 md:right-6 size-12 flex items-center justify-center bg-white/10 text-white rounded-full border border-white/20 hover:bg-brand-orange hover:text-white transition-colors shadow-2xl cursor-pointer" aria-label="Đóng thư viện">
       <i class="fa-solid fa-xmark text-lg"></i>
     </button>
@@ -164,7 +145,7 @@ const categories = [
       </div>
       <div class="text-center text-white max-w-2xl px-4 space-y-2">
         <h4 id="lightbox-title" class="font-display font-extrabold text-lg md:text-xl text-brand-accent"></h4>
-        <p id="lightbox-desc" class="text-xs md:text-sm text-white/70 leading-relaxed"></p>
+        <p id="lightbox-desc" class="text-xs md:text-base text-white/70 leading-relaxed"></p>
       </div>
     </div>
   </div>
@@ -255,10 +236,10 @@ const categories = [
       // Update button styles
       filterButtons.forEach(b => {
         b.classList.remove("bg-gradient-to-r", "from-brand-primary", "to-brand-orange", "text-white", "shadow-lg", "shadow-brand-primary/35");
-        b.classList.add("bg-white", "dark:bg-slate-900", "text-text-base", "border-stone-200/60", "dark:border-white/5");
+        b.classList.add("bg-white", "text-text-base", "border-stone-200/60");
       });
       btn.classList.add("bg-gradient-to-r", "from-brand-primary", "to-brand-orange", "text-white", "shadow-lg", "shadow-brand-primary/35");
-      btn.classList.remove("bg-white", "dark:bg-slate-900", "text-text-base", "border-stone-200/60", "dark:border-white/5");
+      btn.classList.remove("bg-white", "text-text-base", "border-stone-200/60");
 
       // Filter grid cards
       projectCards.forEach(card => {
@@ -288,12 +269,20 @@ const categories = [
     modal?.classList.remove("opacity-0", "pointer-events-none");
     modal?.classList.add("opacity-100");
     document.body.style.overflow = "hidden";
+    
+    // Hide header so lightbox overlay fully covers it
+    const header = document.getElementById("main-header");
+    if (header) header.style.visibility = "hidden";
   }
 
   function closeLightbox() {
     modal?.classList.remove("opacity-100");
     modal?.classList.add("opacity-0", "pointer-events-none");
     document.body.style.overflow = "";
+    
+    // Restore header visibility
+    const header = document.getElementById("main-header");
+    if (header) header.style.visibility = "";
   }
 
   function updateLightboxContent() {
