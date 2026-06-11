@@ -861,6 +861,79 @@ import BlogSection from "../components/BlogSection.astro";
           </div>
         </article>
       </div>
+  </section>
+
+  <!-- FAQ Section - Clean Accordion disclosure design -->
+  <section class="py-12 md:py-[60px] bg-bg-base border-t border-stone-200/40 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-green w-[300px] h-[300px] left-[-50px] top-[10px] opacity-8 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] right-[-50px] bottom-[10px] opacity-8 animate-float-reverse"></div>
+    </div>
+    
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/20 px-4 py-1.5 rounded-full">
+          <span class="text-xs font-semibold text-brand-green uppercase">Giải đáp chuyên môn</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          CÂU HỎI THƯỜNG GẶP KHI THI CÔNG
+        </h2>
+      </div>
+
+      <!-- Clean disclosures list (Accordions) -->
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <!-- FAQ 1 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Thời gian hoàn thiện trần thạch cao phòng khách thông thường bao lâu?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Thông thường đối với phòng khách nhà dân dụng từ 30 - 50m2, quá trình lắp ráp khung xương chịu lực thô, bắn tấm thạch cao chống ẩm Knauf và hoàn thiện sơn bả matit Dulux sẽ mất khoảng từ <strong>3 - 5 ngày làm việc</strong> để đạt bề mặt phẳng đẹp mỹ thuật tối đa.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Chi phí khảo sát đo đạc hiện trạng là bao nhiêu?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Gia Huy hỗ trợ khảo sát hiện trạng công trình, tư vấn giải pháp thiết kế kỹ thuật và đo đạc lập dự toán báo giá <strong>hoàn toàn MIỄN PHÍ</strong> tận nơi tại khu vực Nha Trang - Khánh Hòa, không ràng buộc khách hàng phải ký hợp đồng.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Trần nhôm vân gỗ có thể lắp đặt cho nhà vệ sinh và toilet không?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            <strong>Rất thích hợp và khuyến khích.</strong> Trần nhôm sở hữu độ bền vĩnh cửu nhờ tính kháng nước 100%, không bị ảnh hưởng bởi hơi nước nóng trong toilet ẩm ướt, không cong vênh mối mọt, vệ sinh lau chùi cực kỳ dễ dàng và không tích tụ mùi hôi.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Chính sách bảo hành trần vách của Gia Huy quy định thế nào?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Tất cả các hạng mục thi công do Gia Huy triển khai đều đi kèm cam kết bảo hành kết cấu chịu lực hệ khung xương và độ bền tấm trần từ <strong>2 đến 5 năm</strong>. Mọi phản hồi sự cố sẽ được tiếp nhận và xử lý tận nhà trong vòng 24h làm việc.
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
