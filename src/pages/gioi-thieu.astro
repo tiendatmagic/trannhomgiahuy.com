@@ -1,144 +1,259 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const pageTitle = "Giới thiệu";
-const pageSubtitle = "Tìm hiểu về thương hiệu Trần Nhôm Gia Huy - Uy tín lâu đời trong ngành xây dựng hoàn thiện tại Nha Trang, Khánh Hòa.";
+const pageTitle = "Về Thương Hiệu Gia Huy";
+const pageSubtitle = "Kiến tạo không gian sống hoàn mỹ thông qua giải pháp trần nhôm, trần thạch cao và lam trang trí nghệ thuật hàng đầu Nha Trang.";
 ---
 
-<Layout title="Giới thiệu thương hiệu Gia Huy - Thi công trần vách chuyên nghiệp">
-  <!-- Page Hero Banner -->
-  <div class="relative pt-32 pb-12 md:pt-40 md:pb-20 bg-brand-primary-deep text-white text-center overflow-hidden">
-    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden h-full">
-      <div class="glow-orb glow-orange w-[300px] h-[300px] -left-20 top-[-20px] opacity-20 animate-float"></div>
-      <div class="glow-orb glow-yellow w-[300px] h-[300px] -right-20 bottom-[-20px] opacity-15 animate-float-reverse"></div>
+<Layout title="Giới thiệu thương hiệu Gia Huy - Thiết kế thi công trần vách Nha Trang">
+  <!-- Page Hero Banner - Blends with deep-brown Header -->
+  <div class="relative pt-44 pb-24 md:pt-52 md:pb-32 bg-gradient-to-b from-brand-primary-deep via-stone-950/95 to-stone-950 text-white overflow-hidden border-b-2 border-brand-primary/20">
+    <!-- Background visual - Parallax lines and blur orb -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/projects/project-1.png"
+        alt="Ngoại thất Trần Nhôm Gia Huy"
+        class="w-full h-full object-cover opacity-20 select-none pointer-events-none scale-105 filter blur-[1px]"
+      />
+      <div class="absolute inset-0 bg-stone-950/80"></div>
+      <div class="glow-orb glow-orange w-[300px] h-[300px] -left-20 top-[-20px] opacity-25 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] -right-20 bottom-[-20px] opacity-20 animate-float-reverse"></div>
+      <!-- Geometric accent lines -->
+      <div class="absolute right-[10%] bottom-0 w-[1px] h-[150px] bg-gradient-to-t from-brand-primary to-transparent opacity-40 hidden md:block"></div>
+      <div class="absolute right-[15%] bottom-0 w-[1px] h-[250px] bg-gradient-to-t from-brand-orange to-transparent opacity-20 hidden md:block"></div>
     </div>
     
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-      <nav class="flex justify-center items-center gap-2 text-xs md:text-sm font-semibold text-white/60 tracking-wider uppercase">
-        <a href="/" class="hover:text-brand-accent transition-colors">Trang chủ</a>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left space-y-6">
+      <nav class="flex justify-center lg:justify-start items-center gap-2 text-xs md:text-sm font-semibold tracking-widest uppercase text-white/50">
+        <a href="/" class="hover:text-brand-accent transition-colors flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Trang chủ</a>
         <span class="text-white/30">•</span>
-        <span class="text-brand-accent">{pageTitle}</span>
+        <span class="text-brand-accent">Giới thiệu</span>
       </nav>
-      <h1 class="text-3xl md:text-5xl font-display font-black uppercase tracking-tight">
-        {pageTitle}
-      </h1>
-      <p class="text-sm md:text-base text-white/80 font-medium max-w-xl mx-auto leading-relaxed">
-        {pageSubtitle}
-      </p>
+      <div class="max-w-3xl space-y-4">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase tracking-tight leading-none text-white">
+          {pageTitle}
+        </h1>
+        <p class="text-sm md:text-lg text-white/80 font-medium leading-relaxed max-w-2xl">
+          {pageSubtitle}
+        </p>
+      </div>
     </div>
   </div>
 
-  <!-- About Section Content -->
+  <!-- About Section Content - Overlapping Asymmetry with Glassmorphic Card -->
   <section
     id="gioi-thieu"
-    class="py-16 md:py-24 relative overflow-hidden bg-bg-base transition-colors duration-300"
+    class="py-20 md:py-32 relative overflow-hidden bg-bg-base"
   >
+    <!-- Background Glow Orbs for Depth -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <div
-        class="glow-orb glow-orange w-[350px] h-[350px] left-0 top-1/4 opacity-10 animate-float"
-      >
-      </div>
+      <div class="glow-orb glow-yellow w-[450px] h-[450px] -left-32 top-10 opacity-12 animate-float"></div>
+      <div class="glow-orb glow-orange w-[400px] h-[400px] -right-32 top-1/2 opacity-10 animate-float-reverse"></div>
     </div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-      <div
-        class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16"
-      >
-        <!-- Left: Image grid widget matching color and borders -->
-        <div class="lg:w-1/2 relative space-y-6">
-          <div
-            class="absolute inset-[-10px] bg-gradient-to-tr from-brand-primary/20 via-brand-orange/20 to-brand-accent/20 rounded-[2.5rem] blur-2xl z-0"
-          >
-          </div>
-          <div
-            class="relative border border-stone-200/50 bg-white p-3 rounded-[2rem] shadow-xl z-10"
-          >
-            <img
-              src="/banner.png"
-              alt="Thi công thực tế Gia Huy"
-              class="w-full h-auto object-cover rounded-2xl shadow-sm"
-              loading="lazy"
-            />
+      <div class="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-0">
+        <!-- Left: Image Box with Geometric frame and offset shadow -->
+        <div class="lg:w-[55%] w-full relative z-10 flex items-center">
+          <div class="relative w-full">
+            <div
+              class="absolute -inset-2 bg-gradient-to-tr from-brand-primary via-brand-orange to-brand-accent rounded-[2rem] blur-2xl opacity-20 z-0"
+            >
+            </div>
+            <!-- Geometric solid background board representing aluminum construction theme -->
+            <div class="absolute -right-4 -bottom-4 w-full h-full border-2 border-brand-primary/30 rounded-[2.5rem] z-0 hidden lg:block"></div>
+            <div
+              class="relative border border-stone-200/50 bg-white/90 backdrop-blur-xl p-3.5 rounded-[2.5rem] shadow-2xl z-10"
+            >
+              <img
+                src="/projects/project-2.png"
+                alt="Thi công thực tế Gia Huy"
+                class="w-full h-auto aspect-[16/11] object-cover rounded-3xl border border-stone-150"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
 
-        <!-- Right: Text column -->
-        <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
-          <div class="flex justify-center lg:justify-start">
-            <div
-              class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
+        <!-- Right: Overlapping Glassmorphic Text Card -->
+        <div class="lg:w-[50%] w-full lg:-ml-12 z-20 flex items-center">
+          <div class="bg-white/95 backdrop-blur-xl border border-stone-200/60 shadow-2xl rounded-[2.5rem] p-6 sm:p-10 lg:p-12 space-y-6 relative hover:border-brand-primary/40 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <!-- Top corner accent -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brand-primary/10 to-transparent rounded-tr-[2.5rem] pointer-events-none"></div>
+            
+            <div class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full">
+              <span class="text-xs font-semibold text-brand-primary tracking-widest uppercase">
+                Khởi nguồn phát triển
+              </span>
+            </div>
+
+            <h2
+              class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base leading-tight"
             >
-              <p
-                class="text-xs font-semibold text-brand-primary tracking-widest uppercase"
+              CHUYÊN GIA THI CÔNG <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-orange to-brand-accent inline-block"
+                >TRẦN VÁCH UY TÍN</span
               >
-                Về thương hiệu Gia Huy
+            </h2>
+
+            <div class="text-text-muted text-xs sm:text-sm lg:text-base leading-relaxed space-y-4 font-medium">
+              <p>
+                Khởi đầu từ một tổ thợ chuyên nghiệp yêu nghề tại Nha Trang, Gia Huy đã không ngừng phát triển để trở thành nhà thầu hoàn thiện trần vách kính uy tín hàng đầu. Chúng tôi đem đến những giải pháp đột phá trong thi công <strong>trần nhôm cao cấp, trần thạch cao chống ẩm Knauf, và lam nhựa giả gỗ trang trí</strong>.
+              </p>
+              <p class="bg-brand-primary/[0.03] border-l-4 border-brand-primary p-4.5 text-text-base font-semibold rounded-r-2xl shadow-xs text-left">
+                "Năng lực cốt lõi của Gia Huy nằm ở nguồn cung vật tư trực tiếp giá xưởng và đội thợ chuyên sâu không thuê ngoài, cam kết chất lượng chuẩn kỹ thuật trên từng mét vuông."
+              </p>
+              <p>
+                Đứng trước khí hậu vùng biển nhiều nắng, gió và hơi muối ăn mòn của Nha Trang, chúng tôi ưu tiên tư vấn các dòng vật liệu nhôm hợp kim sơn tĩnh điện vân gỗ hoặc thạch cao chống ẩm thế hệ mới để đảm bảo tính thẩm mỹ vĩnh cửu cho ngôi nhà của bạn.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <h2
-            class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base leading-tight"
-          >
-            CHUYÊN GIA THI CÔNG <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-orange to-brand-accent py-1.5 inline-block"
-              >TRẦN VÁCH UY TÍN</span
-            >
-          </h2>
+  <!-- Mission, Vision & Core Values - Staggered Asymmetrical Heights layout -->
+  <section class="py-20 bg-stone-50 border-y border-stone-200/50 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] right-[-50px] top-[10px] opacity-10 animate-float-reverse"></div>
+      <div class="glow-orb glow-orange w-[250px] h-[250px] left-[-50px] bottom-[10px] opacity-10 animate-float"></div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full">
+          <span class="text-xs font-semibold text-brand-orange uppercase">Định hướng cốt lõi</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          TẦM NHÌN &amp; SỨ MỆNH PHỤC VỤ
+        </h2>
+      </div>
 
-          <div
-            class="text-text-muted text-sm lg:text-base leading-relaxed space-y-4 font-medium max-w-xl mx-auto lg:mx-0"
-          >
-            <p>
-              Gia Huy tự hào đồng hành cùng hàng trăm gia chủ và chủ đầu tư dự
-              án tại Nha Trang, mang tới các sản phẩm **trần nhôm cao cấp, trần
-              thạch cao, lam gỗ nhựa** bền bỉ dưới mọi khí hậu ven biển.
-            </p>
-            <p
-              class="bg-brand-primary/5 p-4 border-l-4 border-brand-primary text-brand-primary-dark font-semibold rounded-r-xl text-left"
-            >
-              Chúng tôi sở hữu năng lực cung cấp trực tiếp vật tư chính hãng với
-              giá cả gốc tại kho và cử thợ chuyên môn cao thi công trực tiếp
-              không qua thầu phụ.
-            </p>
-            <p>
-              Sự chính xác kỹ thuật, tính thẩm mỹ hoàn thiện cao và trách nhiệm
-              bảo hành lâu dài là kim chỉ nam giúp Trần Nhôm Gia Huy khẳng định
-              vị thế thương hiệu lâu đời trong ngành xây dựng hoàn thiện tại
-              Khánh Hòa.
+      <!-- Asymmetrical Staggered Cards with Glassmorphism -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch pt-6 pb-12">
+        <!-- 1. Sứ mệnh (Normal align) -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-2xl rounded-[2.5rem] p-8 space-y-5 transition-all duration-300 group hover:-translate-y-1">
+          <div class="size-14 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center text-2xl group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">Sứ mệnh Gia Huy</h3>
+          <p class="text-xs sm:text-sm lg:text-base text-text-muted font-medium leading-relaxed">
+            Kiến tạo không gian nội thất hoàn mỹ, an toàn và nâng tầm chất lượng sống của gia đình Việt. Chúng tôi mang các giải pháp trần nhôm, trần thạch cao thế hệ mới có độ thích nghi cao, bảo vệ vững vàng mái ấm trước khí hậu khắc nghiệt miền Trung biển cả.
+          </p>
+        </div>
+
+        <!-- 2. Tầm nhìn (Offset taller via translate-y on desktop) -->
+        <div class="bg-white/95 backdrop-blur-xl border border-stone-200/50 hover:border-brand-orange/50 hover:shadow-2xl rounded-[2.5rem] p-8 space-y-5 transition-all duration-300 group hover:-translate-y-1 lg:translate-y-6 relative border-t-2 border-t-brand-orange">
+          <!-- Featured Badge -->
+          <span class="absolute -top-3.5 left-8 bg-brand-orange text-white font-display text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold shadow-md">Định hướng</span>
+          <div class="size-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">Tầm nhìn chiến lược</h3>
+          <p class="text-xs sm:text-sm lg:text-base text-text-muted font-medium leading-relaxed">
+            Trở thành thương hiệu thi công trần vách uy tín số 1 tại Nha Trang và toàn tỉnh Khánh Hòa. Phát triển bền vững dựa trên chất lượng dịch vụ chuẩn mực, công nghệ thi công chính xác và lòng tin trọn vẹn từ các gia chủ và nhà thầu xây dựng.
+          </p>
+        </div>
+
+        <!-- 3. Giá trị cốt lõi (Offset shorter via -translate-y on desktop) -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 hover:border-brand-green/50 hover:shadow-2xl rounded-[2.5rem] p-8 space-y-5 transition-all duration-300 group hover:-translate-y-1 lg:-translate-y-6 border-b-2 border-b-brand-green">
+          <div class="size-14 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center text-2xl group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">Giá trị cốt lõi</h3>
+          <ul class="space-y-3 text-xs sm:text-sm lg:text-base text-text-muted font-medium">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>UY TÍN:</strong> Nói là làm, thi công đúng loại vật tư đã cam kết trên hợp đồng.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>TẬN TÂM:</strong> Tư vấn giải pháp tối ưu nhất cho gia chủ, không vẽ vời chi phí.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>CHẤT LƯỢNG:</strong> Đội thợ thi công chuẩn chỉnh, bảo hành dài hạn.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us - Asymmetric Bento Grid with Glassmorphism elements -->
+  <section class="py-20 md:py-32 bg-bg-base relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full">
+          <span class="text-xs font-semibold text-brand-primary tracking-widest uppercase">Năng lực thực hiện</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          THẾ MẠNH ĐỘC QUYỀN CỦA GIA HUY
+        </h2>
+      </div>
+
+      <!-- Bento Grid (Different sizes and weights with Glassmorphism) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Bento item 1: Large primary cell (2 columns wide on desktop) -->
+        <div class="md:col-span-2 bg-white/90 backdrop-blur-md border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-2xl rounded-[2.5rem] p-6 sm:p-10 transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 size-40 bg-brand-primary/5 rounded-full group-hover:scale-110 transition-transform"></div>
+          <div class="space-y-4">
+            <span class="grid size-12 place-items-center bg-brand-primary text-white font-display text-lg font-black rounded-2xl">01</span>
+            <h4 class="font-display font-extrabold text-base sm:text-xl text-text-base uppercase tracking-tight">
+              Báo giá gốc tại kho - Tiết kiệm đến 20%
+            </h4>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Không thông qua bất kỳ công ty thiết kế hay đơn vị thầu phụ trung gian nào, Trần Nhôm Gia Huy trực tiếp nhập khẩu vật tư và tổ chức thi công trực tiếp. Nhờ đó, quý khách hàng nhận được báo giá sát xưởng nhất, tiết kiệm từ 15% - 20% chi phí xây dựng.
             </p>
           </div>
+        </div>
 
-          <div
-            class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start items-center"
-          >
-            <div
-              class="bg-white border border-stone-200/50 rounded-2xl px-6 py-4"
-            >
-              <p
-                class="text-[10px] lg:text-sm uppercase font-semibold text-text-muted"
-              >
-                Hotline Zalo 24/7
-              </p>
-              <a
-                href="tel:0935373577"
-                class="text-xl font-display font-black text-brand-primary hover:text-brand-orange transition-colors"
-                >0935.37.3577</a
-              >
-            </div>
-            <div
-              class="bg-white border border-stone-200/50 rounded-2xl px-6 py-4"
-            >
-              <p
-                class="text-[10px] lg:text-sm uppercase font-semibold text-text-muted"
-              >
-                Cam kết dịch vụ
-              </p>
-              <p
-                class="text-sm lg:text-base font-display font-bold text-brand-green"
-              >
-                ĐẸP - ĐÚNG TIẾN ĐỘ
+        <!-- Bento item 2: Semi-translucent gradient cell (High Aesthetic Accent) -->
+        <div class="bg-gradient-to-br from-brand-primary-deep/95 via-brand-primary/90 to-brand-orange/90 backdrop-blur-md border border-brand-primary-dark/30 hover:shadow-2xl rounded-[2.5rem] p-6 sm:p-8 transition-all duration-300 relative text-white group">
+          <!-- Background geometric circles -->
+          <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,#ffffff_1px,transparent_1px)] bg-[size:12px_12px]"></div>
+          <div class="space-y-4 h-full flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="grid size-12 place-items-center bg-white/20 text-white font-display text-lg font-black rounded-2xl">02</span>
+              <h4 class="font-display font-extrabold text-base sm:text-lg uppercase tracking-tight leading-snug">
+                Thợ thi công trực tiếp tay nghề cao
+              </h4>
+              <p class="text-xs text-white/90 leading-relaxed font-medium">
+                Tổ thợ chuyên môn cao được chọn lọc kỹ càng, tác phong trung thực, thi công cẩn thận từng chi tiết nhỏ nhất.
               </p>
             </div>
+            <div class="text-white/40 text-[10px] uppercase font-bold tracking-widest border-t border-white/10 pt-4 mt-4">
+              Không bán thầu trung gian
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento item 3: Small cell -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 hover:border-brand-green/50 hover:shadow-2xl rounded-[2.5rem] p-6 sm:p-8 transition-all duration-300 group">
+          <div class="space-y-4">
+            <span class="grid size-12 place-items-center bg-brand-green/15 text-brand-green font-display text-lg font-black rounded-2xl">03</span>
+            <h4 class="font-display font-extrabold text-base sm:text-lg text-text-base uppercase tracking-tight">
+              Vật tư chính hãng 100%
+            </h4>
+            <p class="text-xs sm:text-sm text-text-muted leading-relaxed font-medium">
+              Sử dụng các thương hiệu hàng đầu: thạch cao chống ẩm Knauf Đức, khung xương Vĩnh Tường, hợp kim nhôm sơn tĩnh điện.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento item 4: Large cell (2 columns wide on desktop) -->
+        <div class="md:col-span-2 bg-white/90 backdrop-blur-md border border-stone-200/50 hover:border-brand-orange/50 hover:shadow-2xl rounded-[2.5rem] p-6 sm:p-10 transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 size-40 bg-brand-orange/5 rounded-full group-hover:scale-110 transition-transform"></div>
+          <div class="space-y-4">
+            <span class="grid size-12 place-items-center bg-brand-orange/15 text-brand-orange font-display text-lg font-black rounded-2xl">04</span>
+            <h4 class="font-display font-extrabold text-base sm:text-xl text-text-base uppercase tracking-tight">
+              Chính sách bảo hành vàng &amp; Đồng hành 24/7
+            </h4>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Chúng tôi hiểu rằng chất lượng công trình cần được kiểm chứng qua thời gian. Vì vậy, mọi dự án do Gia Huy triển khai đều đi kèm biên bản nghiệm thu và phiếu bảo hành kết cấu khung xương từ 2 - 5 năm, sẵn sàng có mặt xử lý trong vòng 24h khi khách hàng yêu cầu.
+            </p>
           </div>
         </div>
       </div>

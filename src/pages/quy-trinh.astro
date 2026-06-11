@@ -1,0 +1,303 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Quy Trình Thi Công Chuẩn Mực";
+const pageSubtitle = "Sơ đồ làm việc 5 bước khép kín giúp tối ưu hóa tiến độ hoàn thiện và kiểm soát chất lượng vật tư thực tế tại công trình.";
+---
+
+<Layout title="Quy trình thi công trần thạch cao, trần nhôm chuyên nghiệp - Gia Huy">
+  <!-- Page Hero Banner - High Contrast Geometric Style -->
+  <div class="relative pt-44 pb-24 md:pt-52 md:pb-32 bg-gradient-to-b from-brand-primary-deep via-stone-950/95 to-stone-950 text-white overflow-hidden border-b border-brand-primary/20">
+    <!-- Background visual - Parallax lines and blur orb -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/projects/project-8.png"
+        alt="Quy trình Trần Nhôm Gia Huy"
+        class="w-full h-full object-cover opacity-20 select-none pointer-events-none scale-105 filter blur-[1px]"
+      />
+      <div class="absolute inset-0 bg-stone-950/80"></div>
+      <div class="glow-orb glow-orange w-[300px] h-[300px] -left-20 top-[-20px] opacity-25 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] -right-20 bottom-[-20px] opacity-20 animate-float-reverse"></div>
+      <!-- Geometric accent lines -->
+      <div class="absolute right-[10%] bottom-0 w-[1px] h-[150px] bg-gradient-to-t from-brand-primary to-transparent opacity-40 hidden md:block"></div>
+      <div class="absolute right-[15%] bottom-0 w-[1px] h-[250px] bg-gradient-to-t from-brand-orange to-transparent opacity-20 hidden md:block"></div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left space-y-6">
+      <nav class="flex justify-center lg:justify-start items-center gap-2 text-xs md:text-sm font-semibold tracking-widest uppercase text-white/50">
+        <a href="/" class="hover:text-brand-accent transition-colors flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Trang chủ</a>
+        <span class="text-white/30">•</span>
+        <span class="text-brand-accent">Quy trình</span>
+      </nav>
+      <div class="max-w-3xl space-y-4">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase tracking-tight leading-none text-white">
+          {pageTitle}
+        </h1>
+        <p class="text-sm md:text-lg text-white/80 font-medium leading-relaxed max-w-2xl">
+          {pageSubtitle}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline Flow Section - Geometric Connecting Lines (Flowchart) -->
+  <section class="py-20 md:py-32 relative overflow-hidden bg-bg-base">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-yellow w-[450px] h-[450px] -left-32 top-10 opacity-12 animate-float"></div>
+      <div class="glow-orb glow-orange w-[400px] h-[400px] -right-32 top-1/2 opacity-10 animate-float-reverse"></div>
+      <div class="glow-orb glow-green w-[300px] h-[300px] bottom-10 left-[35%] opacity-8 animate-float"></div>
+    </div>
+
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full">
+          <p class="text-xs font-semibold text-brand-primary tracking-widest uppercase">Phối hợp chặt chẽ</p>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          5 BƯỚC THI CÔNG KỸ THUẬT
+        </h2>
+      </div>
+
+      <!-- Connecting flowchart vertical line with circles -->
+      <div class="relative border-l-2 border-dashed border-brand-primary/30 ml-4 sm:ml-8 pl-8 sm:pl-12 space-y-16">
+        
+        <!-- Step 1 -->
+        <article class="relative group">
+          <!-- Step indicator dot -->
+          <span class="absolute -left-[41px] sm:-left-[57px] top-1.5 size-6 sm:size-8 rounded-full bg-brand-primary border-4 border-white shadow-md flex items-center justify-center font-display font-black text-[10px] text-white group-hover:bg-brand-orange transition-colors">1</span>
+          
+          <div class="bg-white/90 backdrop-blur-xl border border-stone-200/50 p-6 sm:p-8 rounded-[2.5rem] shadow-xl space-y-3 relative hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <span class="text-xs font-semibold text-brand-primary-dark bg-brand-primary/10 px-3 py-1 rounded-full w-fit">1 - 2 Ngày</span>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">
+              Khảo sát đo đạc hiện trạng
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Kỹ sư đến khảo sát trực tiếp tại Nha Trang để kiểm tra độ sụt cốt trần, đo đạc kích thước thực tế, xác định các điểm dầm chịu lực và cốt tường ẩm mốc.
+            </p>
+            <div class="text-[11px] sm:text-xs text-brand-orange font-bold uppercase tracking-wider pt-2 border-t border-stone-200/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Khách hàng: Cung cấp yêu cầu ý tưởng &amp; liên kết điện nước</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="relative group">
+          <!-- Step indicator dot -->
+          <span class="absolute -left-[41px] sm:-left-[57px] top-1.5 size-6 sm:size-8 rounded-full bg-brand-primary border-4 border-white shadow-md flex items-center justify-center font-display font-black text-[10px] text-white group-hover:bg-brand-orange transition-colors">2</span>
+          
+          <div class="bg-white/90 backdrop-blur-xl border border-stone-200/50 p-6 sm:p-8 rounded-[2.5rem] shadow-xl space-y-3 relative hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <span class="text-xs font-semibold text-brand-primary-dark bg-brand-primary/10 px-3 py-1 rounded-full w-fit">1 Ngày</span>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">
+              Lập bản vẽ phân bổ khung xương
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Xây dựng bản vẽ định vị hệ ty treo, phân bổ khẩu độ xương cá xương phụ và tấm trần thạch cao/nhôm tĩnh điện vân gỗ theo tiêu chuẩn kỹ thuật an toàn của hãng.
+            </p>
+            <div class="text-[11px] sm:text-xs text-brand-orange font-bold uppercase tracking-wider pt-2 border-t border-stone-200/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Khách hàng: Thống nhất độ dày nhôm (0.5 - 0.7mm) và sơ đồ giật cấp</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="relative group">
+          <!-- Step indicator dot -->
+          <span class="absolute -left-[41px] sm:-left-[57px] top-1.5 size-6 sm:size-8 rounded-full bg-brand-primary border-4 border-white shadow-md flex items-center justify-center font-display font-black text-[10px] text-white group-hover:bg-brand-orange transition-colors">3</span>
+          
+          <div class="bg-white/90 backdrop-blur-xl border border-stone-200/50 p-6 sm:p-8 rounded-[2.5rem] shadow-xl space-y-3 relative hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <span class="text-xs font-semibold text-brand-primary-dark bg-brand-primary/10 px-3 py-1 rounded-full w-fit">1 Ngày</span>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">
+              Báo giá, Ký hợp đồng &amp; Tập kết
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Dự toán bóc tách chi tiết khối lượng, ký kết hợp đồng thi công trọn gói cam kết không phát sinh. Tập kết vật tư chính hãng nguyên hộp về chân công trình.
+            </p>
+            <div class="text-[11px] sm:text-xs text-brand-orange font-bold uppercase tracking-wider pt-2 border-t border-stone-200/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Khách hàng: Chuẩn bị kho bãi khô ráo để lưu trữ vật tư tạm thời</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 4 -->
+        <article class="relative group">
+          <!-- Step indicator dot -->
+          <span class="absolute -left-[41px] sm:-left-[57px] top-1.5 size-6 sm:size-8 rounded-full bg-brand-primary border-4 border-white shadow-md flex items-center justify-center font-display font-black text-[10px] text-white group-hover:bg-brand-orange transition-colors">4</span>
+          
+          <div class="bg-white/90 backdrop-blur-xl border border-stone-200/50 p-6 sm:p-8 rounded-[2.5rem] shadow-xl space-y-3 relative hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <span class="text-xs font-semibold text-brand-primary-dark bg-brand-primary/10 px-3 py-1 rounded-full w-fit">3 - 5 Ngày</span>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">
+              Lắp dựng kết cấu khung xương
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Lắp dựng ty treo đạn nở sắt, định vị khung xương cá bằng máy laser chính xác, bắn vít cố định tấm thạch cao hoặc cài ghép tấm trần nhôm khớp nối trơn tru.
+            </p>
+            <div class="text-[11px] sm:text-xs text-brand-orange font-bold uppercase tracking-wider pt-2 border-t border-stone-200/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Khách hàng: Giám sát tiến độ lắp đặt phần xương thô trước khi bắn tấm</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 5 -->
+        <article class="relative group">
+          <!-- Step indicator dot -->
+          <span class="absolute -left-[41px] sm:-left-[57px] top-1.5 size-6 sm:size-8 rounded-full bg-brand-primary border-4 border-white shadow-md flex items-center justify-center font-display font-black text-[10px] text-white group-hover:bg-brand-orange transition-colors">5</span>
+          
+          <div class="bg-white/90 backdrop-blur-xl border border-stone-200/50 p-6 sm:p-8 rounded-[2.5rem] shadow-xl space-y-3 relative hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] transition-all duration-300">
+            <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full w-fit">1 Ngày</span>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-tight">
+              Bả sơn hoàn thiện &amp; Nghiệm thu
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium">
+              Trét mối nối lưới thạch cao bằng bột bả chuyên dụng chống nứt, tiến hành xả nhám phẳng láng và lăn sơn Dulux hoàn thiện. Nghiệm thu bàn giao phiếu bảo hành kết cấu.
+            </p>
+            <div class="text-[11px] sm:text-xs text-brand-orange font-bold uppercase tracking-wider pt-2 border-t border-stone-200/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Khách hàng: Đo đạc nghiệm thu khối lượng thực tế và nhận bàn giao sử dụng</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Clean Accordion disclosure design -->
+  <section class="py-20 md:py-28 bg-bg-base border-t border-stone-200/40 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-green w-[300px] h-[300px] left-[-50px] top-[10px] opacity-8 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] right-[-50px] bottom-[10px] opacity-8 animate-float-reverse"></div>
+    </div>
+    
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/20 px-4 py-1.5 rounded-full">
+          <span class="text-xs font-semibold text-brand-green uppercase">Giải đáp chuyên môn</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          CÂU HỎI THƯỜNG GẶP KHI THI CÔNG
+        </h2>
+      </div>
+
+      <!-- Clean disclosures list (Accordions) -->
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <!-- FAQ 1 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Thời gian hoàn thiện trần thạch cao phòng khách thông thường bao lâu?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Thông thường đối với phòng khách nhà dân dụng từ 30 - 50m2, quá trình lắp ráp khung xương chịu lực thô, bắn tấm thạch cao chống ẩm Knauf và hoàn thiện sơn bả matit Dulux sẽ mất khoảng từ <strong>3 - 5 ngày làm việc</strong> để đạt bề mặt phẳng đẹp mỹ thuật tối đa.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Chi phí khảo sát đo đạc hiện trạng là bao nhiêu?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Gia Huy hỗ trợ khảo sát hiện trạng công trình, tư vấn giải pháp thiết kế kỹ thuật và đo đạc lập dự toán báo giá <strong>hoàn toàn MIỄN PHÍ</strong> tận nơi tại khu vực Nha Trang - Khánh Hòa, không ràng buộc khách hàng phải ký hợp đồng.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Trần nhôm vân gỗ có thể lắp đặt cho nhà vệ sinh và toilet không?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            <strong>Rất thích hợp và khuyến khích.</strong> Trần nhôm sở hữu độ bền vĩnh cửu nhờ tính kháng nước 100%, không bị ảnh hưởng bởi hơi nước nóng trong toilet ẩm ướt, không cong vênh mối mọt, vệ sinh lau chùi cực kỳ dễ dàng và không tích tụ mùi hôi.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
+          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
+            <span>Chính sách bảo hành trần vách của Gia Huy quy định thế nào?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
+            Tất cả các hạng mục thi công do Gia Huy triển khai đều đi kèm cam kết bảo hành kết cấu chịu lực hệ khung xương và độ bền tấm trần từ <strong>2 đến 5 năm</strong>. Mọi phản hồi sự cố sẽ được tiếp nhận và xử lý tận nhà trong vòng 24h làm việc.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Banner -->
+  <section
+    class="overflow-hidden border-y border-stone-200/50 bg-stone-100/50 py-6 md:py-10 transition-colors duration-300"
+  >
+    <div
+      class="marquee-container gap-12 whitespace-nowrap text-xs sm:text-sm font-display font-semibold uppercase tracking-[0.2em] text-text-muted"
+    >
+      <div class="marquee-content flex gap-12">
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM GIA HUY</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >UY TÍN - THI CÔNG NHANH</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >BÁO GIÁ TẠI XƯỞNG</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM VÂN GỖ</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >TRẦN THẠCH CAO KNAUF</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >LAM SÓNG GIẢ GỖ CAO CẤP</span
+        >
+        <span class="text-stone-300">•</span>
+
+        <!-- Repeat content for continuous loop -->
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM GIA HUY</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >UY TÍN - THI CÔNG NHANH</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >BÁO GIÁ TẠI XƯỞNG</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM VÂN GỖ</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >TRẦN THẠCH CAO KNAUF</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >LAM SÓNG GIẢ GỖ CAO CẤP</span
+        >
+      </div>
+    </div>
+  </section>
+</Layout>

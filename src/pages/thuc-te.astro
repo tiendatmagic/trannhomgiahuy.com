@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectShowcase from "../components/ProjectShowcase.astro";
+
+const pageTitle = "Kho Lưu Trữ Công Trình";
+const pageSubtitle = "Thư viện tổng hợp hình ảnh hoàn thiện và thi công trực tiếp tại công trường của đội ngũ thợ lành nghề Trần Nhôm Gia Huy.";
+---
+
+<Layout title="Thực tế công trình - Thư viện hình ảnh thi công Gia Huy Nha Trang">
+  <!-- Page Hero Banner - Blends with deep-brown Header -->
+  <div class="relative pt-44 pb-24 md:pt-52 md:pb-32 bg-gradient-to-b from-brand-primary-deep via-stone-950/95 to-stone-950 text-white overflow-hidden border-b-2 border-brand-primary/25">
+    <!-- Background visual - Parallax lines and blur orb -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/projects/project-2.png"
+        alt="Thực tế Trần Nhôm Gia Huy"
+        class="w-full h-full object-cover opacity-20 select-none pointer-events-none scale-105 filter blur-[1px]"
+      />
+      <div class="absolute inset-0 bg-stone-950/80"></div>
+      <div class="glow-orb glow-orange w-[300px] h-[300px] -left-20 top-[-20px] opacity-25 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] -right-20 bottom-[-20px] opacity-20 animate-float-reverse"></div>
+      <!-- Geometric accent lines -->
+      <div class="absolute right-[10%] bottom-0 w-[1px] h-[150px] bg-gradient-to-t from-brand-primary to-transparent opacity-40 hidden md:block"></div>
+      <div class="absolute right-[15%] bottom-0 w-[1px] h-[250px] bg-gradient-to-t from-brand-orange to-transparent opacity-20 hidden md:block"></div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left space-y-6">
+      <nav class="flex justify-center lg:justify-start items-center gap-2 text-xs md:text-sm font-semibold tracking-widest uppercase text-white/50">
+        <a href="/" class="hover:text-brand-accent transition-colors flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Trang chủ</a>
+        <span class="text-white/30">•</span>
+        <span class="text-brand-accent">Thực tế</span>
+      </nav>
+      <div class="max-w-3xl space-y-4">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase tracking-tight leading-none text-white">
+          {pageTitle}
+        </h1>
+        <p class="text-sm md:text-lg text-white/80 font-medium leading-relaxed max-w-2xl">
+          {pageSubtitle}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Showcase Portfolio Section - Generous spacing and Glow Orbs -->
+  <section
+    id="thu-vien"
+    class="py-20 md:py-32 relative overflow-hidden bg-bg-base"
+  >
+    <!-- Background Glow Orbs for Depth -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-yellow w-[450px] h-[450px] -left-32 top-10 opacity-12 animate-float"></div>
+      <div class="glow-orb glow-orange w-[400px] h-[400px] -right-32 bottom-10 opacity-10 animate-float-reverse"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div
+        class="text-center max-w-3xl mx-auto mb-16 space-y-4"
+      >
+        <div
+          class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
+        >
+          <p
+            class="text-xs font-semibold text-brand-primary tracking-widest uppercase"
+          >
+            Nhật ký công trình Nha Trang
+          </p>
+        </div>
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase"
+        >
+          BỘ SƯU TẬP DỰ ÁN HOÀN THIỆN
+        </h2>
+      </div>
+
+      <!-- Showcase Portfolio component -->
+      <ProjectShowcase />
+    </div>
+  </section>
+
+  <!-- Project Classification - Geometric Glassmorphic Cards -->
+  <section class="py-20 md:py-32 bg-stone-50 border-t border-stone-200/50 relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full">
+          <span class="text-xs font-semibold text-brand-orange uppercase">Đa dạng phân khúc</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
+          CÁC PHÂN KHÚC CÔNG TRÌNH TIÊU BIỂU
+        </h2>
+      </div>
+
+      <!-- Staggered Layout with Glassmorphic Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Villa biệt thự -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 p-8 rounded-[2.5rem] space-y-5 hover:shadow-2xl hover:border-brand-primary/40 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden border-b-2 border-b-brand-primary">
+          <span class="absolute right-4 top-2 text-6xl font-display font-black text-stone-100/50 group-hover:text-brand-primary/5 select-none transition-colors z-0">01</span>
+          <div class="size-12 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center text-xl relative z-10 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="space-y-2 relative z-10">
+            <h4 class="font-display font-extrabold text-base text-text-base uppercase">Villa &amp; Biệt thự biển</h4>
+            <p class="text-xs sm:text-sm text-text-muted font-medium leading-relaxed">
+              Thi công sảnh ngoài trời lam nhôm U-Shaped vân gỗ tĩnh điện vững chãi, chống chọi muối mặn và gió lốc của vùng biển.
+            </p>
+          </div>
+        </div>
+
+        <!-- Nhà phố hiện đại -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 p-8 rounded-[2.5rem] space-y-5 hover:shadow-2xl hover:border-brand-orange/40 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden border-t-2 border-t-brand-orange">
+          <span class="absolute right-4 top-2 text-6xl font-display font-black text-stone-100/50 group-hover:text-brand-orange/5 select-none transition-colors z-0">02</span>
+          <div class="size-12 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-xl relative z-10 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <div class="space-y-2 relative z-10">
+            <h4 class="font-display font-extrabold text-base text-text-base uppercase">Nhà phố hiện đại</h4>
+            <p class="text-xs sm:text-sm text-text-muted font-medium leading-relaxed">
+              Các mẫu trần thạch cao phẳng kết hợp giật cấp, ốp vách lam sóng nhựa trang trí mang lại không gian sống ấm áp, tinh tế.
+            </p>
+          </div>
+        </div>
+
+        <!-- Căn hộ chung cư -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 p-8 rounded-[2.5rem] space-y-5 hover:shadow-2xl hover:border-brand-green/40 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden border-b-2 border-b-brand-green">
+          <span class="absolute right-4 top-2 text-6xl font-display font-black text-stone-100/50 group-hover:text-brand-green/5 select-none transition-colors z-0">03</span>
+          <div class="size-12 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center text-xl relative z-10 group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="space-y-2 relative z-10">
+            <h4 class="font-display font-extrabold text-base text-text-base uppercase">Căn hộ chung cư</h4>
+            <p class="text-xs sm:text-sm text-text-muted font-medium leading-relaxed">
+              Tối ưu hóa diện tích cốt trần bằng hệ trần thạch cao phẳng kết hợp chạy LED hiện đại, giấu kín đường ống gió điều hòa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Showroom cafe -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200/50 p-8 rounded-[2.5rem] space-y-5 hover:shadow-2xl hover:border-brand-blue/40 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden border-t-2 border-t-brand-blue">
+          <span class="absolute right-4 top-2 text-6xl font-display font-black text-stone-100/50 group-hover:text-brand-blue/5 select-none transition-colors z-0">04</span>
+          <div class="size-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl relative z-10 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <div class="space-y-2 relative z-10">
+            <h4 class="font-display font-extrabold text-base text-text-base uppercase">Showroom, Cafe &amp; Spa</h4>
+            <p class="text-xs sm:text-sm text-text-muted font-medium leading-relaxed">
+              Tạo hình trần caro (cell) nhôm mở hoặc các vách PVC vân đá cẩm thạch thu hút mọi góc nhìn thị giác của khách hàng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Banner -->
+  <section
+    class="overflow-hidden border-y border-stone-200/50 bg-stone-100/50 py-6 md:py-10 transition-colors duration-300"
+  >
+    <div
+      class="marquee-container gap-12 whitespace-nowrap text-xs sm:text-sm font-display font-semibold uppercase tracking-[0.2em] text-text-muted"
+    >
+      <div class="marquee-content flex gap-12">
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM GIA HUY</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >UY TÍN - THI CÔNG NHANH</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >BÁO GIÁ TẠI XƯỞNG</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM VÂN GỖ</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >TRẦN THẠCH CAO KNAUF</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >LAM SÓNG GIẢ GỖ CAO CẤP</span
+        >
+        <span class="text-stone-300">•</span>
+
+        <!-- Repeat content for continuous loop -->
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM GIA HUY</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >UY TÍN - THI CÔNG NHANH</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >BÁO GIÁ TẠI XƯỞNG</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-primary transition-colors duration-200"
+          >TRẦN NHÔM VÂN GỖ</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-orange transition-colors duration-200"
+          >TRẦN THẠCH CAO KNAUF</span
+        >
+        <span class="text-stone-300">•</span>
+        <span class="hover:text-brand-green transition-colors duration-200"
+          >LAM SÓNG GIẢ GỖ CAO CẤP</span
+        >
+      </div>
+    </div>
+  </section>
+</Layout>

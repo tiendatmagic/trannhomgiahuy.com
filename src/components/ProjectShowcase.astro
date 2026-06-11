@@ -151,7 +151,7 @@ const categories = [
   <div id="project-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
     {projects.map((proj) => (
       <div
-        class="project-card group rounded-2xl sm:rounded-[2rem] bg-white border border-stone-200/60 shadow-sm hover:shadow-md hover:border-brand-primary transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+        class="project-card group rounded-[2.5rem] bg-white/90 backdrop-blur-md border border-stone-200/50 shadow-xl hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] hover:border-brand-primary/45 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
         data-category={proj.category}
         data-id={proj.id}
       >

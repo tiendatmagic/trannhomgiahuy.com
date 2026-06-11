@@ -1,0 +1,469 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Cẩm Nang Xây Dựng & Tin Tức";
+const pageSubtitle = "Tổng hợp các kinh nghiệm lựa chọn vật liệu, phương pháp bảo dưỡng trần vách và những cập nhật mới nhất của Gia Huy.";
+
+// Posts data list
+const posts = [
+  {
+    id: 1,
+    title: "Xu hướng thi công trần nhôm vân gỗ năm 2026 tại Nha Trang",
+    date: "10/06/2026",
+    image: "/projects/project-1.png",
+    summary: "Khám phá các mẫu trần nhôm vân gỗ U-Shaped, caro và ống tròn đang được các resort, biệt thự ven biển cực kỳ ưa chuộng vì độ bền vượt trội trước nắng gió miền Trung."
+  },
+  {
+    id: 2,
+    title: "Tại sao biệt thự biển nên chọn trần thạch cao chống ẩm Knauf?",
+    date: "08/06/2026",
+    image: "/projects/project-2.png",
+    summary: "Giải pháp trần thạch cao chống ẩm thương hiệu Knauf Đức giúp bảo vệ ngôi nhà khỏi hơi muối biển và độ ẩm cao quanh năm tại các khu đô thị ven biển Nha Trang."
+  },
+  {
+    id: 3,
+    title: "Hướng dẫn vệ sinh và bảo dưỡng trần lam nhôm đúng cách",
+    date: "05/06/2026",
+    image: "/projects/project-5.png",
+    summary: "Chia sẻ bí quyết đơn giản giúp hệ trần lam nhôm vân gỗ ngoài sảnh luôn giữ được vẻ đẹp sáng bóng, sạch sẽ như mới mà không dùng hóa chất bào mòn."
+  },
+  {
+    id: 4,
+    title: "Báo giá thi công trần vách nhựa giả gỗ trang trí mới nhất",
+    date: "01/06/2026",
+    image: "/projects/new-project-6.jpg",
+    summary: "Cập nhật bảng báo giá thi công tấm nhựa ốp tường PVC nano, lam nhựa giả gỗ và vách nhựa tại Nha Trang năm 2026 chi tiết từng loại độ dày."
+  },
+  {
+    id: 5,
+    title: "Ưu nhược điểm của các loại trần thạch cao nổi và trần chìm",
+    date: "28/05/2026",
+    image: "/projects/project-4.png",
+    summary: "Phân tích chi tiết giúp gia chủ lựa chọn giải pháp thi công trần thạch cao phù hợp nhất với công năng sử dụng và ngân sách đầu tư xây dựng thực tế."
+  },
+  {
+    id: 6,
+    title: "Quy trình chống thấm cổ ống xuyên sàn và ban công hiệu quả",
+    date: "25/05/2026",
+    image: "/projects/new-project-4.jpg",
+    summary: "Hướng dẫn kỹ thuật chống thấm cổ ống nước và mái đón ngoài trời đúng chuẩn kỹ thuật xây dựng giúp loại bỏ 100% hiện tượng rỉ nước dột sàn."
+  },
+  {
+    id: 7,
+    title: "Thi công tấm nhựa giả đá vân cẩm thạch cho vách tivi sang trọng",
+    date: "20/05/2026",
+    image: "/projects/new-project-7.jpg",
+    summary: "Giải pháp trang trí tường phòng khách hiện đại bằng tấm nhựa PVC vân đá, tạo điểm nhấn nghệ thuật cuốn hút với chi phí tối ưu và thời gian thi công cực nhanh."
+  },
+  {
+    id: 8,
+    title: "Hướng dẫn lựa chọn độ dày tấm trần nhôm phù hợp từng hạng mục",
+    date: "15/05/2026",
+    image: "/projects/new-project-8.jpg",
+    summary: "Tư vấn từ chuyên gia Gia Huy giúp khách hàng lựa chọn độ dày nhôm 0.5mm, 0.6mm hay 0.7mm cho trần vệ sinh hay sảnh lớn ngoài trời lộng gió."
+  }
+];
+---
+
+<Layout title="Tin tức & Cẩm nang thi công trần nhôm thạch cao - Gia Huy Nha Trang">
+  <!-- Page Hero Banner - High Contrast Geometric Style -->
+  <div class="relative pt-44 pb-24 md:pt-52 md:pb-32 bg-gradient-to-b from-brand-primary-deep via-stone-950/95 to-stone-950 text-white overflow-hidden border-b border-brand-primary/20">
+    <!-- Background visual - Parallax lines and blur orb -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/projects/project-4.png"
+        alt="Tin tức Trần Nhôm Gia Huy"
+        class="w-full h-full object-cover opacity-20 select-none pointer-events-none scale-105 filter blur-[1px]"
+      />
+      <div class="absolute inset-0 bg-stone-950/80"></div>
+      <div class="glow-orb glow-orange w-[300px] h-[300px] -left-20 top-[-20px] opacity-25 animate-float"></div>
+      <div class="glow-orb glow-yellow w-[300px] h-[300px] -right-20 bottom-[-20px] opacity-20 animate-float-reverse"></div>
+      <!-- Geometric accent lines -->
+      <div class="absolute right-[10%] bottom-0 w-[1px] h-[150px] bg-gradient-to-t from-brand-primary to-transparent opacity-40 hidden md:block"></div>
+      <div class="absolute right-[15%] bottom-0 w-[1px] h-[250px] bg-gradient-to-t from-brand-orange to-transparent opacity-20 hidden md:block"></div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left space-y-6">
+      <nav class="flex justify-center lg:justify-start items-center gap-2 text-xs md:text-sm font-semibold tracking-widest uppercase text-white/50">
+        <a href="/" class="hover:text-brand-accent transition-colors flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Trang chủ</a>
+        <span class="text-white/30">•</span>
+        <span class="text-brand-accent">Tin tức</span>
+      </nav>
+      <div class="max-w-3xl space-y-4">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase tracking-tight leading-none text-white">
+          {pageTitle}
+        </h1>
+        <p class="text-sm md:text-lg text-white/80 font-medium leading-relaxed max-w-2xl">
+          {pageSubtitle}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- News List Section - Masonry layout with Featured Post -->
+  <section class="py-20 md:py-32 bg-bg-base relative overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="glow-orb glow-yellow w-[450px] h-[450px] -left-32 top-10 opacity-12 animate-float"></div>
+      <div class="glow-orb glow-orange w-[400px] h-[400px] -right-32 top-1/2 opacity-10 animate-float-reverse"></div>
+      <div class="glow-orb glow-green w-[300px] h-[300px] bottom-10 left-[35%] opacity-8 animate-float"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Featured Post (First item, Full-width / large row) -->
+      {posts.slice(0, 1).map((post) => (
+        <div class="mb-16">
+          <div class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full mb-6">
+            <span class="text-xs font-semibold text-brand-primary uppercase">Bài viết nổi bật nhất</span>
+          </div>
+          
+          <article
+            class="blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row gap-6 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group shadow-xl relative"
+            data-post-id={post.id}
+          >
+            <!-- Thumbnail -->
+            <div class="lg:w-1/2 aspect-[16/10] bg-stone-100/50 overflow-hidden relative m-2.5 rounded-[2rem]">
+              <img
+                src={post.image}
+                alt={post.title}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[2rem]"
+                loading="eager"
+              />
+              <span class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                Mới nhất
+              </span>
+            </div>
+
+            <!-- Content details -->
+            <div class="lg:w-1/2 p-6 sm:p-10 flex flex-col justify-center space-y-4">
+              <span class="text-xs font-semibold text-brand-primary bg-brand-primary/10 px-3 py-1 rounded-full w-fit">
+                {post.date}
+              </span>
+              <h3 class="font-display font-black text-xl sm:text-2xl lg:text-3xl text-text-base leading-tight group-hover:text-brand-primary transition-colors">
+                {post.title}
+              </h3>
+              <p class="text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium line-clamp-3">
+                {post.summary}
+              </p>
+              <div class="pt-2">
+                <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-bold text-brand-primary group-hover:text-brand-orange transition-colors">
+                  Đọc chi tiết <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      ))}
+
+      <!-- Section Header for rest of the posts -->
+      <div class="mb-8 border-b border-stone-200 pb-4">
+        <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-wider">
+          Cẩm nang thi công &amp; Tin tức khác
+        </h3>
+      </div>
+
+      <!-- Static Grid Layout: Remaining posts (Mobile 2, Tablet 2, Desktop 3 columns) -->
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {posts.slice(1).map((post) => (
+          <article
+            class="blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5 cursor-pointer shadow-md"
+            data-post-id={post.id}
+          >
+            <div class="space-y-4">
+              <!-- Thumbnail -->
+              <div class="relative aspect-[16/10] bg-stone-100/50 overflow-hidden pointer-events-none m-2.5 rounded-[2rem]">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 rounded-[2rem]"
+                  loading="lazy"
+                />
+                <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full text-brand-primary-dark">
+                  {post.date}
+                </span>
+              </div>
+
+              <!-- Content -->
+              <div class="px-5 pb-4 space-y-2 pointer-events-none">
+                <h3 class="font-display font-bold text-sm sm:text-base lg:text-lg text-text-base leading-snug group-hover:text-brand-primary transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+                <p class="text-[12px] sm:text-xs lg:text-sm text-text-muted leading-relaxed line-clamp-3">
+                  {post.summary}
+                </p>
+              </div>
+            </div>
+
+            <!-- Read More Button -->
+            <div class="px-5 pb-6 pt-2 border-t border-stone-200/40 mt-auto pointer-events-none">
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-bold text-brand-primary group-hover:text-brand-orange transition-colors">
+                Đọc tiếp <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Post Modal (Popup dialog) -->
+  <div
+    id="blog-modal"
+    class="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-md flex items-center justify-center p-4 md:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
+  >
+    <div
+      class="bg-white/95 backdrop-blur-xl rounded-[2.5rem] max-w-3xl w-full max-h-[85vh] flex flex-col overflow-hidden shadow-2xl relative border border-stone-200/50 scale-95 transition-transform duration-300"
+      id="blog-modal-content"
+    >
+      <!-- Header -->
+      <div class="p-6 md:p-8 border-b border-stone-200/40 flex items-start justify-between gap-4">
+        <div>
+          <span
+            id="modal-post-date"
+            class="text-xs font-semibold text-brand-primary-dark bg-brand-primary/10 px-3 py-1 rounded-full animate-pulse"
+          ></span>
+          <h3
+            id="modal-post-title"
+            class="font-display font-black text-lg sm:text-xl md:text-2xl text-text-base mt-3 leading-tight"
+          >
+          </h3>
+        </div>
+        <button
+          id="blog-modal-close"
+          class="size-11 flex items-center justify-center bg-stone-100/80 backdrop-blur-xs text-stone-600 rounded-full hover:bg-brand-orange hover:text-white transition-colors cursor-pointer shrink-0 shadow-sm"
+          aria-label="Đóng bài viết"
+        >
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable content -->
+      <div
+        class="p-6 md:p-8 overflow-y-auto space-y-6 flex-grow font-medium leading-relaxed text-sm md:text-base text-text-base"
+        id="modal-post-body"
+      >
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  #modal-post-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    color: #4b5563;
+  }
+  #modal-post-body strong {
+    font-weight: 700;
+    color: #1f2937;
+  }
+  #modal-post-body ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  #modal-post-body ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  #modal-post-body li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+  #modal-post-body li strong {
+    color: #1f2937;
+  }
+</style>
+
+<script>
+  const postsData = [
+    {
+      id: 1,
+      title: "Xu hướng thi công trần nhôm vân gỗ năm 2026 tại Nha Trang",
+      date: "10/06/2026",
+      content: `<p>Trong những năm gần đây, xu hướng kiến trúc hiện đại tại Nha Trang đang chứng kiến sự lên ngôi của các dòng vật liệu xanh và có tính thích ứng cao với khí hậu ven biển. Trong số đó, <strong>trần nhôm vân gỗ</strong> đã nhanh chóng khẳng định vị thế dẫn đầu trong các hạng mục trang trí nội - ngoại thất cho biệt thự, resort và các quán cafe không gian mở.</p>
+      <p>Khác với gỗ tự nhiên dễ bị cong vênh, mối mọt trước tác động của hơi muối biển, trần nhôm vân gỗ mang đến giải pháp hoàn hảo với độ bền lên đến hàng chục năm. Lớp sơn tĩnh điện vân gỗ nổi 3D tạo cảm giác ấm cúng, sang trọng không thua kém gỗ thật, đồng thời hoàn toàn kháng nước và chịu được bức xạ nhiệt lớn.</p>
+      <p>Các kiểu dáng trần nhôm thịnh hành nhất năm 2026 bao gồm:</p>
+      <ul>
+        <li><strong>Trần nhôm U-Shaped:</strong> Thiết kế thanh lịch, khoảng cách giữa các thanh tạo sự thông thoáng tối đa, rất thích hợp cho sảnh đón ngoài trời.</li>
+        <li><strong>Trần caro (Cell):</strong> Tạo chiều sâu nghệ thuật cực tốt cho các nhà hàng sang trọng.</li>
+        <li><strong>Trần nhôm B-Shaped hoặc trần ống tròn:</strong> Phong cách độc đáo cho các công trình công cộng, showroom lớn.</li>
+      </ul>
+      <p>Trần Nhôm Gia Huy tự hào là đơn vị tiên phong cung cấp vật tư chính hãng và trực tiếp thi công trần nhôm vân gỗ chất lượng cao tại Nha Trang, mang lại sự yên tâm tuyệt đối cho chủ đầu tư.</p>`
+    },
+    {
+      id: 2,
+      title: "Tại sao biệt thự biển nên chọn trần thạch cao chống ẩm Knauf?",
+      date: "08/06/2026",
+      content: `<p>Nha Trang với khí hậu ven biển đặc trưng mang lại bầu không khí trong lành nhưng cũng đi kèm với độ ẩm không khí rất cao và hơi muối biển ăn mòn mạnh. Điều này khiến cho các loại trần thông thường rất dễ bị ố vàng, ẩm mốc hoặc xuống cấp nhanh chóng.</p>
+      <p>Để giải quyết triệt để bài toán này, các kiến trúc sư hàng đầu luôn khuyến nghị sử dụng <strong>tấm thạch cao chống ẩm Knauf Đức</strong> cho các công trình biệt thự ven biển. Tấm Knauf có cấu tạo lõi chống ẩm đặc biệt, lớp giấy ngoài được xử lý hóa chất kháng ẩm tối ưu, giúp ngăn chặn sự thẩm thấu của hơi nước hiệu quả.</p>
+      <p>Những ưu điểm vượt trội khi lựa chọn trần thạch cao Knauf được thi công bởi Gia Huy:</p>
+      <ul>
+        <li><strong>Kháng ẩm vượt trội:</strong> Không xảy ra tình trạng rêu mốc, bong tróc sơn bả trong mùa mưa ẩm.</li>
+        <li><strong>Cách âm cách nhiệt lý tưởng:</strong> Giúp không gian bên trong biệt thự luôn mát mẻ và yên tĩnh tuyệt đối.</li>
+        <li><strong>Thẩm mỹ hoàn hảo:</strong> Dễ dàng tạo hình trần phẳng phẳng mịn tuyệt đối hoặc giật cấp nghệ thuật sang trọng.</li>
+      </ul>
+      <p>Gia Huy kết hợp tấm Knauf chống ẩm cùng hệ khung xương Vĩnh Tường chịu lực siêu bền, cam kết bảo hành lâu dài cho từng mét vuông công trình.</p>`
+    },
+    {
+      id: 3,
+      title: "Hướng dẫn vệ sinh và bảo dưỡng trần lam nhôm đúng cách",
+      date: "05/06/2026",
+      content: `<p>Mặc dù trần lam nhôm nổi tiếng với độ bền cao và ít bám bụi bẩn, tuy nhiên đối với các vị trí sảnh đón ngoài trời hoặc khu vực nấu ăn của nhà hàng, việc bảo dưỡng định kỳ vẫn là yếu tố then chốt để giữ nguyên vẹn vẻ đẹp bóng bẩy ban đầu.</p>
+      <p>Dưới đây là cẩm nang vệ sinh trần lam nhôm đơn giản mà vô cùng hiệu quả từ kỹ sư Trần Nhôm Gia Huy:</p>
+      <ol>
+        <li><strong>Chuẩn bị dụng cụ:</strong> Một cây chổi lông mềm để quét bụi sơ bộ, khăn sợi nhân tạo (microfiber) mềm mại và dung dịch xà phòng nhẹ pha loãng (tránh dùng hóa chất tẩy rửa mạnh có chứa axit hoặc kiềm vì có thể ảnh hưởng đến lớp sơn bóng bên ngoài).</li>
+        <li><strong>Lau bụi bề mặt:</strong> Quét nhẹ dọc theo các thanh lam U-Shaped hoặc caro để loại bỏ mạng nhện và bụi khô bám bẩn.</li>
+        <li><strong>Lau ẩm:</strong> Dùng khăn mềm thấm nước xà phòng ấm đã vắt ráo lau nhẹ nhàng bề mặt thanh lam. Lớp sơn tĩnh điện cao cấp của lam nhôm Gia Huy rất trơn láng nên mọi vết dầu mỡ hay bụi bẩn cứng đầu đều dễ dàng bị đánh bay.</li>
+        <li><strong>Lau khô:</strong> Lau lại bằng khăn khô sạch để tránh các vết nước đọng bám trên bề mặt nhôm.</li>
+      </ol>
+      <p>Thực hiện định kỳ 6 tháng một lần sẽ giúp công trình của bạn luôn đẹp như mới xây và kéo dài tuổi thọ trần nhôm thêm nhiều năm.</p>`
+    },
+    {
+      id: 4,
+      title: "Báo giá thi công trần vách nhựa giả gỗ trang trí mới nhất",
+      date: "01/06/2026",
+      content: `<p>Ốp trần vách bằng nhựa giả gỗ đang là giải pháp trang trí nội thất cực kỳ phổ biến nhờ chi phí tối ưu, thời gian thi công nhanh chóng và hiệu quả thẩm mỹ vượt trội. Vật liệu nhựa Nano PVC và lam sóng nhựa giả gỗ giúp không gian trở nên sang trọng, chống ẩm mốc tuyệt đối cho các bức tường cũ.</p>
+      <p>Trần Nhôm Gia Huy xin gửi tới quý khách hàng thông tin báo giá tham khảo cho các hạng mục thi công vách nhựa giả gỗ tại Nha Trang:</p>
+      <ul>
+        <li><strong>Tấm ốp nhựa PVC Nano phẳng:</strong> Giá dao động từ 250.000đ - 350.000đ / m2 (đã bao gồm vật tư và nhân công hoàn thiện). Thích hợp cho ốp tường phẳng phòng khách, spa.</li>
+        <li><strong>Lam sóng nhựa giả gỗ (3 sóng, 4 sóng):</strong> Giá dao động từ 380.000đ - 480.000đ / m2. Tạo điểm nhấn sang trọng phía sau kệ tivi, đầu giường ngủ.</li>
+        <li><strong>Tấm ốp nhựa vân đá cẩm thạch (PVC vân đá):</strong> Giá dao động từ 300.000đ - 400.000đ / m2. Mang lại vẻ đẹp hiện đại như đá tự nhiên với chi phí chỉ bằng 1/10.</li>
+      </ul>
+      <p><em>Lưu ý:</em> Đơn giá thực tế có thể thay đổi tùy thuộc vào diện tích thi công, độ khó của công trình và loại cốt nhựa lựa chọn. Hãy liên hệ hotline 0935.37.3577 để được khảo sát thực tế và nhận báo giá chi tiết nhất.</p>`
+    },
+    {
+      id: 5,
+      title: "Ưu nhược điểm của các loại trần thạch cao nổi và trần chìm",
+      date: "28/05/2026",
+      content: `<p>Khi xây dựng hoặc cải tạo nhà cửa, việc lựa chọn giữa hệ trần thạch cao thả (nổi) và trần thạch cao khung xương chìm luôn khiến nhiều gia chủ băn khoăn. Mỗi loại đều mang những ưu và nhược điểm riêng phù hợp với từng nhu cầu sử dụng cụ thể.</p>
+      <p><strong>1. Trần thạch cao nổi (Trần thả):</strong></p>
+      <ul>
+        <li><strong>Ưu điểm:</strong> Thi công cực nhanh, dễ tháo lắp để sửa chữa đường điện nước phía trên, chi phí rẻ và khả năng chống ẩm lan tốt.</li>
+        <li><strong>Nhược điểm:</strong> Tính thẩm mỹ trung bình, chia ô nhỏ (600x600mm) tạo cảm giác không gian bị chia cắt, không làm được trần giật cấp.</li>
+      </ul>
+      <p><strong>2. Trần thạch cao chìm (Trần giật cấp/phẳng):</strong></p>
+      <ul>
+        <li><strong>Ưu điểm:</strong> Thẩm mỹ tuyệt đối sang trọng, dễ dàng tạo hình uốn lượn, giật cấp hắt ánh sáng led ấm cúng, tạo cảm giác rộng rãi như trần đúc thật.</li>
+        <li><strong>Nhược điểm:</strong> Chi phí cao hơn, khó sửa chữa đường điện nước bên trên (phải cắt trần và vá lại sơn bả).</li>
+      </ul>
+      <p>Gia Huy cung cấp cả hai dịch vụ với chất lượng khung xương Vĩnh Tường cao cấp, thợ tay nghề trên 5 năm kinh nghiệm trực tiếp đảm nhiệm.</p>`
+    },
+    {
+      id: 6,
+      title: "Quy trình chống thấm cổ ống xuyên sàn và ban công hiệu quả",
+      date: "25/05/2026",
+      content: `<p>Chống thấm cổ ống thoát nước là một trong những khâu quan trọng nhất trong thi công xây dựng hoàn thiện nhà vệ sinh, ban công, mái đón. 90% hiện tượng thấm dột từ tầng trên xuống tầng dưới đều bắt nguồn từ vị trí khe hở xung quanh cổ ống nhựa xuyên qua sàn bê tông.</p>
+      <p>Kỹ thuật chống thấm cổ ống chuẩn quy trình xây dựng của Gia Huy:</p>
+      <ol>
+        <li><strong>Đục tẩy bê tông:</strong> Đục rộng quanh cổ ống sâu từ 5 - 7cm hình phễu, làm sạch bề mặt bê tông cũ để đảm bảo lớp vữa chống thấm liên kết tốt.</li>
+        <li><strong>Lắp băng trương nở (Sika Hydrotite/Hyperstop):</strong> Quấn thanh cao su trương nở ôm khít quanh cổ ống. Loại thanh này sẽ phình to khi tiếp xúc nước, bịt kín mọi lỗ rỗng ngăn nước luồn qua.</li>
+        <li><strong>Quét chất liên kết (Sika Latex TH):</strong> Tạo lớp keo kết nối giữa bê tông cũ và vữa mới.</li>
+        <li><strong>Rót vữa không co ngót (Sika Grout 214-11):</strong> Trộn vữa rót tự chảy cường độ cao lấp đầy hốc phễu đục. Vữa không co ngót giúp bê tông không bị rạn nứt sau khi khô.</li>
+      </ol>
+      <p>Thi công cẩn thận từng chi tiết nhỏ này sẽ giúp công trình của bạn vĩnh viễn không bị rò rỉ nước.</p>`
+    },
+    {
+      id: 7,
+      title: "Thi công tấm nhựa giả đá vân cẩm thạch cho vách tivi sang trọng",
+      date: "20/05/2026",
+      content: `<p>Bức tường phía sau tivi là điểm nhấn thị giác quan trọng nhất của cả phòng khách. Để tạo nên vẻ đẹp sang trọng, đẳng cấp như khách sạn 5 sao, việc sử dụng <strong>tấm ốp nhựa PVC vân đá cẩm thạch</strong> đang là lựa chọn hoàn hảo thay thế cho đá tự nhiên đắt đỏ.</p>
+      <p>Quy trình thi công vách tivi PVC vân đá tại Gia Huy:</p>
+      <ul>
+        <li><strong>Lắp đặt khung xương sắt/nhựa:</strong> Định vị khung xương chắc chắn lên tường để tạo mặt phẳng tuyệt đối và khoảng hở chống ẩm mốc tường.</li>
+        <li><strong>Cắt ghép tấm nhựa vân đá:</strong> Đo đạc và cắt ghép chính xác các tấm nhựa giả đá hoa cương khổ lớn, đảm bảo đường vân liền mạch tự nhiên nhất.</li>
+        <li><strong>Tạo viền trang trí:</strong> Kết hợp các đường chỉ phào nhựa giả gỗ hoặc nẹp nhôm mạ đồng vàng tạo điểm nhấn tinh tế cho bức vách.</li>
+        <li><strong>Đi led hắt hậu:</strong> Lắp hệ thống đèn led chạy chìm phía sau tấm tạo ánh sáng dịu nhẹ ấm áp khi bật tivi buổi tối.</li>
+      </ul>
+      <p>Liên hệ ngay Gia Huy để biến bức tường phòng khách cũ kỹ trở nên lộng lẫy và bắt mắt.</p>`
+    },
+    {
+      id: 8,
+      title: "Hướng dẫn lựa chọn độ dày tấm trần nhôm phù hợp từng hạng mục",
+      date: "15/05/2026",
+      content: `<p>Trần nhôm ngày càng được ứng dụng rộng rãi vì khả năng chống nước và độ bền ấn tượng. Tuy nhiên, nhiều khách hàng khi làm trần nhôm vẫn chưa phân biệt được việc lựa chọn độ dày nhôm phù hợp với từng vị trí công trình sẽ giúp tối ưu chi phí và tăng độ vững chắc.</p>
+      <p>Kỹ sư Gia Huy tư vấn phân bổ độ dày trần nhôm tiêu chuẩn:</p>
+      <ul>
+        <li><strong>Trần nhôm dày 0.5mm:</strong> Phù hợp cho trần nhà vệ sinh, nhà tắm diện tích nhỏ dưới 5m2. Khung xương nhỏ chịu lực ít nên độ dày này là vừa vặn, tiết kiệm chi phí tối đa.</li>
+        <li><strong>Trần nhôm dày 0.6mm:</strong> Lựa chọn tối ưu cho trần phòng khách, phòng ngủ hoặc ban công căn hộ gia đình. Tấm nhôm có độ cứng cáp vừa phải, không bị võng hay xô lệch.</li>
+        <li><strong>Trần nhôm dày 0.7mm - 0.8mm:</strong> Bắt buộc dùng cho các sảnh sảnh đón tòa nhà lớn, sảnh cafe ngoài trời có diện tích rộng chịu tác động trực tiếp của gió biển Nha Trang thổi mạnh. Độ dày cao giúp hệ trần kháng gió rung lắc, bảo vệ tuyệt đối an toàn.</li>
+      </ul>
+      <p>Hãy liên hệ với chúng tôi để được khảo sát vị trí và đo đạc tư vấn kỹ thuật chính xác nhất.</p>`
+    }
+  ];
+
+  // DOM Elements
+  const modal = document.getElementById("blog-modal");
+  const modalContent = document.getElementById("blog-modal-content");
+  const modalClose = document.getElementById("blog-modal-close");
+  const modalTitle = document.getElementById("modal-post-title");
+  const modalDate = document.getElementById("modal-post-date");
+  const modalBody = document.getElementById("modal-post-body");
+  const articleCards = document.querySelectorAll(".blog-card");
+
+  // Move modal to body to avoid z-index/stacking context issues
+  if (modal) {
+    document.body.appendChild(modal);
+  }
+
+  function openPost(id: number) {
+    const post = postsData.find((p) => p.id === id);
+    if (
+      !post ||
+      !modal ||
+      !modalContent ||
+      !modalTitle ||
+      !modalDate ||
+      !modalBody
+    )
+      return;
+
+    modalTitle.textContent = post.title;
+    modalDate.textContent = post.date;
+    modalBody.innerHTML = post.content;
+
+    modal.classList.remove("opacity-0", "pointer-events-none");
+    modal.classList.add("opacity-100");
+    modalContent.classList.remove("scale-95");
+    modalContent.classList.add("scale-100");
+    document.body.style.overflow = "hidden";
+
+    // Hide main header so modal covers everything
+    const header = document.getElementById("main-header");
+    if (header) header.style.visibility = "hidden";
+  }
+
+  function closePost() {
+    if (!modal || !modalContent) return;
+
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0", "pointer-events-none");
+    modalContent.classList.remove("scale-100");
+    modalContent.classList.add("scale-95");
+    document.body.style.overflow = "";
+
+    // Restore header
+    const header = document.getElementById("main-header");
+    if (header) header.style.visibility = "";
+  }
+
+  // Bind click event to each article card
+  articleCards.forEach((article) => {
+    article.addEventListener("click", () => {
+      const id = parseInt(article.getAttribute("data-post-id") || "0");
+      if (id > 0) openPost(id);
+    });
+  });
+
+  modalClose?.addEventListener("click", closePost);
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closePost();
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (modal?.classList.contains("opacity-100") && e.key === "Escape") {
+      closePost();
+    }
+  });
+</script>
