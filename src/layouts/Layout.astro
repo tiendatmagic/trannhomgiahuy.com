@@ -75,67 +75,75 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
             <i class="fa-solid fa-bars text-lg"></i>
           </button>
 
-          <!-- Logo Only - Removed white background capsule wrapper -->
+          <!-- Logo + Brand Name -->
           <a
             href="/"
-            class="flex items-center transition-transform duration-300 hover:scale-105"
+            class="flex items-center flex-shrink-0 gap-2 sm:gap-2.5 mr-2 xl:mr-4 transition-transform duration-300 hover:scale-105"
           >
             <img
               src="/logo.png"
               alt="Trần Nhôm Gia Huy"
-              class="h-14 w-auto object-contain"
+              class="h-10 sm:h-12 md:h-13 lg:h-14 w-auto object-contain"
             />
+            <div class="flex flex-col text-left leading-none">
+              <span class="font-display font-black tracking-wider text-[14px] sm:text-[15px] lg:text-[16px] xl:text-lg uppercase text-white whitespace-nowrap">
+                Trần Nhôm
+              </span>
+              <span class="font-display font-black tracking-widest text-[10px] sm:text-[11px] lg:text-[12px] xl:text-sm uppercase text-brand-orange mt-0.5 whitespace-nowrap">
+                Gia Huy
+              </span>
+            </div>
           </a>
 
           <!-- Navigation links with Icons - Responsive text size and padding to prevent squeezing -->
-          <nav class="hidden lg:flex items-center gap-1">
+          <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5">
             <a
               href="/"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-house text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-house text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Trang chủ</span>
             </a>
             <a
               href="/gioi-thieu"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/gioi-thieu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/gioi-thieu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-circle-info text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-circle-info text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Giới thiệu</span>
             </a>
             <a
               href="/dich-vu"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/dich-vu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/dich-vu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-hammer text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-hammer text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Dịch vụ</span>
             </a>
             <a
               href="/thuc-te"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/thuc-te' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/thuc-te' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-images text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-images text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Thực tế</span>
             </a>
             <a
               href="/tin-tuc"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/tin-tuc' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/tin-tuc' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-newspaper text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-newspaper text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Tin tức</span>
             </a>
             <a
               href="/quy-trinh"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/quy-trinh' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/quy-trinh' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-route text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-route text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Quy trình</span>
             </a>
             <a
               href="/lien-he"
-              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/lien-he' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/lien-he' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-envelope text-xs lg:text-sm xl:text-base"></i>
+              <i class="fa-solid fa-envelope text-xs xl:text-sm !hidden xl:!inline-block"></i>
               <span>Liên hệ</span>
             </a>
           </nav>
@@ -145,10 +153,10 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
             <!-- Desktop Call button: compact at lg, full at xl -->
             <a
               href="tel:0935373577"
-              class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-primary to-brand-orange hover:shadow-lg text-white font-display font-semibold text-xs xl:text-sm px-3 lg:px-3.5 xl:px-5 py-2 xl:py-2.5 rounded-full border border-white/30 transition-all duration-300 shine-effect cursor-pointer whitespace-nowrap"
+              class="hidden sm:inline-flex flex-shrink-0 items-center gap-1.5 xl:gap-2 bg-gradient-to-r from-brand-primary to-brand-orange hover:shadow-lg text-white font-display font-semibold text-xs xl:text-sm px-2.5 lg:px-3 xl:px-5 py-2 xl:py-2.5 rounded-full border border-white/30 transition-all duration-300 shine-effect cursor-pointer whitespace-nowrap"
             >
               <i class="fa-solid fa-phone"></i>
-              <span class="hidden sm:inline">GỌI 0935.37.3577</span>
+              <span class="hidden sm:inline">GỌI TƯ VẤN</span>
             </a>
 
             <!-- Mobile Call icon -->
@@ -178,9 +186,17 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
         <div
           class="flex items-center justify-between border-b border-stone-200/50 pb-4 mb-6"
         >
-          <!-- Removed outer white background capsule wrapper -->
-          <a href="/" class="flex items-center">
-            <img src="/logo.png" alt="Trần Nhôm Gia Huy" class="h-14 w-auto" />
+          <!-- Logo + Brand Name in Drawer -->
+          <a href="/" class="flex items-center gap-2">
+            <img src="/logo.png" alt="Trần Nhôm Gia Huy" class="h-11 w-auto object-contain" />
+            <div class="flex flex-col text-left leading-none">
+              <span class="font-display font-black tracking-wider text-sm uppercase text-text-base whitespace-nowrap">
+                Trần Nhôm
+              </span>
+              <span class="font-display font-black tracking-widest text-[10px] uppercase text-brand-orange mt-0.5 whitespace-nowrap">
+                Gia Huy
+              </span>
+            </div>
           </a>
           <button
             id="drawer-close-btn"
