@@ -619,6 +619,8 @@ import BlogSection from "../components/BlogSection.astro";
               </a>
             </div>
           </article>
+          <!-- Trailing spacer: allows last card to reach snap-start on mobile -->
+          <div class="shrink-0 min-w-[calc(50%-8px)] sm:hidden" aria-hidden="true"></div>
         </div>
 
         <!-- Dots indicator (mobile only) -->
@@ -923,6 +925,11 @@ import BlogSection from "../components/BlogSection.astro";
               </p>
             </div>
           </article>
+          <!-- Trailing spacers to allow cards 4+5 to reach snap-start -->
+          <!-- Spacer 1: mobile (1 card wide) + sm (1/3 card wide) -->
+          <div class="shrink-0 min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] lg:hidden" aria-hidden="true"></div>
+          <!-- Spacer 2: sm only (extra spacer for 3-visible layout) -->
+          <div class="hidden sm:block shrink-0 sm:min-w-[calc(33.333%-12px)] lg:hidden" aria-hidden="true"></div>
         </div>
 
         <!-- Dots indicator (mobile & tablet, hidden on lg) -->

@@ -475,12 +475,15 @@ const posts = [
     }
 
     function updateBlogDots() {
-      if (!blogDots.length || groupWidth === 0) return;
-      // Position relative to middle group start
-      const relativeScroll = slider.scrollLeft - (card8?.offsetLeft ?? 0) + (cards[0] as HTMLElement).offsetLeft;
+      if (!blogDots.length || groupWidth === 0 || !card8) return;
       const cardUnit = getCardUnit();
+      if (cardUnit === 0) return;
+      // middleGroupScrollLeft: scroll position when first card of middle group is at left edge
+      // This matches how initScrollPosition sets slider.scrollLeft
+      const middleGroupScrollLeft = (card8 as HTMLElement).offsetLeft - slider.offsetLeft;
+      const relativeScroll = slider.scrollLeft - middleGroupScrollLeft;
       const rawIdx = Math.round(relativeScroll / cardUnit);
-      // Wrap within 0..7
+      // Wrap within 0..(cardsPerGroup-1)
       const dotIdx = ((rawIdx % cardsPerGroup) + cardsPerGroup) % cardsPerGroup;
       blogDots.forEach((d, i) => {
         const active = i === dotIdx;
@@ -495,9 +498,9 @@ const posts = [
       dot.addEventListener('click', () => {
         if (!card8) return;
         const cardUnit = getCardUnit();
-        const targetScroll = (card8 as HTMLElement).offsetLeft - (cards[0] as HTMLElement).offsetLeft + i * cardUnit;
+        const middleGroupScrollLeft = (card8 as HTMLElement).offsetLeft - slider.offsetLeft;
         slider.style.scrollBehavior = 'smooth';
-        slider.scrollLeft = targetScroll;
+        slider.scrollLeft = middleGroupScrollLeft + i * cardUnit;
       });
     });
 
@@ -507,6 +510,7 @@ const posts = [
 
     // Initial dot state (run after initScrollPosition)
     requestAnimationFrame(() => { requestAnimationFrame(updateBlogDots); });
+
 
 
     // Interactive mouse drag support for desktop (intuitive swiping)
