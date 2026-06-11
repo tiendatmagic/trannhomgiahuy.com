@@ -8,7 +8,7 @@ import BlogSection from "../components/BlogSection.astro";
   <!-- Hero Section with Ambient Orbs -->
   <section
     id="top"
-    class="relative overflow-hidden pt-24 md:pt-[60px] pb-12 md:pb-[60px] bg-bg-base transition-colors duration-300"
+    class="relative overflow-hidden pt-40 lg:pt-44 pb-20 lg:pb-24 bg-bg-base transition-colors duration-300"
   >
     <!-- Ambient Floating Glow Blobs -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -27,9 +27,11 @@ import BlogSection from "../components/BlogSection.astro";
     </div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-16 pt-6">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
         <!-- Left: Taglines, Headline with Gradient, Pill CTA buttons -->
-        <div class="lg:w-1/2 space-y-7 text-center lg:text-left">
+        <div
+          class="lg:w-1/2 space-y-7 text-center lg:text-left reveal-on-scroll"
+        >
           <div
             class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full mt-3"
           >
@@ -80,7 +82,7 @@ import BlogSection from "../components/BlogSection.astro";
         </div>
 
         <!-- Right: Styled image container (KIGI Agency style) with real project photo -->
-        <div class="lg:w-1/2 w-full relative">
+        <div class="lg:w-1/2 w-full relative reveal-on-scroll delay-200">
           <!-- Colorful backdrop decoration -->
           <div
             class="absolute -inset-4 bg-gradient-to-r from-brand-accent via-brand-orange to-brand-green rounded-[2.5rem] blur-3xl opacity-20 animate-pulse"
@@ -108,13 +110,15 @@ import BlogSection from "../components/BlogSection.astro";
   </section>
 
   <!-- Trust Badge Bar - sits below hero as its own section -->
-  <section class="relative z-10 py-6 md:py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section
+    class="relative z-10 py-6 md:py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+  >
     <div
       class="bg-white/95 backdrop-blur-xl border border-stone-200/50 shadow-2xl rounded-2xl sm:rounded-[2.5rem] grid grid-cols-1 md:grid-cols-3 gap-4 p-2 sm:p-4 divide-y md:divide-y-0 md:divide-x divide-stone-200/40"
     >
       <!-- Badge 1 -->
       <div
-        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer"
+        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer reveal-on-scroll"
       >
         <span
           class="grid size-12 place-items-center bg-brand-primary/10 text-brand-primary rounded-2xl text-xl shrink-0 group-hover:scale-110 transition-transform duration-300"
@@ -135,7 +139,7 @@ import BlogSection from "../components/BlogSection.astro";
 
       <!-- Badge 2 -->
       <div
-        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer"
+        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer reveal-on-scroll delay-100"
       >
         <span
           class="grid size-12 place-items-center bg-brand-primary/10 text-brand-primary rounded-2xl text-xl shrink-0 group-hover:scale-110 transition-transform duration-300"
@@ -156,7 +160,7 @@ import BlogSection from "../components/BlogSection.astro";
 
       <!-- Badge 3 -->
       <div
-        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer"
+        class="p-4 sm:p-6 flex items-center gap-4 hover:bg-brand-primary/5 transition-colors duration-300 rounded-xl sm:rounded-[2rem] group cursor-pointer reveal-on-scroll delay-200"
       >
         <span
           class="grid size-12 place-items-center bg-brand-primary/10 text-brand-primary rounded-2xl text-xl shrink-0 group-hover:scale-110 transition-transform duration-300"
@@ -196,7 +200,7 @@ import BlogSection from "../components/BlogSection.astro";
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex flex-col lg:flex-row items-center gap-16">
         <!-- Left: Real project picture -->
-        <div class="lg:w-1/2 w-full">
+        <div class="lg:w-1/2 w-full reveal-on-scroll">
           <div
             class="relative p-2 rounded-[2.5rem] border border-stone-200/60 bg-white shadow-2xl"
           >
@@ -231,7 +235,9 @@ import BlogSection from "../components/BlogSection.astro";
         </div>
 
         <!-- Right: Content details -->
-        <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+        <div
+          class="lg:w-1/2 space-y-6 text-center lg:text-left reveal-on-scroll delay-200"
+        >
           <div
             class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
           >
@@ -390,7 +396,9 @@ import BlogSection from "../components/BlogSection.astro";
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
-      <div class="text-center max-w-7xl mx-auto mb-12 md:mb-16 space-y-4">
+      <div
+        class="text-center max-w-7xl mx-auto mb-12 md:mb-16 space-y-4 reveal-on-scroll"
+      >
         <div
           class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
         >
@@ -416,187 +424,221 @@ import BlogSection from "../components/BlogSection.astro";
         </p>
       </div>
 
-      <!-- Card Grid - 2 columns on mobile and 3 columns on desktop -->
-      <div
-        class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8"
-      >
-        <!-- Card 1: Trần Thạch Cao -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-primary/80 hover:shadow-[0_15px_30px_-5px_rgba(217,119,6,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1"
+      <!-- Card Grid wrapper with group for hover arrows -->
+      <div class="relative group" id="services-wrapper">
+        <!-- Left Arrow - hover only -->
+        <button
+          id="services-prev"
+          class="absolute left-[-10px] sm:left-[-15px] top-[45%] -translate-y-1/2 size-12 hidden sm:flex items-center justify-center bg-white text-text-base rounded-full border border-stone-200/60 shadow-lg active:scale-90 hover:bg-brand-primary hover:text-white transition-all z-20 cursor-pointer opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto duration-300"
+          aria-label="Dịch vụ trước"
         >
-          <div class="space-y-3 md:space-y-5 flex-grow">
-            <!-- Icon -->
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
-            >
-              <span class="text-lg sm:text-xl md:text-2xl font-semibold">
-                <i class="fa-solid fa-fill-drip"></i>
-              </span>
-            </div>
-            <h3
-              class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
-            >
-              Trần thạch cao
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
-            >
-              Thi công hệ trần phẳng, giật cấp thẩm mỹ cao, cách âm cách nhiệt
-              tốt. Thích hợp cho phòng khách biệt thự, căn hộ cao cấp và văn
-              phòng công sở.
-            </p>
-            <ul
-              class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
-            >
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Tấm thạch cao Knauf Đức chống ẩm
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Khung xương Vĩnh Tường chịu lực
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Bề mặt bả sơn nhẵn mịn tuyệt đối
-              </li>
-            </ul>
-          </div>
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
 
-          <div class="pt-3 sm:pt-4 md:pt-5">
-            <a
-              href="#lien-he"
-              class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5"
-            >
-              <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
-              <span class="hidden sm:inline text-xs lg:text-sm xl:text-base"
-                >Nhận tư vấn & Báo giá</span
-              >
-              <span class="sm:hidden text-[10px] font-black">Tư vấn</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 2: Trần Nhôm - Lam Nhôm -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-[0_15px_30px_-5px_rgba(249,115,22,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1"
+        <!-- Right Arrow - hover only -->
+        <button
+          id="services-next"
+          class="absolute right-[-10px] sm:right-[-15px] top-[45%] -translate-y-1/2 size-12 hidden sm:flex items-center justify-center bg-white text-text-base rounded-full border border-stone-200/60 shadow-lg active:scale-90 hover:bg-brand-primary hover:text-white transition-all z-20 cursor-pointer opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto duration-300"
+          aria-label="Dịch vụ sau"
         >
-          <div class="space-y-3 md:space-y-5 flex-grow">
-            <!-- Icon -->
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
-            >
-              <span class="text-lg sm:text-xl md:text-2xl font-semibold">
-                <i class="fa-solid fa-bars-staggered"></i>
-              </span>
-            </div>
-            <h3
-              class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
-            >
-              Trần & Lam nhôm giả gỗ
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
-            >
-              Sản phẩm đỉnh cao kháng nước, chịu bức xạ mặt trời. Rất chuộng thi
-              công sảnh đón ngoài trời, lam chắn nắng mặt tiền nhà hướng Tây.
-            </p>
-            <ul
-              class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
-            >
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Nhôm tĩnh điện vân gỗ nổi cao cấp
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Kết cấu U-Shaped, Caro Cell sang trọng
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Không rỉ sét, chịu gió giật biển khơi
-              </li>
-            </ul>
-          </div>
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
 
-          <div class="pt-3 sm:pt-4 md:pt-5">
-            <a
-              href="#lien-he"
-              class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5"
-            >
-              <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
-              <span class="hidden sm:inline text-xs lg:text-sm xl:text-base"
-                >Nhận tư vấn & Báo giá</span
-              >
-              <span class="sm:hidden text-[10px] font-black">Tư vấn</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 3: Trần - Vách Nhựa Giả Gỗ -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-[0_15px_30px_-5px_rgba(249,115,22,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1"
+        <!-- Card Grid - Slider on mobile, 3 columns grid on desktop -->
+        <div
+          id="services-slider"
+          class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory no-scrollbar sm:grid sm:grid-cols-3 sm:gap-6 lg:gap-8 sm:pb-0 sm:overflow-visible"
         >
-          <div class="space-y-3 md:space-y-5 flex-grow">
-            <!-- Icon -->
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
-            >
-              <span class="text-lg sm:text-xl md:text-2xl font-semibold">
-                <i class="fa-solid fa-layer-group"></i>
-              </span>
-            </div>
-            <h3
-              class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
-            >
-              Trần vách nhựa giả gỗ
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
-            >
-              Tấm nhựa ốp tường PVC nano vân đá, lam nhựa trang trí nội thất. Dễ
-              dàng lau chùi vệ sinh, chi phí thi công kinh tế và sang trọng.
-            </p>
-            <ul
-              class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
-            >
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Vật liệu nhựa nguyên sinh cách nhiệt
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Chống ẩm mốc vách tường cũ rêu phong
-              </li>
-              <li class="flex items-start gap-2">
-                <i
-                  class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
-                ></i> Phù hợp ốp phòng khách, karaoke, spa
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-3 sm:pt-4 md:pt-5">
-            <a
-              href="#lien-he"
-              class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5"
-            >
-              <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
-              <span class="hidden sm:inline text-xs lg:text-sm xl:text-base"
-                >Nhận tư vấn & Báo giá</span
+          <!-- Card 1: Trần Thạch Cao -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-primary/80 hover:shadow-[0_15px_30px_-5px_rgba(217,119,6,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1 reveal-on-scroll sm:min-w-0 sm:w-auto"
+          >
+            <div class="space-y-3 md:space-y-5 flex-grow">
+              <!-- Icon -->
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
               >
-              <span class="sm:hidden text-[10px] font-black">Tư vấn</span>
-            </a>
-          </div>
-        </article>
+                <span class="text-lg sm:text-xl md:text-2xl font-semibold">
+                  <i class="fa-solid fa-fill-drip"></i>
+                </span>
+              </div>
+              <h3
+                class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
+              >
+                Trần thạch cao
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
+              >
+                Thi công hệ trần phẳng, giật cấp thẩm mỹ cao, cách âm cách nhiệt
+                tốt. Thích hợp cho phòng khách biệt thự, căn hộ cao cấp và văn
+                phòng công sở.
+              </p>
+              <ul
+                class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
+              >
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Tấm thạch cao Knauf Đức chống ẩm
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Khung xương Vĩnh Tường chịu lực
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Bề mặt bả sơn nhẵn mịn tuyệt đối
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-3 sm:pt-4 md:pt-5">
+              <a
+                href="#lien-he"
+                class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5 text-xs lg:text-sm xl:text-base"
+              >
+                <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
+                Nhận tư vấn
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Trần Nhôm - Lam Nhôm -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-[0_15px_30px_-5px_rgba(249,115,22,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1 reveal-on-scroll delay-100 sm:min-w-0 sm:w-auto"
+          >
+            <div class="space-y-3 md:space-y-5 flex-grow">
+              <!-- Icon -->
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-lg sm:text-xl md:text-2xl font-semibold">
+                  <i class="fa-solid fa-bars-staggered"></i>
+                </span>
+              </div>
+              <h3
+                class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
+              >
+                Trần & Lam nhôm giả gỗ
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
+              >
+                Sản phẩm đỉnh cao kháng nước, chịu bức xạ mặt trời. Rất chuộng
+                thi công sảnh đón ngoài trời, lam chắn nắng mặt tiền nhà hướng
+                Tây.
+              </p>
+              <ul
+                class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
+              >
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Nhôm tĩnh điện vân gỗ nổi cao cấp
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Kết cấu U-Shaped, Caro Cell sang trọng
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Không rỉ sét, chịu gió giật biển khơi
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-3 sm:pt-4 md:pt-5">
+              <a
+                href="#lien-he"
+                class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5 text-xs lg:text-sm xl:text-base"
+              >
+                <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
+                Nhận tư vấn
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Trần - Vách Nhựa Giả Gỗ -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-[0_15px_30px_-5px_rgba(249,115,22,0.15)] rounded-2xl sm:rounded-[2rem] p-3 sm:p-5 lg:p-7 flex flex-col justify-between cursor-pointer transition-all duration-300 group hover:-translate-y-1 reveal-on-scroll delay-200 sm:min-w-0 sm:w-auto"
+          >
+            <div class="space-y-3 md:space-y-5 flex-grow">
+              <!-- Icon -->
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-lg sm:text-xl md:text-2xl font-semibold">
+                  <i class="fa-solid fa-layer-group"></i>
+                </span>
+              </div>
+              <h3
+                class="font-display font-bold text-base sm:text-lg lg:text-xl text-text-base uppercase tracking-tight group-hover:text-brand-primary transition-colors duration-200"
+              >
+                Trần vách nhựa giả gỗ
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-muted leading-relaxed font-medium"
+              >
+                Tấm nhựa ốp tường PVC nano vân đá, lam nhựa trang trí nội thất.
+                Dễ dàng lau chùi vệ sinh, chi phí thi công kinh tế và sang
+                trọng.
+              </p>
+              <ul
+                class="space-y-2 text-[13px] sm:text-xs lg:text-sm xl:text-base text-text-base font-semibold border-t border-stone-200/50 pt-3 sm:pt-4"
+              >
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Vật liệu nhựa nguyên sinh cách nhiệt
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Chống ẩm mốc vách tường cũ rêu phong
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-brand-green text-[9px] mt-1 shrink-0"
+                  ></i> Phù hợp ốp phòng khách, karaoke, spa
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-3 sm:pt-4 md:pt-5">
+              <a
+                href="#lien-he"
+                class="flex items-center justify-center gap-1.5 w-full py-2.5 sm:py-3 bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-0.5 text-xs lg:text-sm xl:text-base"
+              >
+                <i class="fa-solid fa-comment-dots text-xs sm:text-sm"></i>
+                Nhận tư vấn
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dots indicator (mobile only) -->
+        <div
+          class="flex justify-center gap-2 mt-5 sm:hidden"
+          id="services-dots"
+        >
+          <button
+            class="services-dot size-2 rounded-full bg-brand-primary transition-all duration-300"
+            data-index="0"
+            aria-label="Dịch vụ 1"></button>
+          <button
+            class="services-dot size-2 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="1"
+            aria-label="Dịch vụ 2"></button>
+          <button
+            class="services-dot size-2 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="2"
+            aria-label="Dịch vụ 3"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -670,7 +712,7 @@ import BlogSection from "../components/BlogSection.astro";
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div
-        class="text-center max-w-7xl mx-auto mb-12 md:mb-16 space-y-3 sm:space-y-4"
+        class="text-center max-w-7xl mx-auto mb-12 md:mb-16 space-y-3 sm:space-y-4 reveal-on-scroll"
       >
         <div
           class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
@@ -697,524 +739,715 @@ import BlogSection from "../components/BlogSection.astro";
         </p>
       </div>
 
-      <!-- Beautiful grid design: white cards, top gradient line, icons, glowing translucent numbers -->
-      <div
-        class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5"
-      >
-        <!-- Step 1 -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-primary/80 hover:shadow-xl hover:shadow-brand-primary/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-between relative group hover:-translate-y-1.5 transition-all duration-300"
+      <!-- Steps slider with hover arrows -->
+      <div class="relative group" id="steps-wrapper">
+        <!-- Left Arrow - hover only -->
+        <button
+          id="steps-prev"
+          class="absolute left-[-10px] sm:left-[-15px] top-[45%] -translate-y-1/2 size-12 hidden sm:flex items-center justify-center bg-white text-text-base rounded-full border border-stone-200/60 shadow-lg active:scale-90 hover:bg-brand-primary hover:text-white transition-all z-20 cursor-pointer opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto duration-300"
+          aria-label="Bước trước"
         >
-          <div
-            class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
-          >
-          </div>
-          <span
-            class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-primary/20 transition-all select-none"
-            >01</span
-          >
-          <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
-            >
-              <i class="fa-solid fa-map-location-dot"></i>
-            </div>
-            <h3
-              class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
-            >
-              Khảo sát & Đo đạc
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
-            >
-              Tiếp nhận thông tin điện thoại/Zalo, thảo luận yêu cầu và đến công
-              trình đo đạc thực tế miễn phí.
-            </p>
-          </div>
-        </article>
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
 
-        <!-- Step 2 -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300"
+        <!-- Right Arrow - hover only -->
+        <button
+          id="steps-next"
+          class="absolute right-[-10px] sm:right-[-15px] top-[45%] -translate-y-1/2 size-12 hidden sm:flex items-center justify-center bg-white text-text-base rounded-full border border-stone-200/60 shadow-lg active:scale-90 hover:bg-brand-primary hover:text-white transition-all z-20 cursor-pointer opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto duration-300"
+          aria-label="Bước sau"
         >
-          <div
-            class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
-          >
-          </div>
-          <span
-            class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-orange/20 transition-all select-none"
-            >02</span
-          >
-          <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
-            >
-              <i class="fa-solid fa-compass-drafting"></i>
-            </div>
-            <h3
-              class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
-            >
-              Bản vẽ & Thiết kế
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
-            >
-              Lập bản vẽ kỹ thuật phân bổ khung xương và tấm trần, thống nhất
-              giải pháp tạo hình nghệ thuật.
-            </p>
-          </div>
-        </article>
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
 
-        <!-- Step 3 -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300"
+        <!-- Beautiful grid design: white cards, top gradient line, icons, glowing translucent numbers -->
+        <div
+          id="steps-slider"
+          class="flex overflow-x-auto gap-4 py-4 snap-x snap-mandatory no-scrollbar lg:grid lg:grid-cols-5 lg:gap-5 lg:pb-0 lg:overflow-visible"
         >
-          <div
-            class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
+          <!-- Step 1 -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] sm:w-[calc(33.333%-12px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-primary/80 hover:shadow-xl hover:shadow-brand-primary/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-between relative group hover:-translate-y-1.5 transition-all duration-300 reveal-on-scroll lg:min-w-0 lg:w-auto"
           >
-          </div>
-          <span
-            class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-primary/20 transition-all select-none"
-            >03</span
-          >
-          <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
             <div
-              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
+              class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
             >
-              <i class="fa-solid fa-file-invoice-dollar"></i>
             </div>
-            <h3
-              class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+            <span
+              class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-primary/20 transition-all select-none"
+              >01</span
             >
-              Báo giá hợp đồng
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
-            >
-              Dự toán vật tư, báo giá gốc tại kho không trung gian và ký hợp
-              đồng bảo đảm quyền lợi.
-            </p>
-          </div>
-        </article>
-
-        <!-- Step 4 -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300"
-        >
-          <div
-            class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
-          >
-          </div>
-          <span
-            class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-orange/20 transition-all select-none"
-            >04</span
-          >
-          <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
-            >
-              <i class="fa-solid fa-helmet-safety"></i>
-            </div>
-            <h3
-              class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
-            >
-              Lắp ráp trần vách
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
-            >
-              Chuyển hệ xương nhôm/thép, tấm thạch cao/thanh lam đến hiện trường
-              và tiến hành thi công tỉ mỉ.
-            </p>
-          </div>
-        </article>
-
-        <!-- Step 5 -->
-        <article
-          class="bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300"
-        >
-          <div
-            class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
-          >
-          </div>
-          <span
-            class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-green/20 transition-all select-none"
-            >05</span
-          >
-          <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
-            <div
-              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
-            >
-              <i class="fa-solid fa-award"></i>
-            </div>
-            <h3
-              class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
-            >
-              Nghiệm thu bàn giao
-            </h3>
-            <p
-              class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
-            >
-              Vệ sinh sạch sẽ, nghiệm thu bề mặt trần phẳng đẹp đạt chuẩn và
-              cung cấp phiếu bảo hành dài hạn.
-            </p>
-          </div>
-        </article>
-      </div>
-  </section>
-
-  <!-- FAQ Section - Clean Accordion disclosure design -->
-  <section class="py-12 md:py-[60px] bg-bg-base border-t border-stone-200/40 relative overflow-hidden">
-    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <div class="glow-orb glow-green w-[300px] h-[300px] left-[-50px] top-[10px] opacity-8 animate-float"></div>
-      <div class="glow-orb glow-yellow w-[300px] h-[300px] right-[-50px] bottom-[10px] opacity-8 animate-float-reverse"></div>
-    </div>
-    
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
-        <div class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/20 px-4 py-1.5 rounded-full">
-          <span class="text-xs font-semibold text-brand-green uppercase">Giải đáp chuyên môn</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase">
-          CÂU HỎI THƯỜNG GẶP KHI THI CÔNG
-        </h2>
-      </div>
-
-      <!-- Clean disclosures list (Accordions) -->
-      <div class="space-y-4 max-w-3xl mx-auto">
-        <!-- FAQ 1 -->
-        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
-          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
-            <span>Thời gian hoàn thiện trần thạch cao phòng khách thông thường bao lâu?</span>
-            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </summary>
-          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
-            Thông thường đối với phòng khách nhà dân dụng từ 30 - 50m2, quá trình lắp ráp khung xương chịu lực thô, bắn tấm thạch cao chống ẩm Knauf và hoàn thiện sơn bả matit Dulux sẽ mất khoảng từ <strong>3 - 5 ngày làm việc</strong> để đạt bề mặt phẳng đẹp mỹ thuật tối đa.
-          </div>
-        </details>
-
-        <!-- FAQ 2 -->
-        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
-          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
-            <span>Chi phí khảo sát đo đạc hiện trạng là bao nhiêu?</span>
-            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </summary>
-          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
-            Gia Huy hỗ trợ khảo sát hiện trạng công trình, tư vấn giải pháp thiết kế kỹ thuật và đo đạc lập dự toán báo giá <strong>hoàn toàn MIỄN PHÍ</strong> tận nơi tại khu vực Nha Trang - Khánh Hòa, không ràng buộc khách hàng phải ký hợp đồng.
-          </div>
-        </details>
-
-        <!-- FAQ 3 -->
-        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
-          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
-            <span>Trần nhôm vân gỗ có thể lắp đặt cho nhà vệ sinh và toilet không?</span>
-            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </summary>
-          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
-            <strong>Rất thích hợp và khuyến khích.</strong> Trần nhôm sở hữu độ bền vĩnh cửu nhờ tính kháng nước 100%, không bị ảnh hưởng bởi hơi nước nóng trong toilet ẩm ướt, không cong vênh mối mọt, vệ sinh lau chùi cực kỳ dễ dàng và không tích tụ mùi hôi.
-          </div>
-        </details>
-
-        <!-- FAQ 4 -->
-        <details class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30">
-          <summary class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors">
-            <span>Chính sách bảo hành trần vách của Gia Huy quy định thế nào?</span>
-            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-primary">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </summary>
-          <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30">
-            Tất cả các hạng mục thi công do Gia Huy triển khai đều đi kèm cam kết bảo hành kết cấu chịu lực hệ khung xương và độ bền tấm trần từ <strong>2 đến 5 năm</strong>. Mọi phản hồi sự cố sẽ được tiếp nhận và xử lý tận nhà trong vòng 24h làm việc.
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Đăng Ký Tư Vấn Báo Giá - Synchronized CTA Buttons and theme colors -->
-  <section
-    id="lien-he"
-    class="py-12 md:py-[60px] relative overflow-hidden bg-bg-base transition-colors duration-300 border-t border-stone-200/40"
-  >
-    <div
-      class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#808080_1px,transparent_1px)] bg-[size:16px_16px]"
-    >
-    </div>
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-      <div
-        class="flex flex-col lg:flex-row items-stretch justify-between gap-16"
-      >
-        <!-- Left Column: Contact details in clean glass widgets -->
-        <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
-          <div class="space-y-4 flex flex-col items-center lg:items-start">
-            <div
-              class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
-            >
-              <p
-                class="text-xs font-semibold text-brand-primary tracking-widest uppercase"
-              >
-                Liên hệ với Gia Huy
-              </p>
-            </div>
-
-            <h2
-              class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base leading-tight text-center lg:text-left"
-            >
-              NHẬN <span
-                class="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-orange to-brand-accent py-1.5 inline-block"
-                >TƯ VẤN MIỄN PHÍ</span
-              >
-            </h2>
-            <p
-              class="text-text-muted text-sm lg:text-base leading-relaxed text-center lg:text-left"
-            >
-              Để lại thông tin để đội ngũ Gia Huy hỗ trợ khảo sát, đo đạc và lập
-              dự toán báo giá tối ưu nhất cho công trình của bạn.
-            </p>
-          </div>
-
-          <!-- Vertical stack of contact widgets -->
-          <div class="grid grid-cols-1 gap-4">
-            <!-- Hotline -->
-            <div
-              class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
-            >
-              <span
-                class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
-              >
-                <i class="fa-solid fa-phone"></i>
-              </span>
-              <div>
-                <p
-                  class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
-                >
-                  HOTLINE
-                </p>
-                <a
-                  href="tel:0935373577"
-                  class="text-base font-semibold text-text-base hover:text-brand-primary transition-colors"
-                  >0935.37.3577</a
-                >
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div
-              class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
-            >
-              <span
-                class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
-              >
-                <i class="fa-solid fa-envelope"></i>
-              </span>
-              <div>
-                <p
-                  class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
-                >
-                  EMAIL
-                </p>
-                <span class="text-base font-semibold text-text-base break-all"
-                  >trannhomgiahuy.nt@gmail.com</span
-                >
-              </div>
-            </div>
-
-            <!-- Website -->
-            <div
-              class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
-            >
-              <span
-                class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
-              >
-                <i class="fa-solid fa-globe"></i>
-              </span>
-              <div>
-                <p
-                  class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
-                >
-                  WEBSITE
-                </p>
-                <a
-                  href="#top"
-                  class="text-base font-semibold text-text-base hover:text-brand-primary transition-colors"
-                  >trannhomgiahuy.com</a
-                >
-              </div>
-            </div>
-
-            <!-- Address -->
-            <div
-              class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
-            >
-              <span
-                class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
+            <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
               >
                 <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3
+                class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+              >
+                Khảo sát & Đo đạc
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
+              >
+                Tiếp nhận thông tin điện thoại/Zalo, thảo luận yêu cầu và đến
+                công trình đo đạc thực tế miễn phí.
+              </p>
+            </div>
+          </article>
+
+          <!-- Step 2 -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] sm:w-[calc(33.333%-12px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300 reveal-on-scroll delay-100 lg:min-w-0 lg:w-auto"
+          >
+            <div
+              class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
+            >
+            </div>
+            <span
+              class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-orange/20 transition-all select-none"
+              >02</span
+            >
+            <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
+              >
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3
+                class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+              >
+                Bản vẽ & Thiết kế
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
+              >
+                Lập bản vẽ kỹ thuật phân bổ khung xương và tấm trần, thống nhất
+                giải pháp tạo hình nghệ thuật.
+              </p>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] sm:w-[calc(33.333%-12px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300 reveal-on-scroll delay-200 lg:min-w-0 lg:w-auto"
+          >
+            <div
+              class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
+            >
+            </div>
+            <span
+              class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-primary/20 transition-all select-none"
+              >03</span
+            >
+            <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
+              >
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+              <h3
+                class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+              >
+                Báo giá hợp đồng
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
+              >
+                Dự toán vật tư, báo giá gốc tại kho không trung gian và ký hợp
+                đồng bảo đảm quyền lợi.
+              </p>
+            </div>
+          </article>
+
+          <!-- Step 4 -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] sm:w-[calc(33.333%-12px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300 reveal-on-scroll delay-300 lg:min-w-0 lg:w-auto"
+          >
+            <div
+              class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
+            >
+            </div>
+            <span
+              class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-orange/20 transition-all select-none"
+              >04</span
+            >
+            <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
+              >
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3
+                class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+              >
+                Lắp ráp trần vách
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
+              >
+                Chuyển hệ xương nhôm/thép, tấm thạch cao/thanh lam đến hiện
+                trường và tiến hành thi công tỉ mỉ.
+              </p>
+            </div>
+          </article>
+
+          <!-- Step 5 -->
+          <article
+            class="min-w-[calc(50%-8px)] w-[calc(50%-8px)] sm:min-w-[calc(33.333%-12px)] sm:w-[calc(33.333%-12px)] shrink-0 snap-start bg-white border border-stone-200/60 hover:border-brand-orange/80 hover:shadow-xl hover:shadow-brand-orange/5 rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col justify-start items-start relative group hover:-translate-y-1.5 transition-all duration-300 reveal-on-scroll delay-400 lg:min-w-0 lg:w-auto"
+          >
+            <div
+              class="h-1 w-full bg-gradient-to-r from-brand-primary to-brand-orange"
+            >
+            </div>
+            <span
+              class="absolute right-3 sm:right-5 top-3 text-3xl sm:text-4xl lg:text-5xl font-display font-black text-stone-200/40 group-hover:text-brand-green/20 transition-all select-none"
+              >05</span
+            >
+            <div class="p-3 sm:p-5 lg:p-7 space-y-3 md:space-y-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:text-white flex items-center justify-center text-base sm:text-lg shrink-0 transition-all duration-300"
+              >
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <h3
+                class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base uppercase"
+              >
+                Nghiệm thu bàn giao
+              </h3>
+              <p
+                class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-medium"
+              >
+                Vệ sinh sạch sẽ, nghiệm thu bề mặt trần phẳng đẹp đạt chuẩn và
+                cung cấp phiếu bảo hành dài hạn.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dots indicator (mobile & tablet, hidden on lg) -->
+        <div
+          class="flex justify-center gap-2 my-3 pb-10 lg:hidden"
+          id="steps-dots"
+        >
+          <button
+            class="steps-dot size-2.5 rounded-full bg-brand-primary transition-all duration-300"
+            data-index="0"
+            aria-label="Bước 1"></button>
+          <button
+            class="steps-dot size-2.5 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="1"
+            aria-label="Bước 2"></button>
+          <button
+            class="steps-dot size-2.5 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="2"
+            aria-label="Bước 3"></button>
+          <button
+            class="steps-dot size-2.5 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="3"
+            aria-label="Bước 4"></button>
+          <button
+            class="steps-dot size-2.5 rounded-full bg-stone-300 transition-all duration-300"
+            data-index="4"
+            aria-label="Bước 5"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section - Clean Accordion disclosure design -->
+    <section
+      class="py-12 md:py-[60px] bg-bg-base border-t border-stone-200/40 relative overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+          class="glow-orb glow-green w-[300px] h-[300px] left-[-50px] top-[10px] opacity-8 animate-float"
+        >
+        </div>
+        <div
+          class="glow-orb glow-yellow w-[300px] h-[300px] right-[-50px] bottom-[10px] opacity-8 animate-float-reverse"
+        >
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+          <div
+            class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/20 px-4 py-1.5 rounded-full"
+          >
+            <span class="text-xs font-semibold text-brand-green uppercase"
+              >Giải đáp chuyên môn</span
+            >
+          </div>
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base uppercase"
+          >
+            CÂU HỎI THƯỜNG GẶP KHI THI CÔNG
+          </h2>
+        </div>
+
+        <!-- Clean disclosures list (Accordions) -->
+        <div class="space-y-4 max-w-3xl mx-auto">
+          <!-- FAQ 1 -->
+          <details
+            class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30 reveal-on-scroll"
+          >
+            <summary
+              class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors"
+            >
+              <span
+                >Thời gian hoàn thiện trần thạch cao phòng khách thông thường
+                bao lâu?</span
+              >
+              <span
+                class="transition-transform duration-300 group-open:rotate-180 text-brand-primary"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
               </span>
-              <div>
+            </summary>
+            <div
+              class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30"
+            >
+              Thông thường đối với phòng khách nhà dân dụng từ 30 - 50m2, quá
+              trình lắp ráp khung xương chịu lực thô, bắn tấm thạch cao chống ẩm
+              Knauf và hoàn thiện sơn bả matit Dulux sẽ mất khoảng từ <strong
+                >3 - 5 ngày làm việc</strong
+              > để đạt bề mặt phẳng đẹp mỹ thuật tối đa.
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details
+            class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30 reveal-on-scroll delay-100"
+          >
+            <summary
+              class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors"
+            >
+              <span>Chi phí khảo sát đo đạc hiện trạng là bao nhiêu?</span>
+              <span
+                class="transition-transform duration-300 group-open:rotate-180 text-brand-primary"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <div
+              class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30"
+            >
+              Gia Huy hỗ trợ khảo sát hiện trạng công trình, tư vấn giải pháp
+              thiết kế kỹ thuật và đo đạc lập dự toán báo giá <strong
+                >hoàn toàn MIỄN PHÍ</strong
+              > tận nơi tại khu vực Nha Trang - Khánh Hòa, không ràng buộc khách hàng
+              phải ký hợp đồng.
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details
+            class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30 reveal-on-scroll delay-200"
+          >
+            <summary
+              class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors"
+            >
+              <span
+                >Trần nhôm vân gỗ có thể lắp đặt cho nhà vệ sinh và toilet
+                không?</span
+              >
+              <span
+                class="transition-transform duration-300 group-open:rotate-180 text-brand-primary"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <div
+              class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30"
+            >
+              <strong>Rất thích hợp và khuyến khích.</strong> Trần nhôm sở hữu độ
+              bền vĩnh cửu nhờ tính kháng nước 100%, không bị ảnh hưởng bởi hơi nước
+              nóng trong toilet ẩm ướt, không cong vênh mối mọt, vệ sinh lau chùi
+              cực kỳ dễ dàng và không tích tụ mùi hôi.
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details
+            class="group bg-white/90 backdrop-blur-xl border border-stone-200/50 rounded-[2.5rem] overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand-primary/30 reveal-on-scroll delay-300"
+          >
+            <summary
+              class="flex items-center justify-between p-6 sm:p-8 text-text-base font-display font-bold text-sm sm:text-base uppercase tracking-tight cursor-pointer select-none group-open:bg-brand-primary/5 transition-colors"
+            >
+              <span
+                >Chính sách bảo hành trần vách của Gia Huy quy định thế nào?</span
+              >
+              <span
+                class="transition-transform duration-300 group-open:rotate-180 text-brand-primary"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <div
+              class="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 text-xs sm:text-sm lg:text-base text-text-muted leading-relaxed font-medium border-t border-stone-200/30"
+            >
+              Tất cả các hạng mục thi công do Gia Huy triển khai đều đi kèm cam
+              kết bảo hành kết cấu chịu lực hệ khung xương và độ bền tấm trần từ <strong
+                >2 đến 5 năm</strong
+              >. Mọi phản hồi sự cố sẽ được tiếp nhận và xử lý tận nhà trong
+              vòng 24h làm việc.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Đăng Ký Tư Vấn Báo Giá - Synchronized CTA Buttons and theme colors -->
+    <section
+      id="lien-he"
+      class="py-12 md:py-[60px] relative overflow-hidden bg-bg-base transition-colors duration-300 border-t border-stone-200/40"
+    >
+      <div
+        class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#808080_1px,transparent_1px)] bg-[size:16px_16px]"
+      >
+      </div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="flex flex-col lg:flex-row items-stretch justify-between gap-16"
+        >
+          <!-- Left Column: Contact details in clean glass widgets -->
+          <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
+            <div class="space-y-4 flex flex-col items-center lg:items-start">
+              <div
+                class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
+              >
                 <p
-                  class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
+                  class="text-xs font-semibold text-brand-primary tracking-widest uppercase"
                 >
-                  ĐỊA CHỈ
+                  Liên hệ với Gia Huy
                 </p>
-                <span class="text-base font-semibold text-text-base"
-                  >Vĩnh Lương, TP. Nha Trang, Tỉnh Khánh Hòa</span
+              </div>
+
+              <h2
+                class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-text-base leading-tight text-center lg:text-left"
+              >
+                NHẬN <span
+                  class="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-orange to-brand-accent py-1.5 inline-block"
+                  >TƯ VẤN MIỄN PHÍ</span
                 >
+              </h2>
+              <p
+                class="text-text-muted text-sm lg:text-base leading-relaxed text-center lg:text-left"
+              >
+                Để lại thông tin để đội ngũ Gia Huy hỗ trợ khảo sát, đo đạc và
+                lập dự toán báo giá tối ưu nhất cho công trình của bạn.
+              </p>
+            </div>
+
+            <!-- Vertical stack of contact widgets -->
+            <div class="grid grid-cols-1 gap-4">
+              <!-- Hotline -->
+              <div
+                class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
+              >
+                <span
+                  class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <div>
+                  <p
+                    class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
+                  >
+                    HOTLINE
+                  </p>
+                  <a
+                    href="tel:0935373577"
+                    class="text-base font-semibold text-text-base hover:text-brand-primary transition-colors"
+                    >0935.37.3577</a
+                  >
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
+              >
+                <span
+                  class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <div>
+                  <p
+                    class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
+                  >
+                    EMAIL
+                  </p>
+                  <span class="text-base font-semibold text-text-base break-all"
+                    >trannhomgiahuy.nt@gmail.com</span
+                  >
+                </div>
+              </div>
+
+              <!-- Website -->
+              <div
+                class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
+              >
+                <span
+                  class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                </span>
+                <div>
+                  <p
+                    class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
+                  >
+                    WEBSITE
+                  </p>
+                  <a
+                    href="#top"
+                    class="text-base font-semibold text-text-base hover:text-brand-primary transition-colors"
+                    >trannhomgiahuy.com</a
+                  >
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div
+                class="bg-white border border-stone-200/60 p-4.5 rounded-2xl flex items-center gap-4.5 shadow-xs"
+              >
+                <span
+                  class="grid size-11 place-items-center bg-brand-primary/10 text-brand-primary rounded-xl text-lg shrink-0"
+                >
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </span>
+                <div>
+                  <p
+                    class="text-xs lg:text-base font-semibold uppercase tracking-wider text-text-muted"
+                  >
+                    ĐỊA CHỈ
+                  </p>
+                  <span class="text-base font-semibold text-text-base"
+                    >Vĩnh Lương, TP. Nha Trang, Tỉnh Khánh Hòa</span
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Right Column: Consultation Form card - Synchronized Button color to brand-primary/brand-orange gradient -->
-        <div class="lg:w-1/2 flex items-center">
-          <div
-            class="bg-white border border-stone-200/60 rounded-2xl sm:rounded-[2.5rem] p-4.5 sm:p-5 lg:p-7 space-y-3 md:space-y-4 shadow-xl w-full"
-          >
-            <h3
-              class="font-display font-extrabold text-xl sm:text-2xl lg:text-3xl text-center text-text-base uppercase tracking-tight mb-6"
-            >
-              Gửi thông tin cho chúng tôi
-            </h3>
-
-            <form id="contact-form" class="space-y-5">
-              <!-- Name -->
-              <div class="flex flex-col gap-2">
-                <label
-                  for="fullname"
-                  class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
-                  >Họ và tên <span class="text-red-500">*</span></label
-                >
-                <input
-                  type="text"
-                  id="fullname"
-                  name="fullname"
-                  required
-                  placeholder="Nguyễn Văn A"
-                  class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300"
-                />
-              </div>
-
-              <!-- Phone -->
-              <div class="flex flex-col gap-2">
-                <label
-                  for="phone"
-                  class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
-                  >Số điện thoại <span class="text-red-500">*</span></label
-                >
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  placeholder="0900 000 000"
-                  class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300"
-                />
-              </div>
-
-              <!-- Service category dropdown -->
-              <div class="flex flex-col gap-2">
-                <label
-                  for="service-type"
-                  class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
-                  >Dịch vụ quan tâm</label
-                >
-                <select
-                  id="service-type"
-                  name="service-type"
-                  class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300 cursor-pointer"
-                >
-                  <option value="">-- Chọn dịch vụ --</option>
-                  <option value="lam-nhom">Trần & Lam nhôm giả gỗ</option>
-                  <option value="thach-cao"
-                    >Trần & Vách thạch cao Knauf/Vĩnh Tường</option
-                  >
-                  <option value="nhua-gia-go"
-                    >Trần - Vách - Lam nhựa giả gỗ</option
-                  >
-                  <option value="tron-goi"
-                    >Thi công trọn gói tất cả các hạng mục</option
-                  >
-                </select>
-              </div>
-
-              <!-- Message -->
-              <div class="flex flex-col gap-2">
-                <label
-                  for="message"
-                  class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
-                  >Nội dung cần hỗ trợ</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Mô tả ngắn về nhu cầu của bạn..."
-                  class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300 resize-none"
-                ></textarea>
-              </div>
-
-              <!-- Submit button - Synchronized to brand-primary/brand-orange gradient -->
-              <div class="pt-2">
-                <button
-                  type="submit"
-                  class="w-full py-4 bg-gradient-to-r from-brand-primary to-brand-orange hover:shadow-lg text-white font-display font-bold text-base uppercase tracking-wider rounded-xl transition-all duration-300 cursor-pointer shadow-lg hover:shadow-brand-primary/10 active:scale-[0.99] flex items-center justify-center gap-2"
-                >
-                  <i class="fa-solid fa-paper-plane text-base"></i> Gửi thông tin
-                  ngay
-                </button>
-              </div>
-            </form>
-
-            <!-- Form Success State (Hidden by default) -->
+          <!-- Right Column: Consultation Form card - Synchronized Button color to brand-primary/brand-orange gradient -->
+          <div class="lg:w-1/2 flex items-center">
             <div
-              id="form-success"
-              class="hidden border border-brand-green bg-brand-green/5 text-brand-green p-8 rounded-[2rem] shadow-xl text-center space-y-4 animate-float"
+              class="bg-white border border-stone-200/60 rounded-2xl sm:rounded-[2.5rem] p-4.5 sm:p-5 lg:p-7 space-y-3 md:space-y-4 shadow-xl w-full"
             >
-              <span
-                class="grid size-14 place-items-center bg-brand-green text-white rounded-full mx-auto text-xl shadow-lg"
+              <h3
+                class="font-display font-extrabold text-xl sm:text-2xl lg:text-3xl text-center text-text-base uppercase tracking-tight mb-6"
               >
-                <i class="fa-solid fa-check"></i>
-              </span>
-              <h4
-                class="font-display font-bold text-lg uppercase text-brand-green"
+                Gửi thông tin cho chúng tôi
+              </h3>
+
+              <form id="contact-form" class="space-y-5">
+                <!-- Name -->
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="fullname"
+                    class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
+                    >Họ và tên <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    required
+                    placeholder="Nguyễn Văn A"
+                    class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300"
+                  />
+                </div>
+
+                <!-- Phone -->
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="phone"
+                    class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
+                    >Số điện thoại <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="0900 000 000"
+                    class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300"
+                  />
+                </div>
+
+                <!-- Service category dropdown -->
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="service-type"
+                    class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
+                    >Dịch vụ quan tâm</label
+                  >
+                  <select
+                    id="service-type"
+                    name="service-type"
+                    class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300 cursor-pointer"
+                  >
+                    <option value="">-- Chọn dịch vụ --</option>
+                    <option value="lam-nhom">Trần & Lam nhôm giả gỗ</option>
+                    <option value="thach-cao"
+                      >Trần & Vách thạch cao Knauf/Vĩnh Tường</option
+                    >
+                    <option value="nhua-gia-go"
+                      >Trần - Vách - Lam nhựa giả gỗ</option
+                    >
+                    <option value="tron-goi"
+                      >Thi công trọn gói tất cả các hạng mục</option
+                    >
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="message"
+                    class="font-display font-semibold text-sm lg:text-base uppercase text-text-base tracking-wider pl-2"
+                    >Nội dung cần hỗ trợ</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Mô tả ngắn về nhu cầu của bạn..."
+                    class="px-5 py-3.5 border border-input-border rounded-xl bg-input-bg text-text-base font-sans text-base focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300 resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit button - Synchronized to brand-primary/brand-orange gradient -->
+                <div class="pt-2">
+                  <button
+                    type="submit"
+                    class="w-full py-4 bg-gradient-to-r from-brand-primary to-brand-orange hover:shadow-lg text-white font-display font-bold text-base uppercase tracking-wider rounded-xl transition-all duration-300 cursor-pointer shadow-lg hover:shadow-brand-primary/10 active:scale-[0.99] flex items-center justify-center gap-2"
+                  >
+                    <i class="fa-solid fa-paper-plane text-base"></i> Gửi thông tin
+                    ngay
+                  </button>
+                </div>
+              </form>
+
+              <!-- Form Success State (Hidden by default) -->
+              <div
+                id="form-success"
+                class="hidden border border-brand-green bg-brand-green/5 text-brand-green p-8 rounded-[2rem] shadow-xl text-center space-y-4 animate-float"
               >
-                Thông tin đã gửi thành công!
-              </h4>
-              <p
-                class="text-sm lg:text-base text-text-muted max-w-md mx-auto leading-relaxed"
-              >
-                Cám ơn bạn. Đội ngũ kỹ thuật Gia Huy Nha Trang đã tiếp nhận yêu
-                cầu tư vấn và sẽ liên hệ lại trực tiếp qua số điện thoại sớm
-                nhất.
-              </p>
+                <span
+                  class="grid size-14 place-items-center bg-brand-green text-white rounded-full mx-auto text-xl shadow-lg"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </span>
+                <h4
+                  class="font-display font-bold text-lg uppercase text-brand-green"
+                >
+                  Thông tin đã gửi thành công!
+                </h4>
+                <p
+                  class="text-sm lg:text-base text-text-muted max-w-md mx-auto leading-relaxed"
+                >
+                  Cám ơn bạn. Đội ngũ kỹ thuật Gia Huy Nha Trang đã tiếp nhận
+                  yêu cầu tư vấn và sẽ liên hệ lại trực tiếp qua số điện thoại
+                  sớm nhất.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
+
+  <script>
+    // Simple Form Submission Handler
+    const form = document.getElementById("contact-form");
+    const successBox = document.getElementById("form-success");
+
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      form.classList.add("hidden");
+      successBox?.classList.remove("hidden");
+      successBox?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    // ─── Generic Slider Controller ───────────────────────────────────────────
+    function initSlider(
+      sliderId: string,
+      prevBtnId: string,
+      nextBtnId: string,
+      dotsId: string | null,
+      dotClass: string | null,
+    ) {
+      const slider = document.getElementById(sliderId) as HTMLElement | null;
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+      if (!slider) return;
+
+      // Dots
+      const dots =
+        dotsId && dotClass
+          ? (Array.from(
+              document.querySelectorAll(`.${dotClass}`),
+            ) as HTMLElement[])
+          : [];
+
+      function getCardWidth() {
+        const card = slider.firstElementChild as HTMLElement | null;
+        if (!card) return 200;
+        const gap = parseFloat(window.getComputedStyle(slider).gap) || 16;
+        return card.offsetWidth + gap;
+      }
+
+      function updateDots() {
+        if (!dots.length) return;
+        const cardW = getCardWidth();
+        const idx = Math.round(slider.scrollLeft / cardW);
+        dots.forEach((d, i) => {
+          d.classList.toggle("bg-brand-primary", i === idx);
+          d.classList.toggle("scale-125", i === idx);
+          d.classList.toggle("bg-stone-300", i !== idx);
+        });
+      }
+
+      // Prev / Next
+      prevBtn?.addEventListener("click", () => {
+        slider.scrollBy({ left: -getCardWidth(), behavior: "smooth" });
+      });
+      nextBtn?.addEventListener("click", () => {
+        slider.scrollBy({ left: getCardWidth(), behavior: "smooth" });
+      });
+
+      // Dot click → scroll to card
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          slider.scrollTo({ left: i * getCardWidth(), behavior: "smooth" });
+        });
+      });
+
+      // Sync dots on scroll
+      slider.addEventListener("scroll", updateDots, { passive: true });
+      window.addEventListener("resize", updateDots);
+      updateDots();
+    }
+
+    // Init sliders
+    initSlider(
+      "services-slider",
+      "services-prev",
+      "services-next",
+      "services-dots",
+      "services-dot",
+    );
+    initSlider(
+      "steps-slider",
+      "steps-prev",
+      "steps-next",
+      "steps-dots",
+      "steps-dot",
+    );
+  </script>
 </Layout>
-
-<script>
-  // Simple Form Submission Handler
-  const form = document.getElementById("contact-form");
-  const successBox = document.getElementById("form-success");
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Simulate API request submission
-    form.classList.add("hidden");
-    successBox?.classList.remove("hidden");
-
-    // Smooth scroll to success state
-    successBox?.scrollIntoView({ behavior: "smooth", block: "center" });
-  });
-</script>

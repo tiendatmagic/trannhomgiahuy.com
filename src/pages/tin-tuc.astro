@@ -118,7 +118,7 @@ const posts = [
           </div>
           
           <article
-            class="blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row gap-6 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group shadow-xl relative"
+            class="blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row gap-6 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group shadow-xl relative reveal-on-scroll"
             data-post-id={post.id}
           >
             <!-- Thumbnail -->
@@ -156,7 +156,7 @@ const posts = [
       ))}
 
       <!-- Section Header for rest of the posts -->
-      <div class="mb-8 border-b border-stone-200 pb-4">
+      <div class="mb-8 border-b border-stone-200 pb-4 reveal-on-scroll">
         <h3 class="font-display font-extrabold text-lg sm:text-xl text-text-base uppercase tracking-wider">
           Cẩm nang thi công &amp; Tin tức khác
         </h3>
@@ -164,9 +164,9 @@ const posts = [
 
       <!-- Static Grid Layout: Remaining posts (Mobile 2, Tablet 2, Desktop 3 columns) -->
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {posts.slice(1).map((post) => (
+        {posts.slice(1).map((post, index) => (
           <article
-            class="blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5 cursor-pointer shadow-md"
+            class={`blog-card bg-white/90 backdrop-blur-xl border border-stone-200/50 hover:border-brand-primary/50 hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] rounded-[2.5rem] overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5 cursor-pointer shadow-md reveal-on-scroll ${index % 3 === 1 ? 'delay-100' : index % 3 === 2 ? 'delay-200' : ''}`}
             data-post-id={post.id}
           >
             <div class="space-y-4">

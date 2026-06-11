@@ -74,7 +74,7 @@ const posts = [
 
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header - Centered -->
-    <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12 space-y-3 sm:space-y-4">
+    <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12 space-y-3 sm:space-y-4 reveal-on-scroll">
       <div
         class="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-1.5 rounded-full"
       >
@@ -95,7 +95,7 @@ const posts = [
     </div>
 
     <!-- Outer wrapper with group for hover arrows -->
-    <div class="relative group px-1 sm:px-2 md:px-4">
+    <div class="relative group px-1 sm:px-2 md:px-4 reveal-on-scroll delay-200">
       <!-- Left Arrow - Positioned closer to slider, overlaying borders, hover only -->
       <button
         id="blog-prev"
@@ -118,7 +118,7 @@ const posts = [
       <!-- Added overflow-x-auto, scrollbar-none, cursor-grab and select-none to enable native touch swipe and mouse drag -->
       <div
         id="blog-slider"
-        class="flex gap-4 md:gap-6 pb-4 w-full overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth cursor-grab select-none"
+        class="flex gap-4 md:gap-6 pb-4 w-full overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth cursor-grab select-none"
       >
         {/* Render posts 3 times for infinite loop scroll */}
         {[...posts, ...posts, ...posts].map((post, idx) => (
@@ -160,6 +160,18 @@ const posts = [
             </div>
           </article>
         ))}
+      </div>
+
+      <!-- Dots indicator - hiển thị trên mobile/tablet, ẩn trên lg -->
+      <div class="flex justify-center gap-2 mt-5" id="blog-dots">
+        <button class="blog-dot size-2 rounded-full bg-brand-primary transition-all duration-300 scale-125" data-post="1" aria-label="Bài 1"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="2" aria-label="Bài 2"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="3" aria-label="Bài 3"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="4" aria-label="Bài 4"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="5" aria-label="Bài 5"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="6" aria-label="Bài 6"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="7" aria-label="Bài 7"></button>
+        <button class="blog-dot size-2 rounded-full bg-stone-300 transition-all duration-300" data-post="8" aria-label="Bài 8"></button>
       </div>
     </div>
   </div>
@@ -234,13 +246,7 @@ const posts = [
   #modal-post-body li strong {
     color: #1f2937;
   }
-  .scrollbar-none::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-none {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+
 </style>
 
 <script>
@@ -457,6 +463,51 @@ const posts = [
         slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
       });
     }
+
+    // ── Dots logic ────────────────────────────────────────────────────────
+    const blogDots = Array.from(document.querySelectorAll('.blog-dot')) as HTMLElement[];
+
+    function getCardUnit() {
+      const card0el = cards[0] as HTMLElement;
+      const card1el = cards[1] as HTMLElement;
+      if (!card0el || !card1el) return 200;
+      return card1el.offsetLeft - card0el.offsetLeft;
+    }
+
+    function updateBlogDots() {
+      if (!blogDots.length || groupWidth === 0) return;
+      // Position relative to middle group start
+      const relativeScroll = slider.scrollLeft - (card8?.offsetLeft ?? 0) + (cards[0] as HTMLElement).offsetLeft;
+      const cardUnit = getCardUnit();
+      const rawIdx = Math.round(relativeScroll / cardUnit);
+      // Wrap within 0..7
+      const dotIdx = ((rawIdx % cardsPerGroup) + cardsPerGroup) % cardsPerGroup;
+      blogDots.forEach((d, i) => {
+        const active = i === dotIdx;
+        d.classList.toggle('bg-brand-primary', active);
+        d.classList.toggle('scale-125', active);
+        d.classList.toggle('bg-stone-300', !active);
+      });
+    }
+
+    // Dot click → scroll to that card in the middle group
+    blogDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        if (!card8) return;
+        const cardUnit = getCardUnit();
+        const targetScroll = (card8 as HTMLElement).offsetLeft - (cards[0] as HTMLElement).offsetLeft + i * cardUnit;
+        slider.style.scrollBehavior = 'smooth';
+        slider.scrollLeft = targetScroll;
+      });
+    });
+
+    // Sync dots on scroll
+    slider.addEventListener('scroll', updateBlogDots, { passive: true });
+    window.addEventListener('resize', () => { updateDimensions(); updateBlogDots(); });
+
+    // Initial dot state (run after initScrollPosition)
+    requestAnimationFrame(() => { requestAnimationFrame(updateBlogDots); });
+
 
     // Interactive mouse drag support for desktop (intuitive swiping)
     let isDown = false;

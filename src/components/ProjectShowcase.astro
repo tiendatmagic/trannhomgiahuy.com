@@ -134,7 +134,7 @@ const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
 <div class="space-y-12">
   <!-- Pill Filter Buttons - Vibrant Gradient styles (for buttons, gradients are allowed) -->
-  <div class="flex flex-wrap justify-center gap-3">
+  <div class="flex flex-wrap justify-center gap-3 reveal-on-scroll">
     {categories.map((cat, idx) => (
       <button
         class={`filter-btn px-6 py-3 rounded-full font-display font-black text-xs lg:text-base uppercase tracking-wider transition-all duration-300 cursor-pointer ${
@@ -153,7 +153,7 @@ const displayedProjects = limit ? projects.slice(0, limit) : projects;
   <div id="project-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
     {displayedProjects.map((proj) => (
       <div
-        class="project-card group rounded-[2.5rem] bg-white/90 backdrop-blur-md border border-stone-200/50 shadow-xl hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] hover:border-brand-primary/45 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+        class="project-card group rounded-2xl sm:rounded-[2rem] bg-white border border-stone-200/60 hover:border-brand-primary/80 shadow-sm hover:shadow-lg overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-1.5"
         data-category={proj.category}
         data-id={proj.id}
       >
@@ -173,20 +173,25 @@ const displayedProjects = limit ? projects.slice(0, limit) : projects;
           </div>
         </div>
 
-        <!-- Card Content (Removed Tags completely) -->
-        <div class="p-3 sm:p-4 lg:p-5 flex-grow flex flex-col justify-between space-y-2 sm:space-y-3">
+        <!-- Card Content -->
+        <div class="px-3 sm:px-4 py-3 sm:py-4 flex-grow flex flex-col justify-between space-y-2">
           <div class="space-y-1.5">
-            <h4 class="font-display font-semibold text-base sm:text-lg lg:text-xl text-text-base leading-tight group-hover:text-brand-primary transition-colors line-clamp-2">
+            <h4 class="font-display font-semibold text-base sm:text-lg text-text-base leading-tight group-hover:text-brand-primary transition-colors line-clamp-2">
               {proj.title}
             </h4>
             <p class="text-[13px] sm:text-xs lg:text-sm text-text-muted leading-relaxed line-clamp-3">
               {proj.desc}
             </p>
           </div>
+          <!-- Read More link -->
+          <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-semibold text-brand-primary group-hover:text-brand-orange transition-colors mt-1">
+            Xem chi tiết <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+          </span>
         </div>
       </div>
     ))}
   </div>
+
 
   <!-- Fullscreen Lightbox Modal - z-[9999] to cover fixed header -->
   <div id="lightbox-modal" class="fixed inset-0 z-[9999] bg-black/90 flex flex-col items-center justify-center p-4 md:p-8 opacity-0 pointer-events-none transition-opacity duration-300">

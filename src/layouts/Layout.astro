@@ -69,7 +69,7 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
           <!-- Mobile Hamburger Button -->
           <button
             id="mobile-menu-btn"
-            class="lg:hidden size-10 flex items-center justify-center text-white hover:bg-white/10 transition rounded-full border border-white/20 cursor-pointer"
+            class="lg:hidden min-w-10 size-10 flex items-center justify-center text-white hover:bg-white/10 transition rounded-full border border-white/20 cursor-pointer"
             aria-label="Mở menu"
           >
             <i class="fa-solid fa-bars text-lg"></i>
@@ -78,18 +78,24 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
           <!-- Logo + Brand Name -->
           <a
             href="/"
-            class="flex items-center flex-shrink-0 gap-2 sm:gap-2.5 mr-2 xl:mr-4 transition-transform duration-300 hover:scale-105"
+            class="flex flex-row items-center flex-nowrap flex-shrink-0 gap-2 sm:gap-2.5 mr-2 xl:mr-4 transition-transform duration-300 hover:scale-105"
           >
             <img
               src="/logo.png"
               alt="Trần Nhôm Gia Huy"
-              class="h-10 sm:h-12 md:h-13 lg:h-14 w-auto object-contain"
+              class="h-10 sm:h-12 md:h-13 lg:h-14 w-auto object-contain shrink-0"
             />
-            <div class="flex flex-col text-left leading-none">
-              <span class="font-display font-black tracking-wider text-[14px] sm:text-[15px] lg:text-[16px] xl:text-lg uppercase text-white whitespace-nowrap">
+            <div
+              class="flex flex-row items-center flex-nowrap gap-1.5 sm:gap-2 text-left leading-none"
+            >
+              <span
+                class="font-display font-black text-[13px] sm:text-[15px] lg:text-[16px] xl:text-lg uppercase text-white whitespace-nowrap"
+              >
                 Trần Nhôm
               </span>
-              <span class="font-display font-black tracking-widest text-[10px] sm:text-[11px] lg:text-[12px] xl:text-sm uppercase text-brand-orange mt-0.5 whitespace-nowrap">
+              <span
+                class="font-display font-black text-[13px] sm:text-[15px] lg:text-[16px] xl:text-lg uppercase text-brand-orange whitespace-nowrap"
+              >
                 Gia Huy
               </span>
             </div>
@@ -99,64 +105,60 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
           <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5">
             <a
               href="/"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === "/" ? "bg-white/15 text-white font-bold shadow-sm" : "text-white/80 hover:text-white hover:bg-white/15"}`}
             >
-              <i class="fa-solid fa-house text-xs xl:text-sm !hidden xl:!inline-block"></i>
+              <i
+                class="fa-solid fa-house text-xs xl:text-sm !hidden xl:!inline-block"
+              ></i>
               <span>Trang chủ</span>
             </a>
             <a
               href="/gioi-thieu"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/gioi-thieu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === "/gioi-thieu" ? "bg-white/15 text-white font-bold shadow-sm" : "text-white/80 hover:text-white hover:bg-white/15"}`}
             >
-              <i class="fa-solid fa-circle-info text-xs xl:text-sm !hidden xl:!inline-block"></i>
+              <i
+                class="fa-solid fa-circle-info text-xs xl:text-sm !hidden xl:!inline-block"
+              ></i>
               <span>Giới thiệu</span>
             </a>
             <a
               href="/dich-vu"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/dich-vu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === "/dich-vu" ? "bg-white/15 text-white font-bold shadow-sm" : "text-white/80 hover:text-white hover:bg-white/15"}`}
             >
-              <i class="fa-solid fa-hammer text-xs xl:text-sm !hidden xl:!inline-block"></i>
+              <i
+                class="fa-solid fa-hammer text-xs xl:text-sm !hidden xl:!inline-block"
+              ></i>
               <span>Dịch vụ</span>
             </a>
             <a
               href="/thuc-te"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/thuc-te' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === "/thuc-te" ? "bg-white/15 text-white font-bold shadow-sm" : "text-white/80 hover:text-white hover:bg-white/15"}`}
             >
-              <i class="fa-solid fa-images text-xs xl:text-sm !hidden xl:!inline-block"></i>
-              <span>Thực tế</span>
+              <i
+                class="fa-solid fa-images text-xs xl:text-sm !hidden xl:!inline-block"
+              ></i>
+              <span>Dự án</span>
             </a>
             <a
               href="/tin-tuc"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/tin-tuc' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
+              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === "/tin-tuc" ? "bg-white/15 text-white font-bold shadow-sm" : "text-white/80 hover:text-white hover:bg-white/15"}`}
             >
-              <i class="fa-solid fa-newspaper text-xs xl:text-sm !hidden xl:!inline-block"></i>
+              <i
+                class="fa-solid fa-newspaper text-xs xl:text-sm !hidden xl:!inline-block"
+              ></i>
               <span>Tin tức</span>
-            </a>
-            <a
-              href="/quy-trinh"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/quy-trinh' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
-            >
-              <i class="fa-solid fa-route text-xs xl:text-sm !hidden xl:!inline-block"></i>
-              <span>Quy trình</span>
-            </a>
-            <a
-              href="/lien-he"
-              class={`nav-link whitespace-nowrap px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full font-display font-semibold text-[13.5px] xl:text-[14.5px] 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/lien-he' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
-            >
-              <i class="fa-solid fa-envelope text-xs xl:text-sm !hidden xl:!inline-block"></i>
-              <span>Liên hệ</span>
             </a>
           </nav>
 
           <!-- Actions Right - Responsive call button: shrinks at lg -->
           <div class="flex items-center gap-3">
-            <!-- Desktop Call button: compact at lg, full at xl -->
+            <!-- Desktop Contact button -->
             <a
-              href="tel:0935373577"
+              href="/lien-he"
               class="hidden sm:inline-flex flex-shrink-0 items-center gap-1.5 xl:gap-2 bg-gradient-to-r from-brand-primary to-brand-orange hover:shadow-lg text-white font-display font-semibold text-xs xl:text-sm px-2.5 lg:px-3 xl:px-5 py-2 xl:py-2.5 rounded-full border border-white/30 transition-all duration-300 shine-effect cursor-pointer whitespace-nowrap"
             >
-              <i class="fa-solid fa-phone"></i>
-              <span class="hidden sm:inline">GỌI TƯ VẤN</span>
+              <i class="fa-solid fa-file-signature"></i>
+              <span class="hidden sm:inline">Liên hệ và tư vấn</span>
             </a>
 
             <!-- Mobile Call icon -->
@@ -187,13 +189,23 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
           class="flex items-center justify-between border-b border-stone-200/50 pb-4 mb-6"
         >
           <!-- Logo + Brand Name in Drawer -->
-          <a href="/" class="flex items-center gap-2">
-            <img src="/logo.png" alt="Trần Nhôm Gia Huy" class="h-11 w-auto object-contain" />
-            <div class="flex flex-col text-left leading-none">
-              <span class="font-display font-black tracking-wider text-sm uppercase text-text-base whitespace-nowrap">
+          <a href="/" class="flex flex-row items-center flex-nowrap gap-2">
+            <img
+              src="/logo.png"
+              alt="Trần Nhôm Gia Huy"
+              class="h-11 w-auto object-contain shrink-0"
+            />
+            <div
+              class="flex flex-row items-center flex-nowrap gap-1.5 text-left leading-none flex-wrap"
+            >
+              <span
+                class="font-display font-black tracking-wider text-sm uppercase text-text-base whitespace-nowrap"
+              >
                 Trần Nhôm
               </span>
-              <span class="font-display font-black tracking-widest text-[10px] uppercase text-brand-orange mt-0.5 whitespace-nowrap">
+              <span
+                class="font-display font-black tracking-widest text-sm uppercase text-brand-orange whitespace-nowrap"
+              >
                 Gia Huy
               </span>
             </div>
@@ -209,58 +221,50 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
         <nav class="flex flex-col gap-1.5">
           <a
             href="/"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-house w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/' ? '!text-white' : 'text-stone-400'}`}
+              class={`fa-solid fa-house w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/" ? "!text-white" : "text-stone-400"}`}
             ></i> Trang chủ
           </a>
           <a
             href="/gioi-thieu"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/gioi-thieu' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/gioi-thieu" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-circle-info w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/gioi-thieu' ? '!text-white' : 'text-stone-400'}`}
+              class={`fa-solid fa-circle-info w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/gioi-thieu" ? "!text-white" : "text-stone-400"}`}
             ></i> Giới thiệu
           </a>
           <a
             href="/dich-vu"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/dich-vu' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/dich-vu" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-hammer w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/dich-vu' ? '!text-white' : 'text-stone-400'}`}
+              class={`fa-solid fa-hammer w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/dich-vu" ? "!text-white" : "text-stone-400"}`}
             ></i> Dịch vụ thi công
           </a>
           <a
             href="/thuc-te"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/thuc-te' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/thuc-te" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-images w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/thuc-te' ? '!text-white' : 'text-stone-400'}`}
-            ></i> Thực tế
+              class={`fa-solid fa-images w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/thuc-te" ? "!text-white" : "text-stone-400"}`}
+            ></i> Dự án thực tế
           </a>
           <a
             href="/tin-tuc"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/tin-tuc' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/tin-tuc" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-newspaper w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/tin-tuc' ? '!text-white' : 'text-stone-400'}`}
+              class={`fa-solid fa-newspaper w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/tin-tuc" ? "!text-white" : "text-stone-400"}`}
             ></i> Tin tức
           </a>
           <a
-            href="/quy-trinh"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/quy-trinh' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
-          >
-            <i
-              class={`fa-solid fa-route w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/quy-trinh' ? '!text-white' : 'text-stone-400'}`}
-            ></i> Quy trình
-          </a>
-          <a
             href="/lien-he"
-            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/lien-he' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === "/lien-he" ? "bg-brand-primary text-white font-bold shadow-sm" : "text-text-base hover:bg-brand-primary hover:text-white"}`}
           >
             <i
-              class={`fa-solid fa-envelope w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/lien-he' ? '!text-white' : 'text-stone-400'}`}
+              class={`fa-solid fa-envelope w-5 text-center transition-colors group-hover:!text-white ${currentPath === "/lien-he" ? "!text-white" : "text-stone-400"}`}
             ></i> Liên hệ báo giá
           </a>
         </nav>
@@ -268,11 +272,11 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
 
       <div class="pt-6 border-t border-stone-200/50">
         <a
-          href="tel:0935373577"
+          href="/lien-he"
           class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-brand-primary to-brand-orange text-white font-display font-semibold py-3.5 rounded-full shadow-lg shine-effect"
         >
-          <i class="fa-solid fa-phone"></i>
-          <span>Gọi Ngay 0935.37.3577</span>
+          <i class="fa-solid fa-envelope"></i>
+          <span>Liên hệ báo giá</span>
         </a>
       </div>
     </div>
@@ -384,7 +388,7 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
                   href="/thuc-te"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
-                  ></i> Thư viện thực tế</a
+                  ></i> Dự án thực tế</a
                 >
               </li>
               <li>
@@ -446,7 +450,16 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
           class="pt-6 flex flex-col sm:flex-row items-center justify-between text-sm lg:text-base text-white/50 gap-4 text-center sm:text-left"
         >
           <p>
-            Copyright © {new Date().getFullYear()} <a href="/" class="hover:text-white transition-colors font-semibold">Trần Nhôm Gia Huy</a>. Design by <a href="https://kieugia.vn" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors font-semibold">Kiều Gia Group</a>
+            Copyright © {new Date().getFullYear()}
+            <a href="/" class="hover:text-white transition-colors font-semibold"
+              >Trần Nhôm Gia Huy</a
+            >. Design by <a
+              href="https://kieugia.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors font-semibold"
+              >Kiều Gia Group</a
+            >
           </p>
           <p>Bảo lưu mọi quyền. Nha Trang, Khánh Hòa.</p>
         </div>
@@ -574,6 +587,34 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
 
       // Active link indicator based on current path instead of scroll
 
+      // Intersection Observer for scroll reveal animations
+      const revealCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("active");
+            }, 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const revealObserver = new IntersectionObserver(revealCallback, {
+        root: null,
+        rootMargin: "0px 0px 50px 0px",
+        threshold: 0.05,
+      });
+
+      const initReveal = () => {
+        const revealElements = document.querySelectorAll(".reveal-on-scroll");
+        revealElements.forEach((el) => revealObserver.observe(el));
+      };
+
+      if (document.readyState === "complete") {
+        initReveal();
+      } else {
+        window.addEventListener("load", initReveal);
+      }
     </script>
   </body>
 </html>
