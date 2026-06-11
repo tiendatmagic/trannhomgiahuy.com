@@ -1,4 +1,9 @@
 ---
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+
 // Project list with categories and descriptions matching the copied actual images
 const projects = [
   {
@@ -21,13 +26,6 @@ const projects = [
     category: "noi-that",
     image: "/projects/project-4.png",
     desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc."
-  },
-  {
-    id: 5,
-    title: "Sảnh nhà hàng cafe lam nhôm giả gỗ hoàn thiện",
-    category: "lam-nhom",
-    image: "/projects/project-5.png",
-    desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng."
   },
   {
     id: 6,
@@ -128,7 +126,11 @@ const categories = [
   { id: "thach-cao", name: "Trần & Vách thạch cao" },
   { id: "noi-that", name: "Trần gỗ nghệ thuật" }
 ];
+const displayedProjects = limit ? projects.slice(0, limit) : projects;
 ---
+
+<!-- Projects data serialized for Client scripts -->
+<div id="projects-data" class="hidden" data-projects={JSON.stringify(displayedProjects)}></div>
 
 <div class="space-y-12">
   <!-- Pill Filter Buttons - Vibrant Gradient styles (for buttons, gradients are allowed) -->
@@ -149,7 +151,7 @@ const categories = [
 
   <!-- Rounded Project Grid -->
   <div id="project-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
-    {projects.map((proj) => (
+    {displayedProjects.map((proj) => (
       <div
         class="project-card group rounded-[2.5rem] bg-white/90 backdrop-blur-md border border-stone-200/50 shadow-xl hover:shadow-[0_20px_50px_rgba(217,119,6,0.12)] hover:border-brand-primary/45 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
         data-category={proj.category}
@@ -215,128 +217,9 @@ const categories = [
 </div>
 
 <script>
-  // Project data passed to Client script for Lightbox navigation
-  const projectsData = [
-    {
-      id: 1,
-      title: "Thi công trần lam nhôm giả gỗ sảnh cafe ngoài trời",
-      category: "lam-nhom",
-      image: "/projects/project-1.png",
-      desc: "Lắp đặt hệ lam nhôm vân gỗ kháng nước, chịu nhiệt độ cao cho khu resort ven biển Nha Trang."
-    },
-    {
-      id: 2,
-      title: "Khung xương và vách thạch cao ngoài trời Knauf",
-      category: "thach-cao",
-      image: "/projects/project-2.png",
-      desc: "Thi công hệ vách thạch cao chống ẩm thương hiệu Knauf Đức cho dự án biệt thự biển."
-    },
-    {
-      id: 4,
-      title: "Hệ trần gỗ nghệ thuật nhà hàng cao cấp",
-      category: "noi-that",
-      image: "/projects/project-4.png",
-      desc: "Thi công trần gỗ đan ô hình học trang trí kết hợp hệ thống đèn thả kiến trúc."
-    },
-    {
-      id: 5,
-      title: "Sảnh nhà hàng cafe lam nhôm giả gỗ hoàn thiện",
-      category: "lam-nhom",
-      image: "/projects/project-5.png",
-      desc: "Công trình hoàn thiện thực tế, tạo không gian sang trọng, đón gió biển thoáng đãng."
-    },
-    {
-      id: 6,
-      title: "Trần lam nhôm giả gỗ góc sảnh đứng đón sáng",
-      category: "lam-nhom",
-      image: "/projects/project-6.png",
-      desc: "Kiến trúc trần lam nhôm chạy dọc song song, kết hợp hệ thống đèn âm trần hiện đại."
-    },
-    {
-      id: 7,
-      title: "Thi công vách ngoài trời chống ẩm biệt thự Nha Trang",
-      category: "thach-cao",
-      image: "/projects/project-7.png",
-      desc: "Lắp đặt tấm thạch cao chịu nước mặt ngoài công trình, đảm bảo cách âm cách nhiệt tốt."
-    },
-    {
-      id: 8,
-      title: "Lắp ráp hệ lam nhôm giả gỗ trên giàn giáo cao",
-      category: "lam-nhom",
-      image: "/projects/project-8.png",
-      desc: "Đội ngũ thợ tay nghề cao, thi công tỉ mỉ từng thanh lam thẳng tắp, bảo đảm tính thẩm mỹ."
-    },
-    {
-      id: 9,
-      title: "Đội ngũ Gia Huy thi công lam nhôm sảnh lớn",
-      category: "lam-nhom",
-      image: "/projects/project-9.png",
-      desc: "Lắp ráp đồng loạt hệ trần lam nhôm vân gỗ quy mô lớn đúng tiến độ bàn giao."
-    },
-    {
-      id: 10,
-      title: "Lắp đặt lam nhôm sảnh đón trung tâm thương mại",
-      category: "lam-nhom",
-      image: "/projects/new-project-1.jpg",
-      desc: "Hệ trần lam nhôm U-Shaped vân gỗ hoàn thiện sắc nét tại sảnh chính công trình."
-    },
-    {
-      id: 11,
-      title: "Thi công vách ngăn thạch cao tiêu âm phòng hội nghị",
-      category: "thach-cao",
-      image: "/projects/new-project-2.jpg",
-      desc: "Hệ thống vách thạch cao Knauf Đức xử lý tiêu âm hiệu quả, nhẵn mịn thẩm mỹ cao."
-    },
-    {
-      id: 12,
-      title: "Hoàn thiện trần nhôm caro nghệ thuật",
-      category: "lam-nhom",
-      image: "/projects/new-project-3.jpg",
-      desc: "Hệ trần caro nhôm (Cell) lắp đặt phối hợp đèn âm trần hiện đại, thông thoáng."
-    },
-    {
-      id: 13,
-      title: "Thi công khung xương trần chìm Vĩnh Tường",
-      category: "thach-cao",
-      image: "/projects/new-project-4.jpg",
-      desc: "Hệ khung xương cá chắc chắn, khoảng cách đạt tiêu chuẩn chịu lực an toàn."
-    },
-    {
-      id: 14,
-      title: "Trần thạch cao giật cấp hiện đại căn hộ biển",
-      category: "thach-cao",
-      image: "/projects/new-project-5.jpg",
-      desc: "Thi công giật cấp hắt đèn trang trí tinh tế cho phòng khách căn hộ view biển."
-    },
-    {
-      id: 15,
-      title: "Lam gỗ nhựa trang trí vách hành lang resort",
-      category: "noi-that",
-      image: "/projects/new-project-6.jpg",
-      desc: "Ốp lam gỗ nhựa ngoài trời chịu nắng mưa cực tốt, phong cách nghỉ dưỡng sang trọng."
-    },
-    {
-      id: 16,
-      title: "Ốp vách nhựa Nano vân đá sảnh khách sạn",
-      category: "noi-that",
-      image: "/projects/new-project-7.jpg",
-      desc: "Tấm nhựa giả đá cao cấp kết hợp nẹp đồng vàng tạo điểm nhấn vô cùng ấn tượng."
-    },
-    {
-      id: 17,
-      title: "Lắp đặt lam chắn nắng mặt tiền nhà hướng Tây",
-      category: "lam-nhom",
-      image: "/projects/new-project-8.jpg",
-      desc: "Hệ lam nhôm chuyển động cản bức xạ nhiệt trực tiếp, làm mát ngôi nhà hiệu quả."
-    },
-    {
-      id: 18,
-      title: "Thi công trần thạch cao chống ẩm khu vực bếp",
-      category: "thach-cao",
-      image: "/projects/new-project-9.jpg",
-      desc: "Sử dụng tấm thạch cao Gyproc chống ẩm chất lượng cao, bền bỉ cùng thời gian."
-    }
-  ];
+  // Project data parsed from serialized DOM element
+  const projectsDataEl = document.getElementById("projects-data");
+  const projectsData = projectsDataEl ? JSON.parse(projectsDataEl.getAttribute("data-projects") || "[]") : [];
 
   let activeFilter = "all";
   let visibleProjects = [...projectsData];
