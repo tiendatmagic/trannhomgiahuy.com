@@ -10,6 +10,9 @@ const {
   title = "Trần Nhôm Gia Huy - Thi Công Trần & Vách Chuyên Nghiệp Nha Trang",
   description = "Dịch vụ thi công trọn gói trần nhôm giả gỗ, trần thạch cao, lam nhựa giả gỗ giá rẻ tại Nha Trang, Khánh Hòa. Thiết kế hiện đại, thi công nhanh đúng tiến độ.",
 } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const currentPath = pathname.replace(/\/$/, "") || "/";
 ---
 
 <!doctype html>
@@ -87,54 +90,52 @@ const {
           <!-- Navigation links with Icons - Responsive text size and padding to prevent squeezing -->
           <nav class="hidden lg:flex items-center gap-1">
             <a
-              href="#top"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
               <i class="fa-solid fa-house text-xs lg:text-sm xl:text-base"></i>
               <span>Trang chủ</span>
             </a>
             <a
-              href="#gioi-thieu"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/gioi-thieu"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/gioi-thieu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-circle-info text-xs lg:text-sm xl:text-base"
-              ></i>
+              <i class="fa-solid fa-circle-info text-xs lg:text-sm xl:text-base"></i>
               <span>Giới thiệu</span>
             </a>
             <a
-              href="#dich-vu"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/dich-vu"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/dich-vu' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
               <i class="fa-solid fa-hammer text-xs lg:text-sm xl:text-base"></i>
               <span>Dịch vụ</span>
             </a>
             <a
-              href="#thu-vien"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/thuc-te"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/thuc-te' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
               <i class="fa-solid fa-images text-xs lg:text-sm xl:text-base"></i>
               <span>Thực tế</span>
             </a>
             <a
-              href="#tin-tuc"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/tin-tuc"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/tin-tuc' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
               <i class="fa-solid fa-newspaper text-xs lg:text-sm xl:text-base"></i>
               <span>Tin tức</span>
             </a>
             <a
-              href="#quy-trinh"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/quy-trinh"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/quy-trinh' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
               <i class="fa-solid fa-route text-xs lg:text-sm xl:text-base"></i>
               <span>Quy trình</span>
             </a>
             <a
-              href="#lien-he"
-              class="nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide text-white/80 hover:text-white hover:bg-white/15 transition-all duration-250 flex items-center gap-1.5"
+              href="/lien-he"
+              class={`nav-link px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full font-display font-semibold text-xs lg:text-[13px] xl:text-sm 2xl:text-base uppercase tracking-wide transition-all duration-250 flex items-center gap-1.5 ${currentPath === '/lien-he' ? 'bg-white/15 text-white font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/15'}`}
             >
-              <i class="fa-solid fa-envelope text-xs lg:text-sm xl:text-base"
-              ></i>
+              <i class="fa-solid fa-envelope text-xs lg:text-sm xl:text-base"></i>
               <span>Liên hệ</span>
             </a>
           </nav>
@@ -191,59 +192,59 @@ const {
         </div>
         <nav class="flex flex-col gap-1.5">
           <a
-            href="#top"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-house w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-house w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/' ? '!text-white' : 'text-stone-400'}`}
             ></i> Trang chủ
           </a>
           <a
-            href="#gioi-thieu"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/gioi-thieu"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/gioi-thieu' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-circle-info w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-circle-info w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/gioi-thieu' ? '!text-white' : 'text-stone-400'}`}
             ></i> Giới thiệu
           </a>
           <a
-            href="#dich-vu"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/dich-vu"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/dich-vu' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-hammer w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-hammer w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/dich-vu' ? '!text-white' : 'text-stone-400'}`}
             ></i> Dịch vụ thi công
           </a>
           <a
-            href="#thu-vien"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/thuc-te"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/thuc-te' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-images w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-images w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/thuc-te' ? '!text-white' : 'text-stone-400'}`}
             ></i> Thực tế
           </a>
           <a
-            href="#tin-tuc"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/tin-tuc"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/tin-tuc' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-newspaper w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-newspaper w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/tin-tuc' ? '!text-white' : 'text-stone-400'}`}
             ></i> Tin tức
           </a>
           <a
-            href="#quy-trinh"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/quy-trinh"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/quy-trinh' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-route w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-route w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/quy-trinh' ? '!text-white' : 'text-stone-400'}`}
             ></i> Quy trình
           </a>
           <a
-            href="#lien-he"
-            class="drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base text-text-base hover:bg-brand-primary hover:text-white transition-all duration-200"
+            href="/lien-he"
+            class={`drawer-link group flex items-center gap-3 px-4 py-3 rounded-xl font-display font-semibold text-base transition-all duration-200 ${currentPath === '/lien-he' ? 'bg-brand-primary text-white font-bold shadow-sm' : 'text-text-base hover:bg-brand-primary hover:text-white'}`}
           >
             <i
-              class="fa-solid fa-envelope w-5 text-center text-stone-400 group-hover:!text-white transition-colors"
+              class={`fa-solid fa-envelope w-5 text-center transition-colors group-hover:!text-white ${currentPath === '/lien-he' ? '!text-white' : 'text-stone-400'}`}
             ></i> Liên hệ báo giá
           </a>
         </nav>
@@ -340,7 +341,7 @@ const {
             >
               <li>
                 <a
-                  href="#top"
+                  href="/"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Trang chủ</a
@@ -348,7 +349,7 @@ const {
               </li>
               <li>
                 <a
-                  href="#gioi-thieu"
+                  href="/gioi-thieu"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Giới thiệu</a
@@ -356,7 +357,7 @@ const {
               </li>
               <li>
                 <a
-                  href="#dich-vu"
+                  href="/dich-vu"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Dịch vụ thi công</a
@@ -364,7 +365,7 @@ const {
               </li>
               <li>
                 <a
-                  href="#thu-vien"
+                  href="/thuc-te"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Thư viện thực tế</a
@@ -372,7 +373,7 @@ const {
               </li>
               <li>
                 <a
-                  href="#tin-tuc"
+                  href="/tin-tuc"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Tin tức - Cẩm nang</a
@@ -380,7 +381,7 @@ const {
               </li>
               <li>
                 <a
-                  href="#lien-he"
+                  href="/lien-he"
                   class="hover:text-brand-accent transition-colors flex items-center gap-2.5"
                   ><i class="fa-solid fa-circle text-[6px] text-brand-accent"
                   ></i> Liên hệ báo giá</a
@@ -555,35 +556,8 @@ const {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-      // Active link indicator based on scroll (Capsule round styles)
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".nav-link");
+      // Active link indicator based on current path instead of scroll
 
-      function highlightNav() {
-        let scrollY = window.pageYOffset;
-        let currentSectionId = "top";
-
-        sections.forEach((current) => {
-          const sectionHeight = current.offsetHeight;
-          const sectionTop = current.offsetTop - 140;
-          const sectionId = current.getAttribute("id");
-
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            currentSectionId = sectionId;
-          }
-        });
-
-        navLinks.forEach((link) => {
-          const href = link.getAttribute("href");
-          const isActive = href === `#${currentSectionId}`;
-          link.classList.toggle("bg-white/15", isActive);
-          link.classList.toggle("text-white", isActive);
-          link.classList.toggle("text-white/80", !isActive);
-        });
-      }
-
-      window.addEventListener("scroll", highlightNav);
-      window.addEventListener("DOMContentLoaded", highlightNav);
     </script>
   </body>
 </html>

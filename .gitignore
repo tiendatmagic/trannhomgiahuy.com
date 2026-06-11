@@ -23,3 +23,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# VS Code and Agent folders
+.vscode/
+.agent/
